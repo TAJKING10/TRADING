@@ -5,6 +5,7 @@ it is not deployed anywhere and contains no account/balance data.
 """
 import html
 import json
+import statistics
 from pathlib import Path
 
 STATUS_LABELS = {
@@ -112,6 +113,7 @@ def _horizon_card(base: str, horizon_name: str, data: dict) -> str:
         <tr><td>Trades (holdout)</td><td>{m['num_trades']}</td></tr>
         <tr><td>Win rate</td><td>{m['win_rate_pct']:.1f}%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>{_format_hours(m.get('avg_holding_hours'))}</td></tr>
+        <tr><td>Correlation to BTC</td><td>{data['btc_correlation'] if data.get('btc_correlation') is not None else '—'}</td></tr>
         {stop_row}
       </table>
     </div>"""
@@ -132,8 +134,78 @@ SUPABASE_URL = "https://iiezjeqbxqvlkjkjlnws.supabase.co"
 SUPABASE_PUBLISHABLE_KEY = "sb_publishable_7_rDP4gV_dK5zgHdYivntQ_DGyuVFgS"
 
 
+def _reliability_summary(scan_data: dict) -> dict:
+    """Honest sample-size and correlation reporting. Computed from the actual
+    scan, not asserted — if something can't be defensibly estimated from
+    available data, it's left out rather than faked (see dashboard HTML for
+    what's explicitly labeled "Not established")."""
+    tiers = {"strong": 0, "moderate": 0, "high_risk": 0, "none": 0}
+    total_slots = 0
+    total_holdout_trades = 0
+    btc_corrs = []
+
+    for horizons in scan_data["coins"].values():
+        for data in horizons.values():
+            total_slots += 1
+            tiers[_classify_tier(data)] += 1
+            if data.get("status") == "ok":
+                total_holdout_trades += data["holdout_metrics"].get("num_trades", 0)
+            corr = data.get("btc_correlation")
+            if corr is not None:
+                btc_corrs.append(corr)
+
+    highly_correlated = sum(1 for c in btc_corrs if abs(c) >= 0.7)
+
+    return {
+        "total_coins": len(scan_data["coins"]),
+        "total_slots": total_slots,
+        "tiers": tiers,
+        "total_holdout_trades": total_holdout_trades,
+        "median_btc_correlation": round(statistics.median(btc_corrs), 3) if btc_corrs else None,
+        "n_correlation_samples": len(btc_corrs),
+        "highly_correlated_count": highly_correlated,
+    }
+
+
+def _reliability_summary_html(scan_data: dict) -> str:
+    s = _reliability_summary(scan_data)
+    if s["median_btc_correlation"] is not None:
+        corr_line = (
+            f"Median coin-vs-BTC return correlation: <strong>{s['median_btc_correlation']}</strong> "
+            f"across {s['n_correlation_samples']} coin/horizon slots — "
+            f"<strong>{s['highly_correlated_count']}</strong> are highly correlated (|r| &ge; 0.7) with BTC. "
+            f"A correlated group moving together is NOT {s['n_correlation_samples']} independent trading "
+            "opportunities — it is closer to one BTC-driven market move wearing many coin tickers."
+        )
+    else:
+        corr_line = "Not established — insufficient overlapping price history to compute correlations this scan."
+    return f"""
+    <section class="reliability">
+      <h2>Statistical reliability — read this before trusting any count on this page</h2>
+      <table class="reliability-table">
+        <tr><td>Coins scanned</td><td>{s['total_coins']}</td></tr>
+        <tr><td>Coin&times;horizon slots</td><td>{s['total_slots']}</td></tr>
+        <tr><td>&nbsp;&nbsp;🟩 Strong</td><td>{s['tiers']['strong']}</td></tr>
+        <tr><td>&nbsp;&nbsp;🟨 Moderate</td><td>{s['tiers']['moderate']}</td></tr>
+        <tr><td>&nbsp;&nbsp;🟧 High risk / high reward</td><td>{s['tiers']['high_risk']}</td></tr>
+        <tr><td>&nbsp;&nbsp;⬜ No signal</td><td>{s['tiers']['none']}</td></tr>
+        <tr><td>Total holdout trades across the whole universe</td><td>{s['total_holdout_trades']}</td></tr>
+      </table>
+      <p class="reliability-note">{corr_line}</p>
+      <p class="reliability-note">
+        <strong>What "independent sample size" means here:</strong> {s['total_holdout_trades']} total holdout
+        trades is the raw count across all coins — it is <em>not</em> {s['total_holdout_trades']} independent
+        tests of the strategy, since correlated coins moving together in the same market event aren't separate
+        evidence. A statistically defensible "effective independent sample size" accounting for that overlap is
+        <strong>not established</strong> — it would require a more rigorous cross-asset dependence model than
+        this scan currently computes, rather than a number that looks precise but isn't defensible.
+      </p>
+    </section>"""
+
+
 def generate_dashboard_html(scan_data: dict) -> str:
     coins_html = "".join(_coin_section(base, horizons) for base, horizons in scan_data["coins"].items())
+    reliability_html = _reliability_summary_html(scan_data)
     generated_at = html.escape(scan_data["generated_at"])
 
     return f"""<!doctype html>
@@ -193,6 +265,12 @@ def generate_dashboard_html(scan_data: dict) -> str:
   .sparkline {{ height: 36px; margin-bottom: 10px; }}
   .sparkline svg {{ width: 100%; height: 100%; display: block; }}
   .sparkline polyline {{ fill: none; stroke-width: 1.5; }}
+  .reliability {{ margin-bottom: 28px; border: 1px solid rgba(110,119,129,0.3); border-radius: 8px; padding: 14px 16px; }}
+  .reliability h2 {{ font-size: 1rem; margin-bottom: 10px; }}
+  .reliability-table {{ font-size: 0.85rem; border-collapse: collapse; margin-bottom: 12px; }}
+  .reliability-table td {{ padding: 2px 10px 2px 0; }}
+  .reliability-table td:last-child {{ text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }}
+  .reliability-note {{ font-size: 0.82rem; color: #6e7781; margin: 6px 0; }}
 </style>
 </head>
 <body>
@@ -205,6 +283,8 @@ def generate_dashboard_html(scan_data: dict) -> str:
     mean it will keep working. "NO VALIDATED EDGE" is the common, expected result, not a bug. Nothing here
     is a guarantee, and most active trading loses to buy-and-hold after costs. Size and risk at your own discretion.
   </div>
+
+  {reliability_html}
 
   <section class="track-record">
     <h2>Live track record (Supabase)</h2>

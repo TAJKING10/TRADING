@@ -31,23 +31,60 @@ def _buy_and_hold_return(df) -> float:
     return float(df["close"].iloc[-1] / df["close"].iloc[0] - 1)
 
 
-def _scan_one(training_exchange, kraken, coin: dict, horizon: dict, base_config: TrendConfig) -> dict:
+def _btc_correlation(df: pd.DataFrame, btc_returns: pd.Series) -> float | None:
+    """Pearson correlation of this coin's returns against BTC's, over whatever
+    period overlaps. Directly addresses the "are these 862 slots actually
+    independent bets, or mostly one BTC-driven market move wearing 431 coin
+    tickers" critique — computed from real fetched data, not asserted."""
+    coin_returns = df.set_index("timestamp")["close"].pct_change()
+    aligned_coin, aligned_btc = coin_returns.align(btc_returns, join="inner")
+    aligned_coin = aligned_coin.dropna()
+    aligned_btc = aligned_btc.loc[aligned_coin.index]
+    if len(aligned_coin) < 30:  # too few overlapping points for a meaningful correlation
+        return None
+    corr = aligned_coin.corr(aligned_btc)
+    return round(float(corr), 3) if pd.notna(corr) else None
+
+
+def _serialize_trades(trade_log: list, dataset: str) -> list:
+    """trade_log entries hold pandas Timestamps / numpy floats — make them
+    plain JSON/Supabase-safe values, and tag which dataset slice they're from."""
+    out = []
+    for t in trade_log:
+        row = dict(t)
+        row["dataset"] = dataset
+        row["entry_timestamp"] = row["entry_timestamp"].isoformat()
+        row["exit_timestamp"] = row["exit_timestamp"].isoformat()
+        for k, v in row.items():
+            if isinstance(v, float):
+                row[k] = round(v, 8)
+        out.append(row)
+    return out
+
+
+def _scan_one(training_exchange, kraken, coin: dict, horizon: dict, base_config: TrendConfig, btc_returns: pd.Series) -> dict:
     df = fetch_historical(
         training_exchange, coin["training_symbol"], horizon["timeframe"], lookback_days=horizon["lookback_days"]
     )
     if len(df) < 300:
         return {"status": "insufficient_data", "n_candles": len(df)}
 
+    btc_correlation = _btc_correlation(df, btc_returns)
+
     df = df.reset_index(drop=True)
     holdout_start = int(len(df) * 0.85)
     dev_df = df.iloc[:holdout_start].reset_index(drop=True)
     holdout_df = df.iloc[holdout_start:].reset_index(drop=True)
 
-    sweep = sweep_trend_params(dev_df, base_config, min_trades=max(5, MIN_HOLDOUT_TRADES))
+    sweep, dev_results_by_combo = sweep_trend_params(
+        dev_df, base_config, min_trades=max(5, MIN_HOLDOUT_TRADES), return_results=True,
+    )
     if sweep.empty:
-        return {"status": "no_signal", "n_candles": len(df)}
+        return {"status": "no_signal", "n_candles": len(df), "btc_correlation": btc_correlation}
 
     best = sweep.iloc[0]
+    best_combo = (int(best["entry_lookback"]), int(best["exit_lookback"]), float(best["chandelier_mult"]))
+    dev_trade_log = dev_results_by_combo[best_combo].trade_log
     holdout_signals = compute_trend_signals(
         holdout_df, entry_lookback=int(best["entry_lookback"]), exit_lookback=int(best["exit_lookback"])
     )
@@ -97,6 +134,11 @@ def _scan_one(training_exchange, kraken, coin: dict, horizon: dict, base_config:
         "donchian_breakout_level": float(last["donchian_high"]) if pd.notna(last["donchian_high"]) else None,
         "atr": float(last["atr"]) if pd.notna(last["atr"]) else None,
         "n_candles": len(df),
+        "btc_correlation": btc_correlation,
+        # Per-trade audit trail for the winning combo — "dev" is what it chose the
+        # params on, "holdout" is the one to trust (never touched during tuning).
+        "trade_log": _serialize_trades(dev_trade_log, "dev") + _serialize_trades(honest.trade_log, "holdout"),
+        "rejected_count": len(honest.rejected),
     }
 
 
@@ -117,13 +159,22 @@ def run_scan(settings: Settings) -> dict:
         slippage=settings.slippage_pct,
     )
 
+    # Fetched once per horizon (not per-coin) — every coin's btc_correlation is
+    # computed against this same series.
+    btc_returns_by_horizon = {}
+    for horizon in HORIZONS:
+        btc_df = fetch_historical(training_exchange, "BTC/USDT", horizon["timeframe"], lookback_days=horizon["lookback_days"])
+        btc_returns_by_horizon[horizon["name"]] = btc_df.set_index("timestamp")["close"].pct_change()
+
     coins_result = {}
     for coin in universe:
         coin_entry = {}
         for horizon in HORIZONS:
             t0 = time.time()
             try:
-                result = _scan_one(training_exchange, kraken, coin, horizon, base_config)
+                result = _scan_one(
+                    training_exchange, kraken, coin, horizon, base_config, btc_returns_by_horizon[horizon["name"]],
+                )
             except Exception as e:
                 logger.exception("Scan failed for %s/%s", coin["base"], horizon["name"])
                 result = {"status": "error", "error": str(e)}

@@ -129,10 +129,23 @@ def push_scan(scan_data: dict, supabase_url: str, service_role_key: str) -> None
                 "n_candles": data["n_candles"],
                 "atr": data.get("atr"),
                 "avg_holding_hours": m.get("avg_holding_hours"),
+                "btc_correlation": data.get("btc_correlation"),
             }
-            resp = requests.post(f"{base_url}/rest/v1/coin_signals", headers=headers, json=row, timeout=_TIMEOUT_S)
+            resp = requests.post(
+                f"{base_url}/rest/v1/coin_signals",
+                headers={**headers, "Prefer": "return=representation"},
+                json=row, timeout=_TIMEOUT_S,
+            )
             resp.raise_for_status()
+            coin_signal_id = resp.json()[0]["id"]
             pushed += 1
+
+            for t in data.get("trade_log", []):
+                trade_row = {k: v for k, v in t.items() if k != "dataset"} | {
+                    "coin_signal_id": coin_signal_id, "dataset": t["dataset"],
+                }
+                trade_resp = requests.post(f"{base_url}/rest/v1/backtest_trades", headers=headers, json=trade_row, timeout=_TIMEOUT_S)
+                trade_resp.raise_for_status()
 
             try:
                 _score_prior_signals(base_url, headers, coin, horizon_name, data["live_price"])
