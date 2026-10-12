@@ -43,5 +43,22 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add site/
-          git diff --cached --quiet || git commit -m "Auto-update dashboard scan $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git push
+          if git diff --cached --quiet; then
+            echo "No dashboard changes to commit."
+            exit 0
+          fi
+          git commit -m "Auto-update dashboard scan $(date -u +'%Y-%m-%d %H:%M UTC')"
+          # The scan can run 15-20+ min; origin/main may have moved in that time
+          # (another push, an overlapping run). A plain `git push` then fails with
+          # a non-fast-forward rejection and the whole scan's output is lost. Only
+          # site/ changes here (machine-generated), so rebasing onto new upstream
+          # commits is safe -- retry a few times before giving up.
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed (origin/main likely moved) -- retrying..."
+            sleep 10
+          done
+          echo "::error::Failed to push dashboard update after 5 attempts." >&2
+          exit 1
