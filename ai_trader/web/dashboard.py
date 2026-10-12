@@ -59,6 +59,10 @@ def _coin_section(base: str, horizons: dict) -> str:
     </section>"""
 
 
+SUPABASE_URL = "https://iiezjeqbxqvlkjkjlnws.supabase.co"
+SUPABASE_PUBLISHABLE_KEY = "sb_publishable_7_rDP4gV_dK5zgHdYivntQ_DGyuVFgS"
+
+
 def generate_dashboard_html(scan_data: dict) -> str:
     coins_html = "".join(_coin_section(base, horizons) for base, horizons in scan_data["coins"].items())
     generated_at = html.escape(scan_data["generated_at"])
@@ -102,6 +106,12 @@ def generate_dashboard_html(scan_data: dict) -> str:
   .pos {{ color: #1a7f37; }}
   .neg {{ color: #d1242f; }}
   .na {{ color: #6e7781; font-style: italic; }}
+  .track-record {{ margin-bottom: 28px; }}
+  .track-record h2 {{ font-size: 1.1rem; margin-bottom: 10px; }}
+  .track-record table {{ width: 100%; border-collapse: collapse; font-size: 0.85rem; }}
+  .track-record th, .track-record td {{ text-align: left; padding: 6px 10px; border-bottom: 1px solid rgba(110,119,129,0.2); }}
+  .track-record td:not(:first-child), .track-record th:not(:first-child) {{ text-align: right; font-variant-numeric: tabular-nums; }}
+  .track-record .loading, .track-record .empty {{ color: #6e7781; font-style: italic; font-size: 0.85rem; }}
 </style>
 </head>
 <body>
@@ -114,7 +124,58 @@ def generate_dashboard_html(scan_data: dict) -> str:
     mean it will keep working. "NO VALIDATED EDGE" is the common, expected result, not a bug. Nothing here
     is a guarantee, and most active trading loses to buy-and-hold after costs. Size and risk at your own discretion.
   </div>
+
+  <section class="track-record">
+    <h2>Live track record (Supabase)</h2>
+    <div id="track-record-body" class="loading">Loading signal accuracy history&hellip;</div>
+  </section>
+
   {coins_html}
+
+  <script>
+    (async function() {{
+      const el = document.getElementById("track-record-body");
+      try {{
+        const resp = await fetch(
+          "{SUPABASE_URL}/rest/v1/coin_accuracy?select=*&order=coin.asc",
+          {{ headers: {{
+              "apikey": "{SUPABASE_PUBLISHABLE_KEY}",
+              "Authorization": "Bearer {SUPABASE_PUBLISHABLE_KEY}"
+          }} }}
+        );
+        if (!resp.ok) throw new Error("HTTP " + resp.status);
+        const rows = await resp.json();
+        if (!rows.length) {{
+          el.outerHTML = '<div class="empty">No scored signals yet — check back after a couple of scan cycles.</div>';
+          return;
+        }}
+        const escapeHtml = (s) => String(s).replace(/[&<>"']/g, (c) => ({{
+          "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+        }}[c]));
+        const tableRows = rows.map((r) => `
+          <tr>
+            <td>${{escapeHtml(r.coin)}}</td>
+            <td>${{escapeHtml(r.horizon)}}</td>
+            <td>${{escapeHtml(r.live_status)}}</td>
+            <td>${{r.n_outcomes}}</td>
+            <td>${{r.hit_rate_pct != null ? r.hit_rate_pct + "%" : "—"}}</td>
+            <td>${{r.avg_pct_change != null ? r.avg_pct_change + "%" : "—"}}</td>
+          </tr>`).join("");
+        el.outerHTML = `
+          <table>
+            <thead><tr>
+              <th>Coin</th><th>Horizon</th><th>Signal</th><th>N</th><th>Hit rate</th><th>Avg move</th>
+            </tr></thead>
+            <tbody>${{tableRows}}</tbody>
+          </table>`;
+      }} catch (e) {{
+        el.outerHTML = '<div class="empty">Could not load track record: ' + escapeHtmlFallback(e.message) + '</div>';
+      }}
+      function escapeHtmlFallback(s) {{
+        return String(s).replace(/[&<>"']/g, (c) => ({{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}}[c]));
+      }}
+    }})();
+  </script>
 </body>
 </html>"""
 

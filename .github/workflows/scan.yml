@@ -27,6 +27,10 @@ jobs:
           # without touching code — useful if Binance geo-blocks GitHub's runner IPs.
           EXCHANGE: ${{ vars.EXCHANGE || 'kraken' }}
           TRAINING_DATA_EXCHANGE: ${{ vars.TRAINING_DATA_EXCHANGE || 'binance' }}
+          # Set in repo Settings -> Secrets and variables -> Actions -> Secrets to enable
+          # pushing scan history + accuracy tracking to Supabase. Safe to leave unset.
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: python main.py scan
 
       - name: Commit updated dashboard if changed

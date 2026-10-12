@@ -55,6 +55,9 @@ class Settings:
     whatsapp_phone: str
     whatsapp_apikey: str
 
+    supabase_url: str
+    supabase_service_role_key: str
+
     def validate(self) -> None:
         if not self.dry_run and (not self.api_key or not self.api_secret):
             raise ValueError(
@@ -100,6 +103,8 @@ def load_settings() -> Settings:
         log_dir=log_dir,
         whatsapp_phone=os.getenv("WHATSAPP_PHONE", ""),
         whatsapp_apikey=os.getenv("WHATSAPP_APIKEY", ""),
+        supabase_url=os.getenv("SUPABASE_URL", ""),
+        supabase_service_role_key=os.getenv("SUPABASE_SERVICE_ROLE_KEY", ""),
     )
     settings.validate()
     return settings

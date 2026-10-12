@@ -155,6 +155,16 @@ def cmd_scan(args) -> None:
     path = save_dashboard(scan_data, out_dir)
     logger.info("Dashboard written to %s — open it directly in your browser.", path)
 
+    if settings.supabase_url and settings.supabase_service_role_key:
+        from ai_trader.scan.supabase_sync import push_scan
+
+        try:
+            push_scan(scan_data, settings.supabase_url, settings.supabase_service_role_key)
+        except Exception:
+            logger.exception("Supabase sync failed — dashboard was still written locally.")
+    else:
+        logger.info("SUPABASE_URL/SUPABASE_SERVICE_ROLE_KEY not set — skipping history sync.")
+
 
 def cmd_signal(args) -> None:
     from ai_trader.core.daily_signal import run_and_save
