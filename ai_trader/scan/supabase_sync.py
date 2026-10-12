@@ -6,12 +6,21 @@ No-ops cleanly if SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY aren't set, so
 local runs without Supabase configured keep working unchanged.
 """
 import logging
+from datetime import datetime, timedelta, timezone
 
 import requests
 
 logger = logging.getLogger("supabase_sync")
 
 _TIMEOUT_S = 15
+
+# Must match HORIZON_HOURS in ai_trader/web/dashboard.py and HORIZONS in
+# ai_trader/scan/run_scan.py. A signal is only scored once this much time has
+# actually elapsed — scoring it sooner (e.g. against the literally-previous
+# scan, which could be minutes old on an hourly cadence) would measure noise
+# instead of whether the "near"/"far" signal itself played out.
+HORIZON_HOURS = {"near": 4, "far": 24}
+_BACKLOG_LIMIT = 10
 
 
 def _headers(service_role_key: str) -> dict:
@@ -23,8 +32,12 @@ def _headers(service_role_key: str) -> dict:
 
 
 def _score_prior_signals(base_url: str, headers: dict, coin: str, horizon: str, live_price: float) -> None:
-    """Find this coin/horizon's most recent prior signal that hasn't been scored
-    yet, and record what its live_price turned into by now."""
+    """Score every unscored signal for this coin/horizon old enough for its own
+    horizon window to have elapsed (4h for "near", 24h for "far") — oldest
+    first, draining any backlog that built up between scans."""
+    horizon_hours = HORIZON_HOURS.get(horizon, 4)
+    cutoff = (datetime.now(timezone.utc) - timedelta(hours=horizon_hours)).isoformat()
+
     resp = requests.get(
         f"{base_url}/rest/v1/coin_signals",
         headers=headers,
@@ -32,46 +45,48 @@ def _score_prior_signals(base_url: str, headers: dict, coin: str, horizon: str, 
             "select": "id,live_price,live_status,created_at",
             "coin": f"eq.{coin}",
             "horizon": f"eq.{horizon}",
-            "order": "created_at.desc",
-            "limit": 1,
-            "offset": 1,  # skip the row we just inserted for this scan
+            "created_at": f"lte.{cutoff}",
+            "order": "created_at.asc",
+            "limit": _BACKLOG_LIMIT,
         },
         timeout=_TIMEOUT_S,
     )
     resp.raise_for_status()
-    rows = resp.json()
-    if not rows:
+    candidates = resp.json()
+    if not candidates:
         return
-    prior = rows[0]
 
     outcome_check = requests.get(
         f"{base_url}/rest/v1/signal_outcomes",
         headers=headers,
-        params={"select": "id", "coin_signal_id": f"eq.{prior['id']}", "limit": 1},
+        params={"select": "coin_signal_id", "coin_signal_id": f"in.({','.join(str(c['id']) for c in candidates)})"},
         timeout=_TIMEOUT_S,
     )
     outcome_check.raise_for_status()
-    if outcome_check.json():
-        return  # already scored
+    already_scored = {row["coin_signal_id"] for row in outcome_check.json()}
 
-    price_then = float(prior["live_price"])
-    pct_change = (live_price - price_then) / price_then
-    predicted_up = prior["live_status"] in ("BREAKOUT_ACTIVE", "UPTREND_WAITING")
-    was_correct = (pct_change > 0) if predicted_up else (pct_change <= 0)
+    for prior in candidates:
+        if prior["id"] in already_scored:
+            continue
 
-    insert_resp = requests.post(
-        f"{base_url}/rest/v1/signal_outcomes",
-        headers=headers,
-        json={
-            "coin_signal_id": prior["id"],
-            "price_then": price_then,
-            "price_now": live_price,
-            "pct_change": pct_change,
-            "was_correct": was_correct,
-        },
-        timeout=_TIMEOUT_S,
-    )
-    insert_resp.raise_for_status()
+        price_then = float(prior["live_price"])
+        pct_change = (live_price - price_then) / price_then
+        predicted_up = prior["live_status"] in ("BREAKOUT_ACTIVE", "UPTREND_WAITING")
+        was_correct = (pct_change > 0) if predicted_up else (pct_change <= 0)
+
+        insert_resp = requests.post(
+            f"{base_url}/rest/v1/signal_outcomes",
+            headers=headers,
+            json={
+                "coin_signal_id": prior["id"],
+                "price_then": price_then,
+                "price_now": live_price,
+                "pct_change": pct_change,
+                "was_correct": was_correct,
+            },
+            timeout=_TIMEOUT_S,
+        )
+        insert_resp.raise_for_status()
 
 
 def push_scan(scan_data: dict, supabase_url: str, service_role_key: str) -> None:

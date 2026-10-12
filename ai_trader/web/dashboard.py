@@ -101,6 +101,9 @@ def _horizon_card(base: str, horizon_name: str, data: dict) -> str:
       <div class="tier" style="color:{tier_color}">{tier_label}</div>
       <div class="live-status" style="color:{live_color}">{live_label}</div>
       <div class="price">{price_str}</div>
+      <div class="sparkline" data-coin="{html.escape(base)}" data-horizon="{horizon_name}">
+        <span class="na-cell">Loading price history&hellip;</span>
+      </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="{'pos' if m['total_return_pct']>=0 else 'neg'}">{m['total_return_pct']:+.2f}%</td></tr>
         <tr><td>Buy &amp; hold (same window)</td><td class="{'pos' if data['buy_and_hold_pct']>=0 else 'neg'}">{data['buy_and_hold_pct']:+.2f}%</td></tr>
@@ -187,6 +190,9 @@ def generate_dashboard_html(scan_data: dict) -> str:
   .track-record th, .track-record td {{ text-align: left; padding: 6px 10px; border-bottom: 1px solid rgba(110,119,129,0.2); }}
   .track-record td:not(:first-child), .track-record th:not(:first-child) {{ text-align: right; font-variant-numeric: tabular-nums; }}
   .track-record .loading, .track-record .empty {{ color: #6e7781; font-style: italic; font-size: 0.85rem; }}
+  .sparkline {{ height: 36px; margin-bottom: 10px; }}
+  .sparkline svg {{ width: 100%; height: 100%; display: block; }}
+  .sparkline polyline {{ fill: none; stroke-width: 1.5; }}
 </style>
 </head>
 <body>
@@ -283,6 +289,52 @@ def generate_dashboard_html(scan_data: dict) -> str:
           applyFilter(btn.dataset.filter);
         }});
       }});
+    }})();
+
+    (async function() {{
+      const containers = document.querySelectorAll(".sparkline");
+      const notEnough = (n) => '<span class="na-cell">Not enough price history yet (' + n + ' point' + (n === 1 ? '' : 's') + ')</span>';
+      try {{
+        const resp = await fetch(
+          "{SUPABASE_URL}/rest/v1/coin_price_history?select=coin,horizon,live_price,created_at",
+          {{ headers: {{
+              "apikey": "{SUPABASE_PUBLISHABLE_KEY}",
+              "Authorization": "Bearer {SUPABASE_PUBLISHABLE_KEY}"
+          }} }}
+        );
+        if (!resp.ok) throw new Error("HTTP " + resp.status);
+        const rows = await resp.json();
+
+        const grouped = new Map();
+        rows.forEach((r) => {{
+          const key = r.coin + "|" + r.horizon;
+          if (!grouped.has(key)) grouped.set(key, []);
+          grouped.get(key).push(r.live_price);
+        }});
+
+        containers.forEach((el) => {{
+          const key = el.dataset.coin + "|" + el.dataset.horizon;
+          const prices = grouped.get(key);
+          if (!prices || prices.length < 2) {{
+            el.innerHTML = notEnough(prices ? prices.length : 0);
+            return;
+          }}
+          const min = Math.min(...prices);
+          const max = Math.max(...prices);
+          const range = max - min || 1;
+          const w = 240, h = 36;
+          const points = prices.map((p, i) => {{
+            const x = (i / (prices.length - 1)) * w;
+            const y = h - ((p - min) / range) * h;
+            return x.toFixed(1) + "," + y.toFixed(1);
+          }}).join(" ");
+          const color = prices[prices.length - 1] >= prices[0] ? "#1a7f37" : "#d1242f";
+          el.innerHTML = '<svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none">'
+            + '<polyline points="' + points + '" stroke="' + color + '"/></svg>';
+        }});
+      }} catch (e) {{
+        containers.forEach((el) => {{ el.innerHTML = '<span class="na-cell">Chart unavailable</span>'; }});
+      }}
     }})();
   </script>
 </body>
