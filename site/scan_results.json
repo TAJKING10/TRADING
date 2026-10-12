@@ -1,0 +1,719 @@
+{
+  "generated_at": "2026-10-12T18:49:14.783900+00:00",
+  "horizons": [
+    {
+      "name": "near",
+      "timeframe": "4h",
+      "lookback_days": 365
+    },
+    {
+      "name": "far",
+      "timeframe": "1d",
+      "lookback_days": 1095
+    }
+  ],
+  "coins": {
+    "BTC": {
+      "near": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 20,
+          "exit_lookback": 10,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -2.53,
+          "max_drawdown_pct": -3.26,
+          "sharpe_annualized": -10.08,
+          "num_trades": 5,
+          "win_rate_pct": 20.0,
+          "final_equity": 97.47
+        },
+        "buy_and_hold_pct": 28.08,
+        "live_price": 82289.5,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 84250.0,
+        "n_candles": 2190,
+        "elapsed_s": 2.6
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 55,
+          "exit_lookback": 10,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -1.02,
+          "max_drawdown_pct": -1.02,
+          "sharpe_annualized": -21.62,
+          "num_trades": 1,
+          "win_rate_pct": 0.0,
+          "final_equity": 98.98
+        },
+        "buy_and_hold_pct": 5.32,
+        "live_price": 82277.2,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 87446.7,
+        "n_candles": 1095,
+        "elapsed_s": 1.5
+      }
+    },
+    "ETH": {
+      "near": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 10,
+          "exit_lookback": 10,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -8.23,
+          "max_drawdown_pct": -8.35,
+          "sharpe_annualized": -21.79,
+          "num_trades": 11,
+          "win_rate_pct": 18.18,
+          "final_equity": 91.77
+        },
+        "buy_and_hold_pct": 31.35,
+        "live_price": 2508.58,
+        "live_status": "NO_SIGNAL",
+        "donchian_breakout_level": 2576.94,
+        "n_candles": 2190,
+        "elapsed_s": 2.5
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 40,
+          "exit_lookback": 10,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -1.0,
+          "max_drawdown_pct": -1.0,
+          "sharpe_annualized": -21.95,
+          "num_trades": 1,
+          "win_rate_pct": 0.0,
+          "final_equity": 99.0
+        },
+        "buy_and_hold_pct": 9.4,
+        "live_price": 2507.92,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 2806.69,
+        "n_candles": 1095,
+        "elapsed_s": 1.5
+      }
+    },
+    "SOL": {
+      "near": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 40,
+          "exit_lookback": 10,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -2.15,
+          "max_drawdown_pct": -3.11,
+          "sharpe_annualized": -10.87,
+          "num_trades": 4,
+          "win_rate_pct": 0.0,
+          "final_equity": 97.85
+        },
+        "buy_and_hold_pct": 39.74,
+        "live_price": 107.43,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 121.97,
+        "n_candles": 2190,
+        "elapsed_s": 2.6
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 10,
+          "exit_lookback": 10,
+          "chandelier_mult": 3.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -2.05,
+          "max_drawdown_pct": -2.35,
+          "sharpe_annualized": -22.23,
+          "num_trades": 3,
+          "win_rate_pct": 33.33,
+          "final_equity": 97.95
+        },
+        "buy_and_hold_pct": 28.45,
+        "live_price": 107.43,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 123.74,
+        "n_candles": 1095,
+        "elapsed_s": 1.5
+      }
+    },
+    "XRP": {
+      "near": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 10,
+          "exit_lookback": 20,
+          "chandelier_mult": 3.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -4.63,
+          "max_drawdown_pct": -4.63,
+          "sharpe_annualized": -17.53,
+          "num_trades": 8,
+          "win_rate_pct": 12.5,
+          "final_equity": 95.37
+        },
+        "buy_and_hold_pct": 35.78,
+        "live_price": 1.35625,
+        "live_status": "NO_SIGNAL",
+        "donchian_breakout_level": 1.425,
+        "n_candles": 2190,
+        "elapsed_s": 2.6
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 40,
+          "exit_lookback": 10,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "sharpe_annualized": 0.0,
+          "num_trades": 0,
+          "win_rate_pct": 0.0,
+          "final_equity": 100.0
+        },
+        "buy_and_hold_pct": -2.0,
+        "live_price": 1.35625,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 1.6578,
+        "n_candles": 1095,
+        "elapsed_s": 1.5
+      }
+    },
+    "ADA": {
+      "near": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 10,
+          "exit_lookback": 10,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": 2.32,
+          "max_drawdown_pct": -3.74,
+          "sharpe_annualized": 4.95,
+          "num_trades": 7,
+          "win_rate_pct": 57.14,
+          "final_equity": 102.32
+        },
+        "buy_and_hold_pct": 37.54,
+        "live_price": 0.240773,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 0.256934,
+        "n_candles": 2190,
+        "elapsed_s": 2.8
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 10,
+          "exit_lookback": 10,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -1.21,
+          "max_drawdown_pct": -1.21,
+          "sharpe_annualized": -22.12,
+          "num_trades": 1,
+          "win_rate_pct": 0.0,
+          "final_equity": 98.79
+        },
+        "buy_and_hold_pct": -2.86,
+        "live_price": 0.240773,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 0.282499,
+        "n_candles": 1095,
+        "elapsed_s": 1.5
+      }
+    },
+    "DOGE": {
+      "near": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 20,
+          "exit_lookback": 10,
+          "chandelier_mult": 4.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -0.56,
+          "max_drawdown_pct": -1.35,
+          "sharpe_annualized": -3.32,
+          "num_trades": 3,
+          "win_rate_pct": 0.0,
+          "final_equity": 99.44
+        },
+        "buy_and_hold_pct": 20.87,
+        "live_price": 0.084762,
+        "live_status": "NO_SIGNAL",
+        "donchian_breakout_level": 0.0880132,
+        "n_candles": 2190,
+        "elapsed_s": 2.6
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 20,
+          "exit_lookback": 10,
+          "chandelier_mult": 3.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "sharpe_annualized": 0.0,
+          "num_trades": 0,
+          "win_rate_pct": 0.0,
+          "final_equity": 100.0
+        },
+        "buy_and_hold_pct": -21.93,
+        "live_price": 0.084762,
+        "live_status": "NO_SIGNAL",
+        "donchian_breakout_level": 0.1059479,
+        "n_candles": 1095,
+        "elapsed_s": 2.4
+      }
+    },
+    "LTC": {
+      "near": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 40,
+          "exit_lookback": 10,
+          "chandelier_mult": 3.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": 2.1,
+          "max_drawdown_pct": -1.48,
+          "sharpe_annualized": 7.61,
+          "num_trades": 3,
+          "win_rate_pct": 100.0,
+          "final_equity": 102.1
+        },
+        "buy_and_hold_pct": 40.23,
+        "live_price": 62.21,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 70.61,
+        "n_candles": 2190,
+        "elapsed_s": 2.5
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 40,
+          "exit_lookback": 20,
+          "chandelier_mult": 4.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": 0.01,
+          "max_drawdown_pct": -0.98,
+          "sharpe_annualized": 0.3,
+          "num_trades": 0,
+          "win_rate_pct": 0.0,
+          "final_equity": 100.01
+        },
+        "buy_and_hold_pct": 12.38,
+        "live_price": 62.21,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 74.98,
+        "n_candles": 1095,
+        "elapsed_s": 1.7
+      }
+    },
+    "LINK": {
+      "near": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 40,
+          "exit_lookback": 10,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -2.49,
+          "max_drawdown_pct": -4.88,
+          "sharpe_annualized": -8.59,
+          "num_trades": 5,
+          "win_rate_pct": 20.0,
+          "final_equity": 97.51
+        },
+        "buy_and_hold_pct": 32.6,
+        "live_price": 12.86487,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 14.1289,
+        "n_candles": 2190,
+        "elapsed_s": 2.5
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 20,
+          "exit_lookback": 20,
+          "chandelier_mult": 4.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -0.93,
+          "max_drawdown_pct": -1.59,
+          "sharpe_annualized": -11.15,
+          "num_trades": 1,
+          "win_rate_pct": 0.0,
+          "final_equity": 99.07
+        },
+        "buy_and_hold_pct": 41.4,
+        "live_price": 12.86487,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 15.7666,
+        "n_candles": 1095,
+        "elapsed_s": 1.5
+      }
+    },
+    "DOT": {
+      "near": {
+        "status": "no_signal",
+        "n_candles": 2190,
+        "elapsed_s": 2.5
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 10,
+          "exit_lookback": 10,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "sharpe_annualized": 0.0,
+          "num_trades": 0,
+          "win_rate_pct": 0.0,
+          "final_equity": 100.0
+        },
+        "buy_and_hold_pct": 0.83,
+        "live_price": 1.212,
+        "live_status": "NO_SIGNAL",
+        "donchian_breakout_level": 1.295,
+        "n_candles": 1095,
+        "elapsed_s": 1.5
+      }
+    },
+    "AVAX": {
+      "near": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 10,
+          "exit_lookback": 10,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": 2.7,
+          "max_drawdown_pct": -6.65,
+          "sharpe_annualized": 4.05,
+          "num_trades": 10,
+          "win_rate_pct": 30.0,
+          "final_equity": 102.7
+        },
+        "buy_and_hold_pct": 62.48,
+        "live_price": 10.326,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 11.103,
+        "n_candles": 2190,
+        "elapsed_s": 2.6
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 10,
+          "exit_lookback": 10,
+          "chandelier_mult": 3.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "sharpe_annualized": 0.0,
+          "num_trades": 0,
+          "win_rate_pct": 0.0,
+          "final_equity": 100.0
+        },
+        "buy_and_hold_pct": 13.88,
+        "live_price": 10.326,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 11.726,
+        "n_candles": 1095,
+        "elapsed_s": 1.5
+      }
+    },
+    "UNI": {
+      "near": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 55,
+          "exit_lookback": 10,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": 4.24,
+          "max_drawdown_pct": -2.56,
+          "sharpe_annualized": 11.21,
+          "num_trades": 3,
+          "win_rate_pct": 66.67,
+          "final_equity": 104.24
+        },
+        "buy_and_hold_pct": 122.33,
+        "live_price": 7.3505,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 9.2463,
+        "n_candles": 2190,
+        "elapsed_s": 2.7
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 10,
+          "exit_lookback": 10,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": 4.97,
+          "max_drawdown_pct": -2.18,
+          "sharpe_annualized": 18.69,
+          "num_trades": 3,
+          "win_rate_pct": 100.0,
+          "final_equity": 104.97
+        },
+        "buy_and_hold_pct": 129.65,
+        "live_price": 7.3505,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 9.32,
+        "n_candles": 1095,
+        "elapsed_s": 1.5
+      }
+    },
+    "ATOM": {
+      "near": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 10,
+          "exit_lookback": 20,
+          "chandelier_mult": 3.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": 1.85,
+          "max_drawdown_pct": -4.45,
+          "sharpe_annualized": 4.9,
+          "num_trades": 5,
+          "win_rate_pct": 60.0,
+          "final_equity": 101.85
+        },
+        "buy_and_hold_pct": 30.29,
+        "live_price": 1.8388,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 2.0532,
+        "n_candles": 2190,
+        "elapsed_s": 2.7
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 10,
+          "exit_lookback": 10,
+          "chandelier_mult": 3.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -1.52,
+          "max_drawdown_pct": -1.52,
+          "sharpe_annualized": -39.36,
+          "num_trades": 2,
+          "win_rate_pct": 0.0,
+          "final_equity": 98.48
+        },
+        "buy_and_hold_pct": -2.95,
+        "live_price": 1.8388,
+        "live_status": "NO_SIGNAL",
+        "donchian_breakout_level": 2.0825,
+        "n_candles": 1095,
+        "elapsed_s": 1.5
+      }
+    },
+    "XLM": {
+      "near": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 20,
+          "exit_lookback": 10,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -3.02,
+          "max_drawdown_pct": -3.23,
+          "sharpe_annualized": -10.16,
+          "num_trades": 4,
+          "win_rate_pct": 25.0,
+          "final_equity": 96.98
+        },
+        "buy_and_hold_pct": 26.29,
+        "live_price": 0.195362,
+        "live_status": "NO_SIGNAL",
+        "donchian_breakout_level": 0.205798,
+        "n_candles": 2190,
+        "elapsed_s": 2.5
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 20,
+          "exit_lookback": 20,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -2.49,
+          "max_drawdown_pct": -2.49,
+          "sharpe_annualized": -13.78,
+          "num_trades": 3,
+          "win_rate_pct": 0.0,
+          "final_equity": 97.51
+        },
+        "buy_and_hold_pct": 22.56,
+        "live_price": 0.195362,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 0.236993,
+        "n_candles": 1095,
+        "elapsed_s": 1.6
+      }
+    },
+    "BCH": {
+      "near": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 10,
+          "exit_lookback": 20,
+          "chandelier_mult": 3.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": 0.23,
+          "max_drawdown_pct": -2.79,
+          "sharpe_annualized": 0.88,
+          "num_trades": 3,
+          "win_rate_pct": 33.33,
+          "final_equity": 100.23
+        },
+        "buy_and_hold_pct": 33.92,
+        "live_price": 273.37,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 288.4,
+        "n_candles": 2190,
+        "elapsed_s": 3.1
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 20,
+          "exit_lookback": 20,
+          "chandelier_mult": 4.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "sharpe_annualized": 0.0,
+          "num_trades": 0,
+          "win_rate_pct": 0.0,
+          "final_equity": 100.0
+        },
+        "buy_and_hold_pct": -39.42,
+        "live_price": 273.37,
+        "live_status": "NO_SIGNAL",
+        "donchian_breakout_level": 365.91,
+        "n_candles": 1095,
+        "elapsed_s": 2.9
+      }
+    },
+    "ETC": {
+      "near": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 10,
+          "exit_lookback": 20,
+          "chandelier_mult": 2.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": -0.33,
+          "max_drawdown_pct": -4.96,
+          "sharpe_annualized": -0.53,
+          "num_trades": 5,
+          "win_rate_pct": 20.0,
+          "final_equity": 99.67
+        },
+        "buy_and_hold_pct": 34.7,
+        "live_price": 8.212,
+        "live_status": "NO_SIGNAL",
+        "donchian_breakout_level": 8.546,
+        "n_candles": 2190,
+        "elapsed_s": 4.4
+      },
+      "far": {
+        "status": "ok",
+        "edge_validated": false,
+        "params": {
+          "entry_lookback": 10,
+          "exit_lookback": 20,
+          "chandelier_mult": 4.0
+        },
+        "holdout_metrics": {
+          "total_return_pct": 0.0,
+          "max_drawdown_pct": 0.0,
+          "sharpe_annualized": 0.0,
+          "num_trades": 0,
+          "win_rate_pct": 0.0,
+          "final_equity": 100.0
+        },
+        "buy_and_hold_pct": -2.14,
+        "live_price": 8.212,
+        "live_status": "UPTREND_WAITING",
+        "donchian_breakout_level": 9.211,
+        "n_candles": 1095,
+        "elapsed_s": 1.5
+      }
+    }
+  }
+}

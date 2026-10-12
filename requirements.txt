@@ -1,0 +1,7 @@
+ccxt
+lightgbm
+pandas
+numpy
+scikit-learn
+pyarrow
+python-dotenv
