@@ -47,6 +47,8 @@ class Settings:
     max_drawdown_pct: float
     stop_loss_pct: float
     take_profit_pct: float
+    taker_fee_pct: float
+    slippage_pct: float
 
     retrain_interval_hours: float
     model_dir: Path
@@ -98,6 +100,11 @@ def load_settings() -> Settings:
         max_drawdown_pct=_float("MAX_DRAWDOWN_PCT", 0.10),
         stop_loss_pct=_float("STOP_LOSS_PCT", 0.015),
         take_profit_pct=_float("TAKE_PROFIT_PCT", 0.03),
+        # Kraken base-tier spot taker fee is 0.80% (Oct 2026) — not Binance's
+        # 0.1%, which this used to (incorrectly) assume. Override to match
+        # your actual account's volume tier once you know it.
+        taker_fee_pct=_float("TAKER_FEE_PCT", 0.008),
+        slippage_pct=_float("SLIPPAGE_PCT", 0.0005),
         retrain_interval_hours=_float("RETRAIN_INTERVAL_HOURS", 24.0),
         model_dir=model_dir,
         log_dir=log_dir,

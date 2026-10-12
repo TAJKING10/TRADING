@@ -1,15 +1,18 @@
 """Event-driven long-only backtest over out-of-sample model predictions.
 
 Uses real fees + a slippage assumption so the result isn't a fantasy backtest.
-Binance spot taker fee is 0.1% by default; BNB fee discount not assumed.
+Defaults to Kraken's base-tier spot taker fee (0.80%, as of Oct 2026) since
+Kraken is the execution exchange (see ai_trader.config.settings.exchange_name)
+— NOT Binance's 0.1%, which this previously (incorrectly) assumed. Override
+via TAKER_FEE_PCT / SLIPPAGE_PCT in .env once you know your actual fee tier.
 """
 from dataclasses import dataclass, field
 
 import numpy as np
 import pandas as pd
 
-TAKER_FEE = 0.001
-SLIPPAGE = 0.0005  # assumed adverse price move on fill, each side
+DEFAULT_TAKER_FEE = 0.008
+DEFAULT_SLIPPAGE = 0.0005  # assumed adverse price move on fill, each side
 
 
 @dataclass
@@ -20,6 +23,8 @@ class BacktestConfig:
     take_profit_pct: float = 0.03
     position_pct: float = 0.5  # fraction of capital deployed per trade
     starting_capital: float = 100.0
+    taker_fee: float = DEFAULT_TAKER_FEE
+    slippage: float = DEFAULT_SLIPPAGE
 
 
 @dataclass
@@ -49,8 +54,8 @@ def run_backtest(oos_predictions: pd.DataFrame, config: BacktestConfig) -> Backt
             sell_signal = row["pred_proba"] < config.sell_threshold
 
             if hit_stop or hit_target or sell_signal:
-                fill_price = price * (1 - SLIPPAGE)
-                proceeds = position_qty * fill_price * (1 - TAKER_FEE)
+                fill_price = price * (1 - config.slippage)
+                proceeds = position_qty * fill_price * (1 - config.taker_fee)
                 cash += proceeds
                 trades.append(
                     {
@@ -69,8 +74,8 @@ def run_backtest(oos_predictions: pd.DataFrame, config: BacktestConfig) -> Backt
             buy_signal = row["pred_proba"] > config.buy_threshold
             if buy_signal:
                 deploy = cash * config.position_pct
-                fill_price = price * (1 + SLIPPAGE)
-                qty = (deploy * (1 - TAKER_FEE)) / fill_price
+                fill_price = price * (1 + config.slippage)
+                qty = (deploy * (1 - config.taker_fee)) / fill_price
                 cash -= deploy
                 position_qty = qty
                 entry_price = fill_price
@@ -111,6 +116,8 @@ def sweep_thresholds(
                 take_profit_pct=base_config.take_profit_pct,
                 position_pct=base_config.position_pct,
                 starting_capital=base_config.starting_capital,
+                taker_fee=base_config.taker_fee,
+                slippage=base_config.slippage,
             )
             result = run_backtest(oos_predictions, cfg)
             m = result.metrics

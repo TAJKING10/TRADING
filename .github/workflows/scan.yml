@@ -28,6 +28,10 @@ jobs:
           # (geo-restriction), so KuCoin is the default training-data exchange here.
           EXCHANGE: ${{ vars.EXCHANGE || 'kraken' }}
           TRAINING_DATA_EXCHANGE: ${{ vars.TRAINING_DATA_EXCHANGE || 'kucoin' }}
+          # Default is Kraken's base-tier spot taker fee (0.80%, Oct 2026). Override
+          # via repo Variables once you know your actual account's fee tier.
+          TAKER_FEE_PCT: ${{ vars.TAKER_FEE_PCT || '0.008' }}
+          SLIPPAGE_PCT: ${{ vars.SLIPPAGE_PCT || '0.0005' }}
           # Set in repo Settings -> Secrets and variables -> Actions -> Secrets to enable
           # pushing scan history + accuracy tracking to Supabase. Safe to leave unset.
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}

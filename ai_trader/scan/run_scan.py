@@ -56,6 +56,8 @@ def _scan_one(training_exchange, kraken, coin: dict, horizon: dict, base_config:
         risk_per_trade_pct=base_config.risk_per_trade_pct,
         max_position_pct=base_config.max_position_pct,
         starting_capital=base_config.starting_capital,
+        taker_fee=base_config.taker_fee,
+        slippage=base_config.slippage,
     )
     honest = run_trend_backtest(holdout_signals, honest_cfg)
     bh_return = _buy_and_hold_return(holdout_df)
@@ -111,6 +113,8 @@ def run_scan(settings: Settings) -> dict:
         risk_per_trade_pct=settings.risk_per_trade_pct,
         max_position_pct=settings.max_position_pct,
         starting_capital=settings.capital_allocation_usdt,
+        taker_fee=settings.taker_fee_pct,
+        slippage=settings.slippage_pct,
     )
 
     coins_result = {}

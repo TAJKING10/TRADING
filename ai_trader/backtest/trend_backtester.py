@@ -10,7 +10,7 @@ from dataclasses import dataclass, field
 
 import pandas as pd
 
-from ai_trader.backtest.backtester import TAKER_FEE, SLIPPAGE, _compute_metrics
+from ai_trader.backtest.backtester import DEFAULT_SLIPPAGE, DEFAULT_TAKER_FEE, _compute_metrics
 
 
 @dataclass
@@ -19,6 +19,8 @@ class TrendConfig:
     risk_per_trade_pct: float = 0.01
     max_position_pct: float = 0.5
     starting_capital: float = 100.0
+    taker_fee: float = DEFAULT_TAKER_FEE
+    slippage: float = DEFAULT_SLIPPAGE
 
 
 @dataclass
@@ -51,8 +53,8 @@ def run_trend_backtest(signals_df: pd.DataFrame, config: TrendConfig) -> TrendBa
 
             if hit_stop or trend_flipped or donchian_exit:
                 reason = "chandelier_stop" if hit_stop else "trend_flip" if trend_flipped else "donchian_exit"
-                fill_price = price * (1 - SLIPPAGE)
-                proceeds = qty * fill_price * (1 - TAKER_FEE)
+                fill_price = price * (1 - config.slippage)
+                proceeds = qty * fill_price * (1 - config.taker_fee)
                 cash += proceeds
                 trades.append(
                     {
@@ -80,8 +82,8 @@ def run_trend_backtest(signals_df: pd.DataFrame, config: TrendConfig) -> TrendBa
                     buy_qty = min(qty_by_risk, qty_by_cap)
 
                     if buy_qty > 0:
-                        fill_price = price * (1 + SLIPPAGE)
-                        cost = buy_qty * fill_price * (1 + TAKER_FEE)
+                        fill_price = price * (1 + config.slippage)
+                        cost = buy_qty * fill_price * (1 + config.taker_fee)
                         if cost <= cash:
                             cash -= cost
                             qty = buy_qty
@@ -127,6 +129,8 @@ def sweep_trend_params(
                     risk_per_trade_pct=base_config.risk_per_trade_pct,
                     max_position_pct=base_config.max_position_pct,
                     starting_capital=base_config.starting_capital,
+                    taker_fee=base_config.taker_fee,
+                    slippage=base_config.slippage,
                 )
                 result = run_trend_backtest(signals, cfg)
                 m = result.metrics

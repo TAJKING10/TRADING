@@ -41,6 +41,8 @@ def cmd_backtest(args) -> None:
         take_profit_pct=settings.take_profit_pct,
         position_pct=settings.max_position_pct,
         starting_capital=settings.capital_allocation_usdt,
+        taker_fee=settings.taker_fee_pct,
+        slippage=settings.slippage_pct,
     )
     bt = run_backtest(result.oos_predictions, config)
     logger.info("Dev-OOS backtest (fees+slippage, default thresholds): %s", bt.metrics)
@@ -61,6 +63,8 @@ def cmd_backtest(args) -> None:
             take_profit_pct=settings.take_profit_pct,
             position_pct=settings.max_position_pct,
             starting_capital=settings.capital_allocation_usdt,
+            taker_fee=settings.taker_fee_pct,
+            slippage=settings.slippage_pct,
         )
         honest = run_backtest(result.holdout_predictions, honest_config)
         logger.info(
@@ -87,6 +91,8 @@ def cmd_trend_backtest(args) -> None:
         risk_per_trade_pct=settings.risk_per_trade_pct,
         max_position_pct=settings.max_position_pct,
         starting_capital=settings.capital_allocation_usdt,
+        taker_fee=settings.taker_fee_pct,
+        slippage=settings.slippage_pct,
     )
 
     sweep = sweep_trend_params(dev_df, base_config)
@@ -107,6 +113,8 @@ def cmd_trend_backtest(args) -> None:
         risk_per_trade_pct=settings.risk_per_trade_pct,
         max_position_pct=settings.max_position_pct,
         starting_capital=settings.capital_allocation_usdt,
+        taker_fee=settings.taker_fee_pct,
+        slippage=settings.slippage_pct,
     )
     honest = run_trend_backtest(best_signals_holdout, honest_cfg)
     logger.info(
