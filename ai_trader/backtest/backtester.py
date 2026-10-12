@@ -141,7 +141,15 @@ def _compute_metrics(equity_curve: pd.DataFrame, trades: list, starting_capital:
     max_drawdown = drawdown.min()
 
     total_return = equity.iloc[-1] / starting_capital - 1
-    sharpe = (returns.mean() / returns.std() * np.sqrt(365 * 24 * 4)) if returns.std() > 0 else 0.0
+
+    # Annualization factor must match the ACTUAL bar interval, not assume one.
+    # This used to hardcode sqrt(365*24*4) -- correct only for 15-minute bars --
+    # and got applied uniformly to 4h/1d trend-strategy equity curves too,
+    # overstating every Sharpe ratio by 4x (4h bars) to ~9.8x (1d bars).
+    # Derive it from the equity curve's own timestamps instead.
+    bar_seconds = equity_curve["timestamp"].diff().dt.total_seconds().median()
+    periods_per_year = (365 * 24 * 3600) / bar_seconds if bar_seconds and bar_seconds > 0 else 365 * 24 * 4
+    sharpe = (returns.mean() / returns.std() * np.sqrt(periods_per_year)) if returns.std() > 0 else 0.0
 
     sell_trades = [t for t in trades if t["side"] == "sell"]
     wins = [t for t in sell_trades if t["pnl_pct"] > 0]
