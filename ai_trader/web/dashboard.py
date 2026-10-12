@@ -28,6 +28,13 @@ TIER_LABELS = {
 # Candle hours per horizon — must match HORIZONS in ai_trader/scan/run_scan.py.
 HORIZON_HOURS = {"near": 4, "far": 24}
 
+# Display-only labels. The internal horizon key stays "near"/"far" (Supabase
+# columns, data-horizon JS matching, scan_data) — only what's SHOWN changes.
+# "near"/"far" as display text collided with the real coin ticker NEAR
+# (NEAR Protocol) badly enough that a user nearly bought BTC thinking a
+# "NEAR" badge meant the NEAR Protocol coin — this exists to prevent that.
+HORIZON_DISPLAY_LABELS = {"near": "4H", "far": "1D"}
+
 
 def _classify_tier(data: dict) -> str:
     if data.get("status") != "ok":
@@ -65,7 +72,7 @@ def _horizon_card(base: str, horizon_name: str, data: dict) -> str:
                    "error": "Scan error"}.get(status, status)
         return f"""
         <div class="horizon-card muted" data-tier="none">
-          <div class="horizon-title">{horizon_name.upper()}</div>
+          <div class="horizon-title">{HORIZON_DISPLAY_LABELS.get(horizon_name, horizon_name.upper())}</div>
           <div class="na">— {html.escape(str(reason))} —</div>
         </div>"""
 
@@ -98,7 +105,7 @@ def _horizon_card(base: str, horizon_name: str, data: dict) -> str:
 
     return f"""
     <div class="horizon-card" data-tier="{tier}">
-      <div class="horizon-title">{horizon_name.upper()} <span class="badge {badge_class}">{badge_text}</span></div>
+      <div class="horizon-title">{HORIZON_DISPLAY_LABELS.get(horizon_name, horizon_name.upper())} <span class="badge {badge_class}">{badge_text}</span></div>
       <div class="tier" style="color:{tier_color}">{tier_label}</div>
       <div class="live-status" style="color:{live_color}">{live_label}</div>
       <div class="price">{price_str}</div>
@@ -275,7 +282,7 @@ def generate_dashboard_html(scan_data: dict) -> str:
 </head>
 <body>
   <h1>Trading signal dashboard</h1>
-  <div class="meta">Generated {generated_at} · "near" = 4h candles, "far" = 1d candles</div>
+  <div class="meta">Generated {generated_at} · "4H" = 4-hour candles, "1D" = daily candles (not the NEAR Protocol coin — "near"/"far" are internal timeframe names, renamed here to avoid that mix-up)</div>
   <div class="disclaimer">
     <strong>Read before trading on any of this:</strong> every number here comes from a real backtest where
     parameters were tuned on one slice of history and then checked against a holdout slice the tuning never
