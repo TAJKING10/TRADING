@@ -82,6 +82,8 @@ Files: `ai_trader/features/trend_signals.py` (indicators),
 | `f45d911` | **Bug (the big one): same-candle execution.** A breakout confirmed at bar i's close was filling at that same close — a price only knowable after the fact. Chandelier stops had the same issue, plus only checked the close (missed intrabar touches). **Fix:** 3-phase fill model — entries/trend-flip/Donchian exits confirm at close, fill at next bar's OPEN; chandelier stop is a standing order checked INTRABAR against each bar's low, gap-aware (fills at open if gapped through). Also renamed dashboard "near"/"far" labels to "4H"/"1D" (a user nearly bought BTC thinking a "NEAR" badge meant the NEAR Protocol coin) | 3 new tests (next-open fill, intrabar stop trigger, gap-aware fill). Controlled before/after on real ACT/USDT 4h data (same params, same fetched df): return -6.62%→-3.8%, same 3 trades. 10/10 tests passing at this point. |
 | `d090aef` | **Bug: Sharpe annualization hardcoded to 15-minute bars** (`sqrt(365*24*4)`), applied uniformly to 4h/1d trend-strategy data too. Overstated every Sharpe by 4x (4h) to ~9.8x (1d), directly affecting the `Sharpe≥0.5` validation bar. **Fix:** derive periods-per-year from the equity curve's actual median bar spacing. | 2 new tests. Verified: ACT/4h Sharpe -27.47→-6.26 on identical data. 12/12 tests passing. |
 | `b1838c5` | README was describing the pre-session state (Binance, 15 coins, 6h cadence). Synced with reality; added explicit "not done yet" scope list. Added EMA/ATR no-lookahead regression test. | 13/13 tests passing (current total) |
+| `4b9247a` | Added `HANDOFF.md` (this file) | — |
+| `30e1d5d` | **Bug: scan workflow's `git push` had no resilience to `origin/main` advancing during the 15-20+ min scan run.** Discovered when scan #5's backtest succeeded cleanly (21m32s, zero errors) but the final push was rejected (non-fast-forward) because other commits landed while it ran. **Fix:** `git pull --rebase` + retry up to 5x before giving up, in the "Commit updated dashboard" step. | Confirmed root cause via Actions log (non-fast-forward rejection, not a Python error); re-triggered as scan #6 to verify the fix |
 
 **Additional controlled before/after validation** (not a commit, done as
 verification): same fetched historical data run through pre-fix vs
@@ -239,35 +241,43 @@ anywhere near the old hardcoded 15-min value.
 
 ---
 
-## 12. Exact current state — VERIFIED at end of session
+## 12. Exact current state — VERIFIED, updated after scan #5/#6
 
 **Git:**
 - Branch: `main`
-- Latest commit (local AND origin, confirmed identical): `b1838c53fd2ed3242286614d96f72cf989bc0e9b` — "Sync README with reality, add EMA/ATR no-lookahead regression test"
+- Latest commit (local AND origin, confirmed identical): `30e1d5d` — "Fix scan workflow: git push had no resilience to origin/main moving mid-run"
 - Working tree: clean, 0 uncommitted changes, 0 commits ahead/behind origin.
 
-**Tests:** 13/13 passing (`pytest tests/ -v`, confirmed at commit `b1838c5`).
+**Tests:** 13/13 passing (`pytest tests/ -v`, confirmed at commit `b1838c5`; no test-affecting changes since).
 
-**GitHub Actions scan runs** (as of last check):
-- Run #1 (commit `20ec0a9`-era, before KuCoin fix): **FAILED** (38s, Binance HTTP 451) — this was the original bug discovery.
+**GitHub Actions scan runs** (updated):
+- Run #1 (commit `20ec0a9`-era, before KuCoin fix): **FAILED** (38s, Binance HTTP 451) — the original bug discovery.
 - Run #2: SUCCESS (16m2s) — first successful KuCoin-based run.
-- Run #3: SUCCESS (15m49s) — includes charts + hourly cron + horizon-aware scoring.
-- Run #4 (commit `091ed29`): SUCCESS (15m19s) — includes per-trade logging, BTC correlation, reliability panel. **This is what the live site currently reflects** (`generated_at: 2026-10-12T23:19:19`, 431 coins — confirmed via direct fetch of the live `scan_results.json`).
-- Run #5 (commit `f45d911`, fill-timing fix only — does NOT include the Sharpe fix from `d090aef` or the README changes from `b1838c5`): **status at end of session: still IN PROGRESS** (~13+ min elapsed when last checked). **Not confirmed complete.**
-- Run #6: **not yet triggered.** Plan was to trigger it once #5 finished, at a commit including the Sharpe fix (`d090aef` or later) — this did not happen before the session ended.
+- Run #3: SUCCESS (15m49s) — charts + hourly cron + horizon-aware scoring.
+- Run #4 (commit `091ed29`): SUCCESS (15m19s) — per-trade logging, BTC correlation, reliability panel. Live site served this data for a while.
+- Run #5 (commit `f45d911`): **FAILED, but not a code bug.** The scan step itself succeeded in 21m32s with zero errors — the fill-timing fix ran correctly at full scale. The failure was entirely in the final `git push`: `origin/main` had advanced during the 20+ min run (concurrent pushes: Sharpe fix, README, HANDOFF.md), so the plain non-retrying push was rejected. **Fixed in `30e1d5d`** — the commit step now does `git pull --rebase` + retry (up to 5x) before giving up.
+- Run #6 (commit `30e1d5d`, includes fill-timing + Sharpe + 4H/1D label + the git-retry fix): dispatched, result **pending — check `https://github.com/TAJKING10/TRADING/actions` for current status before doing anything else.**
 
-**⚠️ Important gap: the live dashboard has NOT yet been verified with the fill-timing fix, the Sharpe fix, or the 4H/1D label fix applied at full scale.** Everything in §4's bug fixes is verified correct via unit tests and controlled same-data comparisons on a handful of coins — but not yet via a complete, successful production scan using the latest code.
+**If Run #6 succeeded:** the fill-timing fix, Sharpe fix, and label fix are
+now FULLY verified at production scale, not just via unit tests. Pull
+`scan_results.json` and Supabase row counts to get fresh tier counts
+(last known pre-fix baseline: 0 Strong, 0 Moderate, 2 High-risk, 860
+No-signal, out of 862 slots — the Sharpe fix could shift this).
 
-**Supabase (verified via direct query):**
-- `scans`: 3 rows, latest `generated_at` = `2026-10-12 23:19:19` (matches Run #4, i.e. still the pre-fill-timing-fix data).
-- `coin_signals`: 621 rows.
-- `backtest_trades`: 1,506 rows (confirms per-trade logging works at scale).
-- `signal_outcomes`: 0 rows (expected — needs more scan cycles).
+**If Run #6 also failed:** check whether it's the same git-push race (the
+retry fix not working as intended — investigate why) or a new/different
+error. Don't just re-trigger blindly; read the actual logs first.
 
-**Live site** (https://tradingcryptobytoto.vercel.app/): serving Run #4's
-data (431 coins, generated `2026-10-12T23:19:19`). Does NOT yet reflect the
-fill-timing fix, Sharpe fix, or label rename — those are only in the
-codebase, not yet in a completed production scan.
+**Supabase (as of before run #6):**
+- `scans`: 3 rows, latest `generated_at` = `2026-10-12 23:19:19` (Run #4's data).
+- `coin_signals`: 621 rows. `backtest_trades`: 1,506 rows (confirms per-trade logging works at scale). `signal_outcomes`: 0 rows (expected — needs more scan cycles to accumulate scored outcomes).
+- These numbers will be higher after Run #6 lands — re-query before trusting any figure above as current.
+
+**Live site** (https://tradingcryptobytoto.vercel.app/): was serving Run
+#4's data (pre-fill-timing-fix, pre-Sharpe-fix, "NEAR"/"FAR" labels) as of
+this update. **Re-check after confirming Run #6's outcome** — don't assume
+the live site reflects the latest code without verifying `scan_results.json`'s
+`generated_at` timestamp first.
 
 ---
 
