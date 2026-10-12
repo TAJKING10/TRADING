@@ -138,6 +138,25 @@ def test_no_lookahead_in_donchian_channel():
     )
 
 
+def test_no_lookahead_in_ema_and_atr():
+    """EMA (trend filter) and ATR (stop sizing) must also depend only on
+    past/current bars. ewm-based indicators are lookahead-safe by
+    construction (each value is a function of prior values + the current
+    bar only), but this locks that in as a regression guard rather than
+    assuming it."""
+    df = _synthetic_ohlcv()
+    signals_a = compute_trend_signals(df, entry_lookback=10, exit_lookback=5)
+
+    df_b = df.copy()
+    df_b.loc[df_b.index[-1], "close"] = 999999.0
+    df_b.loc[df_b.index[-1], "high"] = 999999.0
+    df_b.loc[df_b.index[-1], "low"] = 999999.0
+    signals_b = compute_trend_signals(df_b, entry_lookback=10, exit_lookback=5)
+
+    pd.testing.assert_series_equal(signals_a["ema_slow"].iloc[:-1], signals_b["ema_slow"].iloc[:-1])
+    pd.testing.assert_series_equal(signals_a["atr"].iloc[:-1], signals_b["atr"].iloc[:-1])
+
+
 def _hand_built_df(rows: list[dict]) -> pd.DataFrame:
     """Minimal hand-built signals_df for precise control over fill timing,
     bypassing compute_trend_signals entirely."""

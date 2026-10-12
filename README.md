@@ -4,7 +4,8 @@ A research + execution toolkit for Kraken crypto trading: data pipeline, an
 ML classifier kept for research/comparison, a rule-based trend-following
 strategy (Donchian breakout + EMA filter) that's what `run`/`signal`/`scan`
 actually use live, a persistent risk/kill-switch layer, dry-run-safe order
-execution, a daily WhatsApp digest, and a multi-coin dashboard.
+execution, a daily WhatsApp digest, and a multi-coin dashboard with a
+Supabase-backed prediction history.
 
 The ML classifier (`train`/`backtest` commands) failed honest holdout
 validation (see below) and is **not** used by the live loop or daily
@@ -16,15 +17,32 @@ baseline, not because it's trusted with real signals.
 
 Every backtest number in this repo comes from a strict methodology: parameters
 are tuned on one slice of history ("dev"), then checked against a holdout
-slice that tuning never saw. As of the last scan, **0 of 15 coins across 2
-timeframes showed a validated edge over simple buy-and-hold** — active
-trading lost to just holding, because the test period was a strong bull run
-and stop-losses/breakout exits gave back gains that holding would have kept.
-That's the honest, current state of the signal quality. The dashboard will
-say "NO VALIDATED EDGE" until a strategy actually earns a "VALIDATED EDGE"
-label by beating buy-and-hold on data it was never tuned on. Don't trust a
-"VALIDATED EDGE" label blindly either — re-check it periodically, markets
-change regime.
+slice that tuning never saw. Costs are modeled at Kraken's real base-tier
+spot taker fee (0.80%, not a discount rate) plus slippage, on both entry and
+exit. Fills are timed realistically — a signal confirmed at a candle's close
+executes at the *next* candle's open, not the same close; the chandelier
+stop is checked intrabar (gap-aware) since it's a standing order, not a
+close-confirmed signal.
+
+As of the last full scan, **0 of 862 coin/horizon slots across the entire
+scanned Kraken universe (431 coins) showed a validated edge over simple
+buy-and-hold.** That's the honest, current state of the signal quality —
+see the dashboard's live "Statistical reliability" panel for current counts,
+including how many coins are highly correlated with BTC (a correlated group
+moving together isn't independent evidence, however many coins are in it).
+The dashboard will say "NO VALIDATED EDGE" until a strategy actually earns
+a "VALIDATED EDGE" label by beating buy-and-hold on data it was never tuned
+on. Don't trust a "VALIDATED EDGE" label blindly either — re-check it
+periodically, markets change regime.
+
+**What this system has not yet done, to be explicit about scope:**
+walk-forward validation across multiple market periods (currently a single
+85/15 split), a KuCoin-vs-Kraken historical price divergence check, a
+portfolio-level risk model (each coin is still evaluated independently),
+forward paper trading, or a head-to-head comparison against the ML model
+under identical validation standards. None of this is connected to real
+money — `run`/`signal` exist as a separate, unconnected code path (see
+below) and require you to explicitly supply API keys and flip `DRY_RUN`.
 
 **DRY_RUN=true by default.** With dry-run on, the bot reads real balances
 and prices (if you give it API keys) but never sends a real order — it only
@@ -36,17 +54,25 @@ logs/reports what it *would* do. Flip `DRY_RUN=false` only once you've run
 ```
 ai_trader/
   config/      settings.py — all behavior is controlled via .env
-  data/        Kraken (live prices/execution) + Binance (deep training history)
+  data/        Kraken (live prices/execution) + KuCoin (deep training history —
+               not Binance, which geo-blocks GitHub Actions' runner IPs)
   features/    technical indicators + trend-following signals
   model/       LightGBM direction classifier, walk-forward + holdout training
-  backtest/    honest backtesters (real fees+slippage) for both strategies
+  backtest/    honest backtesters (real Kraken fees+slippage, realistic fill
+               timing — next-open fills, intrabar/gap-aware stops) for both
+               strategies
   risk/        position sizing + persistent kill switch
   execution/   order placement wrapper (precision checks, dry-run)
   core/        live trading loop, daily digest, WhatsApp notifier, smoke test
-  scan/        multi-coin universe scanner
-  web/         static dashboard generator
+  scan/        multi-coin universe scanner — dynamically resolves every
+               Kraken/USD pair with KuCoin/USDT history (~431 coins), pushes
+               results + per-trade logs + BTC correlation to Supabase
+  web/         static dashboard generator — tiers, filters, price sparklines,
+               live track record, statistical reliability panel
 site/          generated dashboard (index.html + scan_results.json) — this is
                what gets deployed to Vercel
+tests/         pytest suite for the backtester (fill timing, no-lookahead,
+               Sharpe annualization, aggregate/trade-log reconciliation)
 ```
 
 ## Local setup
@@ -70,6 +96,19 @@ cp .env.example .env              # defaults are safe (dry-run, no keys needed f
 | `python main.py smoke-test` | Validates order precision/kill-switch plumbing, no real orders | Yes |
 | `python main.py run` | Starts the live loop (dry-run or real, per `.env`) | Yes |
 | `python main.py reset-risk` | Clears a tripped kill switch after you've investigated why | No |
+
+## Running tests
+
+```bash
+pip install -r requirements-dev.txt
+pytest tests/ -v
+```
+
+Tests run against a hand-built deterministic synthetic price series, not
+live data — no network access needed, same result every run. Covers fill
+timing (next-open fills, intrabar/gap-aware stops), no-lookahead checks on
+every indicator, Sharpe annualization, and that aggregate metrics
+reconcile exactly with the per-trade log.
 
 ## Getting Kraken API keys
 
@@ -95,21 +134,35 @@ on your own machine (or a VPS later), because it needs to hold credentials
 and persist state continuously, which a public static host can't do safely.
 
 1. Push this repo to GitHub (`.env` is gitignored — your keys never leave
-   your machine).
+   your machine). The repo must be **public** on the Hobby plan — Vercel
+   blocks auto-deploy for commits from an author who isn't a recognized
+   project collaborator on a private repo.
 2. In Vercel: "Add New Project" → import the GitHub repo. Framework preset
    "Other" is fine — `vercel.json` already points Vercel at the `site/`
    folder as static output, so no build step runs on Vercel at all.
-3. `.github/workflows/scan.yml` re-runs the scan every 6 hours (and on-demand
-   via the Actions tab's "Run workflow" button), commits the refreshed
-   `site/` folder back to `main`, and Vercel auto-redeploys on every push.
-   This workflow needs no secrets — it only reads public market data.
+3. `.github/workflows/scan.yml` re-runs the scan **every hour** (free on
+   GitHub Actions for public repos; also runnable on-demand via the Actions
+   tab's "Run workflow" button), commits the refreshed `site/` folder back
+   to `main`, and Vercel auto-redeploys on every push. This workflow needs
+   no secrets for the scan itself — only public market data is read.
 
-**Known risk:** Binance (used for deep training history) occasionally
-geo-blocks certain cloud IP ranges, which could include GitHub's hosted
-runners. If the scheduled scan's Actions log shows connection errors instead
-of real data, go to the repo's Settings → Secrets and variables → Actions →
-Variables and add `TRAINING_DATA_EXCHANGE` set to another exchange (e.g.
-`okx` or `bybit`) — no code change needed.
+**Training data exchange:** uses KuCoin, not Binance — Binance returns
+HTTP 451 and geo-blocks GitHub Actions' runner IPs. If KuCoin ever has the
+same issue, override via the repo's Settings → Secrets and variables →
+Actions → Variables, adding `TRAINING_DATA_EXCHANGE` set to another
+ccxt-supported exchange — no code change needed. Same mechanism exists for
+`TAKER_FEE_PCT`/`SLIPPAGE_PCT` if your Kraken account is on a different fee
+tier than the base rate this defaults to.
+
+## Optional: Supabase (prediction history + live track record)
+
+Without Supabase configured, `scan` still works — it just skips history
+sync and the dashboard's live track-record/reliability panels show no data.
+To enable it: create a Supabase project, and set `SUPABASE_URL` +
+`SUPABASE_SERVICE_ROLE_KEY` (repo secrets for the GitHub Actions workflow,
+or your local `.env`). The service-role key is server-side only — never
+put it in client code or commit it. The dashboard embeds a separate
+*publishable* key for read-only browser queries, which is safe to expose.
 
 ## Safety notes
 
