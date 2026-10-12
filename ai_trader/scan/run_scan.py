@@ -93,6 +93,7 @@ def _scan_one(binance, kraken, coin: dict, horizon: dict, base_config: TrendConf
         "live_price": float(last["close"]),
         "live_status": live_status,
         "donchian_breakout_level": float(last["donchian_high"]) if pd.notna(last["donchian_high"]) else None,
+        "atr": float(last["atr"]) if pd.notna(last["atr"]) else None,
         "n_candles": len(df),
     }
 

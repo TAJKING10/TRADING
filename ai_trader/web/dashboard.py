@@ -13,6 +13,49 @@ STATUS_LABELS = {
     "NO_SIGNAL": ("⚪ No signal", "#6e7781"),
 }
 
+# Tier is computed purely from objective backtest numbers already produced by
+# the scan — not a personal call. "High risk / high reward" means exactly
+# that: live momentum exists but the holdout backtest did NOT validate an
+# edge, so there is no evidence behind it beyond the current breakout itself.
+TIER_LABELS = {
+    "strong": ("🟩 STRONG — validated edge", "#1a7f37"),
+    "moderate": ("🟨 MODERATE — validated edge", "#9a6700"),
+    "high_risk": ("🟧 HIGH RISK / HIGH REWARD — momentum, unproven edge", "#bf3989"),
+    "none": ("⬜ NO SIGNAL", "#6e7781"),
+}
+
+# Candle hours per horizon — must match HORIZONS in ai_trader/scan/run_scan.py.
+HORIZON_HOURS = {"near": 4, "far": 24}
+
+
+def _classify_tier(data: dict) -> str:
+    if data.get("status") != "ok":
+        return "none"
+    m = data["holdout_metrics"]
+    if data["edge_validated"]:
+        strong = (
+            m.get("sharpe_annualized", 0) >= 1.0
+            and m.get("win_rate_pct", 0) >= 50
+            and m.get("num_trades", 0) >= 10
+        )
+        return "strong" if strong else "moderate"
+    if data["live_status"] == "BREAKOUT_ACTIVE":
+        return "high_risk"
+    return "none"
+
+
+def _format_price(price: float) -> str:
+    decimals = 2 if price >= 100 else 4 if price >= 1 else 6
+    return f"${price:,.{decimals}f}"
+
+
+def _format_hours(hours) -> str:
+    if hours is None:
+        return "—"
+    if hours < 48:
+        return f"~{hours:.0f}h"
+    return f"~{hours / 24:.1f}d"
+
 
 def _horizon_card(base: str, horizon_name: str, data: dict) -> str:
     status = data.get("status")
@@ -20,7 +63,7 @@ def _horizon_card(base: str, horizon_name: str, data: dict) -> str:
         reason = {"insufficient_data": "Not enough history yet", "no_signal": "No tradable setups in test data",
                    "error": "Scan error"}.get(status, status)
         return f"""
-        <div class="horizon-card muted">
+        <div class="horizon-card muted" data-tier="none">
           <div class="horizon-title">{horizon_name.upper()}</div>
           <div class="na">— {html.escape(str(reason))} —</div>
         </div>"""
@@ -31,12 +74,31 @@ def _horizon_card(base: str, horizon_name: str, data: dict) -> str:
     badge_text = "VALIDATED EDGE" if validated else "NO VALIDATED EDGE"
     live_label, live_color = STATUS_LABELS.get(data["live_status"], (data["live_status"], "#6e7781"))
     price = data["live_price"]
-    decimals = 2 if price >= 100 else 4 if price >= 1 else 6
-    price_str = f"${price:,.{decimals}f}"
+    price_str = _format_price(price)
+
+    tier = _classify_tier(data)
+    tier_label, tier_color = TIER_LABELS[tier]
+
+    # Real trailing-stop distance from THIS strategy's own chandelier exit —
+    # only meaningful if a breakout is active right now (i.e. you'd be
+    # entering at ~live price). No fixed take-profit exists in this
+    # strategy — it exits on trend flip / chandelier stop / Donchian break,
+    # so we don't fabricate a take-profit number.
+    atr = data.get("atr")
+    chandelier_mult = data["params"]["chandelier_mult"]
+    if atr is not None and data["live_status"] == "BREAKOUT_ACTIVE":
+        stop_price = price - chandelier_mult * atr
+        stop_pct = (price - stop_price) / price * 100
+        stop_row = f"""
+        <tr><td>Trailing stop (chandelier)</td><td>{_format_price(stop_price)} (-{stop_pct:.1f}%)</td></tr>"""
+    else:
+        stop_row = """
+        <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>"""
 
     return f"""
-    <div class="horizon-card">
+    <div class="horizon-card" data-tier="{tier}">
       <div class="horizon-title">{horizon_name.upper()} <span class="badge {badge_class}">{badge_text}</span></div>
+      <div class="tier" style="color:{tier_color}">{tier_label}</div>
       <div class="live-status" style="color:{live_color}">{live_label}</div>
       <div class="price">{price_str}</div>
       <table class="metrics">
@@ -46,14 +108,18 @@ def _horizon_card(base: str, horizon_name: str, data: dict) -> str:
         <tr><td>Max drawdown</td><td>{m['max_drawdown_pct']:.2f}%</td></tr>
         <tr><td>Trades (holdout)</td><td>{m['num_trades']}</td></tr>
         <tr><td>Win rate</td><td>{m['win_rate_pct']:.1f}%</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>{_format_hours(m.get('avg_holding_hours'))}</td></tr>
+        {stop_row}
       </table>
     </div>"""
 
 
 def _coin_section(base: str, horizons: dict) -> str:
     cards = "".join(_horizon_card(base, name, data) for name, data in horizons.items())
+    tiers = {_classify_tier(data) for data in horizons.values()}
+    best_tier = next((t for t in ("strong", "moderate", "high_risk", "none") if t in tiers), "none")
     return f"""
-    <section class="coin">
+    <section class="coin" data-best-tier="{best_tier}">
       <h2>{html.escape(base)}</h2>
       <div class="horizon-row">{cards}</div>
     </section>"""
@@ -106,6 +172,15 @@ def generate_dashboard_html(scan_data: dict) -> str:
   .pos {{ color: #1a7f37; }}
   .neg {{ color: #d1242f; }}
   .na {{ color: #6e7781; font-style: italic; }}
+  .na-cell {{ color: #6e7781; font-style: italic; font-size: 0.8rem; }}
+  .tier {{ font-size: 0.8rem; font-weight: 600; margin-bottom: 6px; }}
+  .filter-bar {{ display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }}
+  .filter-btn {{
+    font: inherit; font-size: 0.8rem; font-weight: 600; padding: 6px 14px; border-radius: 999px;
+    border: 1px solid rgba(110,119,129,0.4); background: transparent; color: CanvasText; cursor: pointer;
+  }}
+  .filter-btn.active {{ background: rgba(9,105,218,0.15); border-color: #0969da; color: #0969da; }}
+  .coin.hidden, .horizon-card.hidden {{ display: none; }}
   .track-record {{ margin-bottom: 28px; }}
   .track-record h2 {{ font-size: 1.1rem; margin-bottom: 10px; }}
   .track-record table {{ width: 100%; border-collapse: collapse; font-size: 0.85rem; }}
@@ -129,6 +204,14 @@ def generate_dashboard_html(scan_data: dict) -> str:
     <h2>Live track record (Supabase)</h2>
     <div id="track-record-body" class="loading">Loading signal accuracy history&hellip;</div>
   </section>
+
+  <div class="filter-bar" id="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="strong">🟩 Strong</button>
+    <button class="filter-btn" data-filter="moderate">🟨 Moderate</button>
+    <button class="filter-btn" data-filter="high_risk">🟧 High risk / high reward</button>
+    <button class="filter-btn" data-filter="none">⬜ No signal</button>
+  </div>
 
   {coins_html}
 
@@ -174,6 +257,32 @@ def generate_dashboard_html(scan_data: dict) -> str:
       function escapeHtmlFallback(s) {{
         return String(s).replace(/[&<>"']/g, (c) => ({{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}}[c]));
       }}
+    }})();
+
+    (function() {{
+      const buttons = document.querySelectorAll("#filter-bar .filter-btn");
+      const cards = document.querySelectorAll(".horizon-card");
+      const coins = document.querySelectorAll(".coin");
+
+      function applyFilter(tier) {{
+        cards.forEach((card) => {{
+          card.classList.toggle("hidden", tier !== "all" && card.dataset.tier !== tier);
+        }});
+        coins.forEach((coin) => {{
+          const visible = Array.from(coin.querySelectorAll(".horizon-card")).some(
+            (c) => !c.classList.contains("hidden")
+          );
+          coin.classList.toggle("hidden", !visible);
+        }});
+      }}
+
+      buttons.forEach((btn) => {{
+        btn.addEventListener("click", () => {{
+          buttons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          applyFilter(btn.dataset.filter);
+        }});
+      }});
     }})();
   </script>
 </body>

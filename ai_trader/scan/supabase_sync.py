@@ -112,6 +112,8 @@ def push_scan(scan_data: dict, supabase_url: str, service_role_key: str) -> None
                 "holdout_sharpe": m.get("sharpe_annualized"),
                 "holdout_total_return_pct": m.get("total_return_pct"),
                 "n_candles": data["n_candles"],
+                "atr": data.get("atr"),
+                "avg_holding_hours": m.get("avg_holding_hours"),
             }
             resp = requests.post(f"{base_url}/rest/v1/coin_signals", headers=headers, json=row, timeout=_TIMEOUT_S)
             resp.raise_for_status()

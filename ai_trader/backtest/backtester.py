@@ -140,6 +140,13 @@ def _compute_metrics(equity_curve: pd.DataFrame, trades: list, starting_capital:
     wins = [t for t in sell_trades if t["pnl_pct"] > 0]
     win_rate = len(wins) / len(sell_trades) if sell_trades else 0.0
 
+    buy_trades = [t for t in trades if t["side"] == "buy"]
+    holding_hours = [
+        (sell["timestamp"] - buy["timestamp"]).total_seconds() / 3600
+        for buy, sell in zip(buy_trades, sell_trades)
+    ]
+    avg_holding_hours = round(sum(holding_hours) / len(holding_hours), 1) if holding_hours else None
+
     return {
         "total_return_pct": round(total_return * 100, 2),
         "max_drawdown_pct": round(max_drawdown * 100, 2),
@@ -147,4 +154,5 @@ def _compute_metrics(equity_curve: pd.DataFrame, trades: list, starting_capital:
         "num_trades": len(sell_trades),
         "win_rate_pct": round(win_rate * 100, 2),
         "final_equity": round(float(equity.iloc[-1]), 2),
+        "avg_holding_hours": avg_holding_hours,
     }
