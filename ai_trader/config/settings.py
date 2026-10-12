@@ -82,7 +82,7 @@ def load_settings() -> Settings:
 
     settings = Settings(
         exchange_name=os.getenv("EXCHANGE", "kraken").strip().lower(),
-        training_data_exchange_name=os.getenv("TRAINING_DATA_EXCHANGE", "binance").strip().lower(),
+        training_data_exchange_name=os.getenv("TRAINING_DATA_EXCHANGE", "kucoin").strip().lower(),
         api_key=os.getenv("API_KEY", ""),
         api_secret=os.getenv("API_SECRET", ""),
         use_testnet=_bool("USE_TESTNET", False),

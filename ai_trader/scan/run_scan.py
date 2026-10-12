@@ -31,9 +31,9 @@ def _buy_and_hold_return(df) -> float:
     return float(df["close"].iloc[-1] / df["close"].iloc[0] - 1)
 
 
-def _scan_one(binance, kraken, coin: dict, horizon: dict, base_config: TrendConfig) -> dict:
+def _scan_one(training_exchange, kraken, coin: dict, horizon: dict, base_config: TrendConfig) -> dict:
     df = fetch_historical(
-        binance, coin["binance_symbol"], horizon["timeframe"], lookback_days=horizon["lookback_days"]
+        training_exchange, coin["training_symbol"], horizon["timeframe"], lookback_days=horizon["lookback_days"]
     )
     if len(df) < 300:
         return {"status": "insufficient_data", "n_candles": len(df)}
@@ -100,11 +100,11 @@ def _scan_one(binance, kraken, coin: dict, horizon: dict, base_config: TrendConf
 
 def run_scan(settings: Settings) -> dict:
     kraken = make_exchange(settings)
-    binance = make_training_data_exchange(settings)
+    training_exchange = make_training_data_exchange(settings)
     kraken.load_markets()
-    binance.load_markets()
+    training_exchange.load_markets()
 
-    universe = resolve_universe(kraken, binance)
+    universe = resolve_universe(kraken, training_exchange)
     logger.info("Scanning %d coins x %d horizons", len(universe), len(HORIZONS))
 
     base_config = TrendConfig(
@@ -119,7 +119,7 @@ def run_scan(settings: Settings) -> dict:
         for horizon in HORIZONS:
             t0 = time.time()
             try:
-                result = _scan_one(binance, kraken, coin, horizon, base_config)
+                result = _scan_one(training_exchange, kraken, coin, horizon, base_config)
             except Exception as e:
                 logger.exception("Scan failed for %s/%s", coin["base"], horizon["name"])
                 result = {"status": "error", "error": str(e)}

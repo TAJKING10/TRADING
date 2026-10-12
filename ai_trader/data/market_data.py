@@ -43,8 +43,9 @@ def make_training_data_exchange(settings: Settings) -> ccxt.Exchange:
     """Deep-history exchange for training data only — never used for live prices/orders.
 
     Kraken's public OHLCV caps out around ~720 candles with no real historical paging,
-    so training data comes from TRAINING_DATA_EXCHANGE (Binance by default), which does
-    support deep pagination. No keys needed (public endpoint).
+    so training data comes from TRAINING_DATA_EXCHANGE (KuCoin by default — Binance
+    blocks GitHub Actions' datacenter IPs with HTTP 451), which does support deep
+    pagination. No keys needed (public endpoint).
     """
     return _build(settings.training_data_exchange_name)
 

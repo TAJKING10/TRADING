@@ -1,10 +1,11 @@
 """Which coins to scan: every coin that is BOTH liquid-enough to trade on
 Kraken (a real USD spot pair) AND has deep history on the training-data
-exchange (Binance) for honest backtesting. Dynamically resolved from both
-exchanges' live market lists every run — not a fixed list — so new Kraken
-listings get picked up automatically. Coins without Binance history are
-skipped rather than backtested dishonestly; stablecoins/fiat are excluded
-since their "price prediction" is meaningless by construction.
+exchange (TRAINING_DATA_EXCHANGE, KuCoin by default) for honest backtesting.
+Dynamically resolved from both exchanges' live market lists every run — not
+a fixed list — so new Kraken listings get picked up automatically. Coins
+without training-exchange history are skipped rather than backtested
+dishonestly; stablecoins/fiat are excluded since their "price prediction"
+is meaningless by construction.
 """
 import logging
 
@@ -19,7 +20,7 @@ EXCLUDED_BASES = {
 }
 
 
-def resolve_universe(kraken: ccxt.Exchange, binance: ccxt.Exchange) -> list[dict]:
+def resolve_universe(kraken: ccxt.Exchange, training_exchange: ccxt.Exchange) -> list[dict]:
     resolved = []
     skipped = 0
     for market in kraken.markets.values():
@@ -29,17 +30,17 @@ def resolve_universe(kraken: ccxt.Exchange, binance: ccxt.Exchange) -> list[dict
         if not base or base in EXCLUDED_BASES:
             continue
 
-        binance_symbol = f"{base}/USDT"
-        binance_market = binance.markets.get(binance_symbol)
-        if not binance_market or not binance_market.get("active") or not binance_market.get("spot"):
+        training_symbol = f"{base}/USDT"
+        training_market = training_exchange.markets.get(training_symbol)
+        if not training_market or not training_market.get("active") or not training_market.get("spot"):
             skipped += 1
             continue
 
-        resolved.append({"base": base, "kraken_symbol": f"{base}/USD", "binance_symbol": binance_symbol})
+        resolved.append({"base": base, "kraken_symbol": f"{base}/USD", "training_symbol": training_symbol})
 
     resolved.sort(key=lambda c: c["base"])
     logger.info(
-        "Universe: %d coins tradeable on Kraken/USD with Binance/USDT history (%d Kraken/USD pairs skipped — no Binance counterpart)",
+        "Universe: %d coins tradeable on Kraken/USD with training-exchange/USDT history (%d Kraken/USD pairs skipped — no counterpart)",
         len(resolved), skipped,
     )
     return resolved

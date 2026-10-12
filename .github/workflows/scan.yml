@@ -24,9 +24,10 @@ jobs:
       - name: Run scan (public market data only, no API keys needed)
         env:
           # Overridable in GitHub repo Settings -> Secrets and variables -> Actions -> Variables,
-          # without touching code — useful if Binance geo-blocks GitHub's runner IPs.
+          # without touching code. Binance blocks GitHub-runner IPs with HTTP 451
+          # (geo-restriction), so KuCoin is the default training-data exchange here.
           EXCHANGE: ${{ vars.EXCHANGE || 'kraken' }}
-          TRAINING_DATA_EXCHANGE: ${{ vars.TRAINING_DATA_EXCHANGE || 'binance' }}
+          TRAINING_DATA_EXCHANGE: ${{ vars.TRAINING_DATA_EXCHANGE || 'kucoin' }}
           # Set in repo Settings -> Secrets and variables -> Actions -> Secrets to enable
           # pushing scan history + accuracy tracking to Supabase. Safe to leave unset.
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
