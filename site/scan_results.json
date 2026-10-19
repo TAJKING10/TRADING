@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T21:18:36.376951+00:00",
+  "generated_at": "2026-10-18T23:56:29.537553+00:00",
   "horizons": [
     {
       "name": "near",
@@ -45,10 +45,10 @@
           "avg_holding_hours": 26.0
         },
         "buy_and_hold_pct": -4.87,
-        "live_price": 0.0893,
+        "live_price": 0.0922,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.0935,
-        "atr": 0.0011038725575836493,
+        "atr": 0.0012967297004407928,
         "n_candles": 999,
         "btc_correlation": 0.623,
         "trade_log": [
@@ -290,7 +290,7 @@
           "avg_holding_hours": 192.0
         },
         "buy_and_hold_pct": -21.39,
-        "live_price": 0.0893,
+        "live_price": 0.0922,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.1081,
         "atr": 0.0043717677487279515,
@@ -465,10 +465,10 @@
           "avg_holding_hours": 120.0
         },
         "buy_and_hold_pct": 2.32,
-        "live_price": 0.02898,
+        "live_price": 0.02988,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.03324,
-        "atr": 0.0007844817247722245,
+        "atr": 0.0008466245819150816,
         "n_candles": 999,
         "btc_correlation": 0.481,
         "trade_log": [
@@ -631,7 +631,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.653,
-        "elapsed_s": 1.1
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "insufficient_data",
@@ -664,7 +664,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -21.3,
-        "live_price": 146.5,
+        "live_price": 151.96,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 187.61,
         "atr": 10.539951485806402,
@@ -845,7 +845,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -42.11,
-        "live_price": 0.0051,
+        "live_price": 0.00524,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.00634,
         "atr": 0.000417829332621824,
@@ -1070,7 +1070,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.1
       }
     },
     "ACT": {
@@ -1092,10 +1092,10 @@
           "avg_holding_hours": 44.0
         },
         "buy_and_hold_pct": -6.13,
-        "live_price": 0.00846,
+        "live_price": 0.0087,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.00975,
-        "atr": 0.00016844924813609992,
+        "atr": 0.00018773496242181415,
         "n_candles": 999,
         "btc_correlation": 0.31,
         "trade_log": [
@@ -1338,7 +1338,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -41.29,
-        "live_price": 0.212708,
+        "live_price": 0.221099,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.259106,
         "atr": 0.015841655900191768,
@@ -1515,7 +1515,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.0
       }
     },
     "ADI": {
@@ -1726,7 +1726,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.4
       },
       "far": {
         "status": "ok",
@@ -1897,10 +1897,10 @@
           "avg_holding_hours": 32.0
         },
         "buy_and_hold_pct": -2.16,
-        "live_price": 0.7676,
+        "live_price": 0.7991,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.9045,
-        "atr": 0.02895109050158261,
+        "atr": 0.031301090501582605,
         "n_candles": 999,
         "btc_correlation": 0.677,
         "trade_log": [
@@ -2064,7 +2064,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.556,
-        "elapsed_s": 1.0
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "no_signal",
@@ -2371,7 +2371,7 @@
       "far": {
         "status": "insufficient_data",
         "n_candles": 0,
-        "elapsed_s": 0.1
+        "elapsed_s": 0.2
       }
     },
     "AIOZ": {
@@ -2399,7 +2399,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -26.31,
-        "live_price": 0.1017,
+        "live_price": 0.1046,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.1448,
         "atr": 0.014317453887045684,
@@ -2552,7 +2552,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.1
       }
     },
     "AIXBT": {
@@ -2574,10 +2574,10 @@
           "avg_holding_hours": 56.0
         },
         "buy_and_hold_pct": -10.72,
-        "live_price": 0.01788,
+        "live_price": 0.01845,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.0193,
-        "atr": 0.000275073521212498,
+        "atr": 0.0003157878069267838,
         "n_candles": 999,
         "btc_correlation": 0.505,
         "trade_log": [
@@ -2797,10 +2797,10 @@
           "avg_holding_hours": 792.0
         },
         "buy_and_hold_pct": 72.26,
-        "live_price": 0.6806,
+        "live_price": 0.7191,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.7916,
-        "atr": 0.06126734189526857,
+        "atr": 0.06286734189526857,
         "n_candles": 999,
         "btc_correlation": 0.538,
         "trade_log": [
@@ -2998,7 +2998,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.0
       }
     },
     "ALGO": {
@@ -3020,10 +3020,10 @@
           "avg_holding_hours": 36.0
         },
         "buy_and_hold_pct": 39.71,
-        "live_price": 0.10673,
+        "live_price": 0.11117,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.11599,
-        "atr": 0.0029211402226118266,
+        "atr": 0.00320399736546897,
         "n_candles": 999,
         "btc_correlation": 0.722,
         "trade_log": [
@@ -3241,7 +3241,7 @@
           "avg_holding_hours": 168.0
         },
         "buy_and_hold_pct": -11.68,
-        "live_price": 0.10673,
+        "live_price": 0.11117,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.14623,
         "atr": 0.009978494336584142,
@@ -3422,7 +3422,7 @@
           "avg_holding_hours": 696.0
         },
         "buy_and_hold_pct": 6.64,
-        "live_price": 0.1364,
+        "live_price": 0.1413,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.2631,
         "atr": 0.016007161292036724,
@@ -3635,10 +3635,10 @@
           "avg_holding_hours": 120.0
         },
         "buy_and_hold_pct": -0.24,
-        "live_price": 0.002584,
+        "live_price": 0.002594,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.00288,
-        "atr": 9.536311830478108e-05,
+        "atr": 9.593454687620966e-05,
         "n_candles": 999,
         "btc_correlation": 0.396,
         "trade_log": [
@@ -3869,7 +3869,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -20.4,
-        "live_price": 0.00395,
+        "live_price": 0.00405,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.00496,
         "atr": 0.0003307325609977907,
@@ -3998,7 +3998,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.0
       }
     },
     "APE": {
@@ -4026,7 +4026,7 @@
           "avg_holding_hours": 408.0
         },
         "buy_and_hold_pct": 12.56,
-        "live_price": 0.135,
+        "live_price": 0.1422,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.191,
         "atr": 0.013285919818813594,
@@ -4207,7 +4207,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -28.53,
-        "live_price": 0.2562,
+        "live_price": 0.2641,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.3499,
         "atr": 0.032451851695301466,
@@ -4357,7 +4357,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.683,
-        "elapsed_s": 0.9
+        "elapsed_s": 0.8
       },
       "far": {
         "status": "ok",
@@ -4377,7 +4377,7 @@
           "avg_holding_hours": 180.0
         },
         "buy_and_hold_pct": -33.63,
-        "live_price": 0.7407,
+        "live_price": 0.7855,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.964,
         "atr": 0.0781332647120037,
@@ -4554,7 +4554,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.2
       }
     },
     "AR": {
@@ -4576,10 +4576,10 @@
           "avg_holding_hours": 46.4
         },
         "buy_and_hold_pct": 8.27,
-        "live_price": 3.598,
+        "live_price": 3.753,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 3.96,
-        "atr": 0.12744906224139624,
+        "atr": 0.13766334795568194,
         "n_candles": 999,
         "btc_correlation": 0.54,
         "trade_log": [
@@ -4845,7 +4845,7 @@
           "avg_holding_hours": 228.0
         },
         "buy_and_hold_pct": -1.49,
-        "live_price": 3.598,
+        "live_price": 3.753,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 5.649,
         "atr": 0.46954508644220516,
@@ -5074,10 +5074,10 @@
           "avg_holding_hours": 216.0
         },
         "buy_and_hold_pct": -19.7,
-        "live_price": 0.1773,
+        "live_price": 0.1858,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.203,
-        "atr": 0.01702015928195845,
+        "atr": 0.017098730710529877,
         "n_candles": 999,
         "btc_correlation": 0.629,
         "trade_log": [
@@ -5249,10 +5249,10 @@
           "avg_holding_hours": 40.0
         },
         "buy_and_hold_pct": 60.17,
-        "live_price": 0.04031,
+        "live_price": 0.04118,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.04397,
-        "atr": 0.0026016016705509982,
+        "atr": 0.002631601670550998,
         "n_candles": 999,
         "btc_correlation": 0.081,
         "trade_log": [
@@ -5858,7 +5858,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.3
+        "elapsed_s": 1.2
       },
       "far": {
         "status": "insufficient_data",
@@ -5871,7 +5871,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.708,
-        "elapsed_s": 0.9
+        "elapsed_s": 0.8
       },
       "far": {
         "status": "ok",
@@ -5891,7 +5891,7 @@
           "avg_holding_hours": 216.0
         },
         "buy_and_hold_pct": -6.25,
-        "live_price": 0.1097,
+        "live_price": 0.114,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.1463,
         "atr": 0.010725620569422055,
@@ -6068,7 +6068,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.4
+        "elapsed_s": 1.1
       }
     },
     "ARPA": {
@@ -6096,7 +6096,7 @@
           "avg_holding_hours": 336.0
         },
         "buy_and_hold_pct": -13.36,
-        "live_price": 0.00967,
+        "live_price": 0.00998,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.01677,
         "atr": 0.0008918200256163496,
@@ -6249,7 +6249,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.0
       }
     },
     "ARX": {
@@ -6268,7 +6268,7 @@
       "near": {
         "status": "insufficient_data",
         "n_candles": 0,
-        "elapsed_s": 0.2
+        "elapsed_s": 0.1
       },
       "far": {
         "status": "insufficient_data",
@@ -6295,10 +6295,10 @@
           "avg_holding_hours": 52.0
         },
         "buy_and_hold_pct": -5.84,
-        "live_price": 0.67956,
+        "live_price": 0.69999,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.71687,
-        "atr": 0.011684277390264718,
+        "atr": 0.013034991675979001,
         "n_candles": 999,
         "btc_correlation": 0.481,
         "trade_log": [
@@ -6481,7 +6481,7 @@
           "avg_holding_hours": 240.0
         },
         "buy_and_hold_pct": -36.06,
-        "live_price": 0.00568,
+        "live_price": 0.00582,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.00706,
         "atr": 0.0003629439771678056,
@@ -6669,10 +6669,10 @@
           "avg_holding_hours": 116.0
         },
         "buy_and_hold_pct": -2.11,
-        "live_price": 1.6322,
+        "live_price": 1.689,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 1.7582,
-        "atr": 0.03929175116612665,
+        "atr": 0.043013179737555224,
         "n_candles": 999,
         "btc_correlation": 0.638,
         "trade_log": [
@@ -6842,8 +6842,8 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -26.86,
-        "live_price": 1.6322,
-        "live_status": "NO_SIGNAL",
+        "live_price": 1.689,
+        "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 2.0825,
         "atr": 0.12456551602309737,
         "n_candles": 999,
@@ -7007,10 +7007,10 @@
           "avg_holding_hours": 40.0
         },
         "buy_and_hold_pct": 5.78,
-        "live_price": 0.3284,
+        "live_price": 0.32,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.4735,
-        "atr": 0.03766204421718554,
+        "atr": 0.038319187074328395,
         "n_candles": 999,
         "btc_correlation": 0.57,
         "trade_log": [
@@ -7204,10 +7204,10 @@
           "avg_holding_hours": 240.0
         },
         "buy_and_hold_pct": -25.82,
-        "live_price": 0.3284,
+        "live_price": 0.32,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.448,
-        "atr": 0.05605675086628845,
+        "atr": 0.05650675086628845,
         "n_candles": 999,
         "btc_correlation": 0.277,
         "trade_log": [
@@ -7532,7 +7532,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.3
+        "elapsed_s": 1.2
       },
       "far": {
         "status": "insufficient_data",
@@ -7545,7 +7545,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.795,
-        "elapsed_s": 0.8
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "ok",
@@ -7565,7 +7565,7 @@
           "avg_holding_hours": 180.0
         },
         "buy_and_hold_pct": -27.7,
-        "live_price": 9.369,
+        "live_price": 9.762,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 11.189,
         "atr": 0.6967453048031271,
@@ -7790,7 +7790,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 0.9
+        "elapsed_s": 1.1
       }
     },
     "AVNT": {
@@ -7825,10 +7825,10 @@
           "avg_holding_hours": 104.0
         },
         "buy_and_hold_pct": 1.24,
-        "live_price": 0.975,
+        "live_price": 1.01,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 1.073,
-        "atr": 0.022943492077864322,
+        "atr": 0.02515777779215004,
         "n_candles": 999,
         "btc_correlation": 0.458,
         "trade_log": [
@@ -7978,7 +7978,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.2
       },
       "far": {
         "status": "ok",
@@ -7998,7 +7998,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -28.77,
-        "live_price": 0.975,
+        "live_price": 1.01,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 1.271,
         "atr": 0.0818680538491256,
@@ -8161,10 +8161,10 @@
           "avg_holding_hours": 31.3
         },
         "buy_and_hold_pct": 6.5,
-        "live_price": 0.3938,
+        "live_price": 0.4001,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.4245,
-        "atr": 0.00568480169569606,
+        "atr": 0.005770515981410348,
         "n_candles": 999,
         "btc_correlation": 0.138,
         "trade_log": [
@@ -8458,7 +8458,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.0
       },
       "far": {
         "status": "insufficient_data",
@@ -8679,10 +8679,10 @@
           "avg_holding_hours": 84.0
         },
         "buy_and_hold_pct": 0.51,
-        "live_price": 0.17093,
+        "live_price": 0.1784,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.20695,
-        "atr": 0.011793751031108067,
+        "atr": 0.012370179602536637,
         "n_candles": 999,
         "btc_correlation": 0.523,
         "trade_log": [
@@ -8876,7 +8876,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -36.96,
-        "live_price": 0.17093,
+        "live_price": 0.1784,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.2227,
         "atr": 0.022261231589667693,
@@ -9027,10 +9027,10 @@
           "avg_holding_hours": 102.7
         },
         "buy_and_hold_pct": -1.12,
-        "live_price": 265.38,
+        "live_price": 276.18,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 281.64,
-        "atr": 5.259742308551811,
+        "atr": 5.982599451408954,
         "n_candles": 999,
         "btc_correlation": 0.61,
         "trade_log": [
@@ -9344,7 +9344,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -57.24,
-        "live_price": 265.38,
+        "live_price": 276.18,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 333.63,
         "atr": 16.603012889951234,
@@ -9590,7 +9590,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.544,
-        "elapsed_s": 0.8
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "insufficient_data",
@@ -9623,7 +9623,7 @@
           "avg_holding_hours": 120.0
         },
         "buy_and_hold_pct": -44.21,
-        "live_price": 0.01565,
+        "live_price": 0.01635,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.02048,
         "atr": 0.0015062324172027772,
@@ -9822,10 +9822,10 @@
           "avg_holding_hours": 36.0
         },
         "buy_and_hold_pct": -5.84,
-        "live_price": 0.006434,
+        "live_price": 0.006643,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.007193,
-        "atr": 0.0001247049758452262,
+        "atr": 0.0001393478329880833,
         "n_candles": 999,
         "btc_correlation": 0.654,
         "trade_log": [
@@ -10019,7 +10019,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -54.96,
-        "live_price": 0.006434,
+        "live_price": 0.006643,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.008919,
         "atr": 0.0007883872349715673,
@@ -10192,7 +10192,7 @@
       "near": {
         "status": "insufficient_data",
         "n_candles": 0,
-        "elapsed_s": 0.2
+        "elapsed_s": 0.1
       },
       "far": {
         "status": "insufficient_data",
@@ -10251,7 +10251,7 @@
           "avg_holding_hours": 432.0
         },
         "buy_and_hold_pct": -23.17,
-        "live_price": 0.00939,
+        "live_price": 0.00963,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01933,
         "atr": 0.0016603593281411212,
@@ -10404,7 +10404,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.0
       }
     },
     "BLZ": {
@@ -10453,10 +10453,10 @@
           "avg_holding_hours": 156.0
         },
         "buy_and_hold_pct": -8.14,
-        "live_price": 707.58,
+        "live_price": 722.15,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 723.49,
-        "atr": 6.899646730653232,
+        "atr": 7.911789587796086,
         "n_candles": 999,
         "btc_correlation": 0.828,
         "trade_log": [
@@ -10626,7 +10626,7 @@
           "avg_holding_hours": 768.0
         },
         "buy_and_hold_pct": -5.4,
-        "live_price": 707.58,
+        "live_price": 722.15,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 809.78,
         "atr": 21.26240006624596,
@@ -10952,7 +10952,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -51.97,
-        "live_price": 2.825e-06,
+        "live_price": 2.937e-06,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 4.101e-06,
         "atr": 2.5116785887462304e-07,
@@ -11128,10 +11128,10 @@
           "avg_holding_hours": 78.0
         },
         "buy_and_hold_pct": -2.69,
-        "live_price": 80837.1,
+        "live_price": 81969.0,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 82177.3,
-        "atr": 699.3208959789927,
+        "atr": 781.6280388361357,
         "n_candles": 999,
         "btc_correlation": 1.0,
         "trade_log": [
@@ -11305,7 +11305,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.0
       },
       "far": {
         "status": "ok",
@@ -11325,7 +11325,7 @@
           "avg_holding_hours": 696.0
         },
         "buy_and_hold_pct": -5.51,
-        "live_price": 80837.1,
+        "live_price": 81954.0,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 87446.7,
         "atr": 2125.221723253557,
@@ -11502,7 +11502,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.0
+        "elapsed_s": 1.2
       }
     },
     "BTR": {
@@ -11524,10 +11524,10 @@
           "avg_holding_hours": 4.0
         },
         "buy_and_hold_pct": -82.98,
-        "live_price": 0.04201,
+        "live_price": 0.04316,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.04907,
-        "atr": 0.0011264349084212546,
+        "atr": 0.0011857206227069692,
         "n_candles": 999,
         "btc_correlation": 0.176,
         "trade_log": [
@@ -11725,7 +11725,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.4
+        "elapsed_s": 1.2
       },
       "far": {
         "status": "insufficient_data",
@@ -11758,7 +11758,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -20.91,
-        "live_price": 3.516e-07,
+        "live_price": 3.585e-07,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 4.548e-07,
         "atr": 3.088561878893975e-08,
@@ -11911,7 +11911,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.0
       }
     },
     "C98": {
@@ -11939,7 +11939,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -57.61,
-        "live_price": 0.014259,
+        "live_price": 0.014886,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.019647,
         "atr": 0.0016101357686848343,
@@ -12100,7 +12100,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.727,
-        "elapsed_s": 0.9
+        "elapsed_s": 0.8
       },
       "far": {
         "status": "ok",
@@ -12120,7 +12120,7 @@
           "avg_holding_hours": 480.0
         },
         "buy_and_hold_pct": 10.55,
-        "live_price": 2.12,
+        "live_price": 2.186,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 2.449,
         "atr": 0.1417424291038406,
@@ -12551,7 +12551,7 @@
       "far": {
         "status": "insufficient_data",
         "n_candles": 144,
-        "elapsed_s": 0.1
+        "elapsed_s": 0.2
       }
     },
     "CAT": {
@@ -12559,7 +12559,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.689,
-        "elapsed_s": 1.0
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "insufficient_data",
@@ -12599,10 +12599,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -15.17,
-        "live_price": 0.003612,
+        "live_price": 0.003619,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.004148,
-        "atr": 0.0001058819020671537,
+        "atr": 0.00010859618778143943,
         "n_candles": 999,
         "btc_correlation": 0.114,
         "trade_log": [
@@ -12728,7 +12728,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.0
       },
       "far": {
         "status": "ok",
@@ -12748,10 +12748,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -52.97,
-        "live_price": 0.003612,
+        "live_price": 0.003619,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.004148,
-        "atr": 0.00031171046317557464,
+        "atr": 0.0003127818917470032,
         "n_candles": 999,
         "btc_correlation": 0.142,
         "trade_log": [
@@ -12929,7 +12929,7 @@
           "avg_holding_hours": 528.0
         },
         "buy_and_hold_pct": -15.85,
-        "live_price": 0.0781,
+        "live_price": 0.0803,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.1004,
         "atr": 0.009455910845483563,
@@ -13104,10 +13104,10 @@
           "avg_holding_hours": 17.3
         },
         "buy_and_hold_pct": -0.77,
-        "live_price": 0.0024449,
+        "live_price": 0.0025049,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.0027357,
-        "atr": 5.438943437480575e-05,
+        "atr": 5.8453720089091454e-05,
         "n_candles": 999,
         "btc_correlation": 0.648,
         "trade_log": [
@@ -13325,7 +13325,7 @@
           "avg_holding_hours": 120.0
         },
         "buy_and_hold_pct": -32.05,
-        "live_price": 0.0024449,
+        "live_price": 0.0025049,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.003227,
         "atr": 0.00024781038247948016,
@@ -13506,7 +13506,7 @@
           "avg_holding_hours": 2280.0
         },
         "buy_and_hold_pct": 109.12,
-        "live_price": 0.114,
+        "live_price": 0.1194,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.1539,
         "atr": 0.01197605356316587,
@@ -13735,7 +13735,7 @@
           "avg_holding_hours": 720.0
         },
         "buy_and_hold_pct": -19.07,
-        "live_price": 0.05049,
+        "live_price": 0.05257,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.07262,
         "atr": 0.004407691935532304,
@@ -13912,7 +13912,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.1
       }
     },
     "CHIP": {
@@ -13952,8 +13952,8 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -41.34,
-        "live_price": 0.01804,
-        "live_status": "NO_SIGNAL",
+        "live_price": 0.01831,
+        "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.02648,
         "atr": 0.002122084961020875,
         "n_candles": 999,
@@ -14103,10 +14103,10 @@
           "avg_holding_hours": 64.0
         },
         "buy_and_hold_pct": 4.24,
-        "live_price": 0.01316,
+        "live_price": 0.01378,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01449,
-        "atr": 0.0002834938522847405,
+        "atr": 0.00031635099514188336,
         "n_candles": 999,
         "btc_correlation": 0.515,
         "trade_log": [
@@ -14276,7 +14276,7 @@
           "avg_holding_hours": 216.0
         },
         "buy_and_hold_pct": -58.21,
-        "live_price": 0.01316,
+        "live_price": 0.01378,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01802,
         "atr": 0.0008999623257119574,
@@ -14450,7 +14450,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.317,
-        "elapsed_s": 0.9
+        "elapsed_s": 0.8
       },
       "far": {
         "status": "insufficient_data",
@@ -14483,7 +14483,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -17.1,
-        "live_price": 20.65,
+        "live_price": 21.28,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 25.31,
         "atr": 1.326850230322152,
@@ -14667,7 +14667,7 @@
           "avg_holding_hours": 600.0
         },
         "buy_and_hold_pct": -35.44,
-        "live_price": 0.01032,
+        "live_price": 0.01067,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.0137,
         "atr": 0.0014131956422821315,
@@ -14890,10 +14890,10 @@
           "avg_holding_hours": 36.0
         },
         "buy_and_hold_pct": -13.36,
-        "live_price": 0.1237,
+        "live_price": 0.1268,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.1358,
-        "atr": 0.0017511639309014827,
+        "atr": 0.0019940210737586263,
         "n_candles": 999,
         "btc_correlation": 0.615,
         "trade_log": [
@@ -15100,7 +15100,7 @@
           "avg_holding_hours": 1128.0
         },
         "buy_and_hold_pct": -11.95,
-        "live_price": 0.02679,
+        "live_price": 0.02766,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.03761,
         "atr": 0.004187363443906387,
@@ -15285,7 +15285,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.735,
-        "elapsed_s": 0.9
+        "elapsed_s": 0.8
       },
       "far": {
         "status": "ok",
@@ -15305,10 +15305,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -30.48,
-        "live_price": 0.05507,
+        "live_price": 0.05681,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.06365,
-        "atr": 0.003785140595544553,
+        "atr": 0.004095854881258839,
         "n_candles": 999,
         "btc_correlation": 0.597,
         "trade_log": [
@@ -15558,10 +15558,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -10.64,
-        "live_price": 0.33087,
+        "live_price": 0.35302,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.4156,
-        "atr": 0.029325252426772447,
+        "atr": 0.02966810956962959,
         "n_candles": 999,
         "btc_correlation": 0.599,
         "trade_log": [
@@ -15894,7 +15894,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.0
+        "elapsed_s": 1.1
       }
     },
     "CTR": {
@@ -15934,7 +15934,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -13.7,
-        "live_price": 0.0295,
+        "live_price": 0.03019,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.043,
         "atr": 0.003222441161560392,
@@ -16098,10 +16098,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -26.82,
-        "live_price": 1.968,
+        "live_price": 2.06,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 2.03,
-        "atr": 0.056708445120336126,
+        "atr": 0.063565587977479,
         "n_candles": 999,
         "btc_correlation": 0.56,
         "trade_log": [
@@ -16227,7 +16227,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.2
       },
       "far": {
         "status": "ok",
@@ -16247,10 +16247,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -30.14,
-        "live_price": 1.968,
+        "live_price": 2.06,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 2.391,
-        "atr": 0.1658719801504651,
+        "atr": 0.16880055157903653,
         "n_candles": 999,
         "btc_correlation": 0.531,
         "trade_log": [
@@ -16404,7 +16404,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -53.58,
-        "live_price": 0.299,
+        "live_price": 0.31,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.421,
         "atr": 0.04235468809490169,
@@ -16579,10 +16579,10 @@
           "avg_holding_hours": 80.0
         },
         "buy_and_hold_pct": -9.51,
-        "live_price": 0.006236,
+        "live_price": 0.006271,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.006669,
-        "atr": 0.0002694333529644768,
+        "atr": 0.0002715762101073339,
         "n_candles": 999,
         "btc_correlation": 0.323,
         "trade_log": [
@@ -16752,7 +16752,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -37.95,
-        "live_price": 0.006236,
+        "live_price": 0.006271,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.008396,
         "atr": 0.0007737085758612116,
@@ -16903,10 +16903,10 @@
           "avg_holding_hours": 25.3
         },
         "buy_and_hold_pct": -5.61,
-        "live_price": 46.74,
+        "live_price": 49.056,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 49.72,
-        "atr": 1.195888862048614,
+        "atr": 1.3496745763343283,
         "n_candles": 999,
         "btc_correlation": 0.38,
         "trade_log": [
@@ -17148,7 +17148,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -9.08,
-        "live_price": 46.74,
+        "live_price": 49.056,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 82.887,
         "atr": 3.982241318278053,
@@ -17285,12 +17285,12 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.181,
-        "elapsed_s": 0.8
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "insufficient_data",
         "n_candles": 137,
-        "elapsed_s": 0.1
+        "elapsed_s": 0.2
       }
     },
     "DCR": {
@@ -17312,10 +17312,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -31.37,
-        "live_price": 14.294,
+        "live_price": 14.454,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 15.214,
-        "atr": 0.15929628622179076,
+        "atr": 0.1707248576503622,
         "n_candles": 999,
         "btc_correlation": 0.179,
         "trade_log": [
@@ -17486,7 +17486,7 @@
         "status": "no_signal",
         "n_candles": 319,
         "btc_correlation": 0.416,
-        "elapsed_s": 0.4
+        "elapsed_s": 0.3
       }
     },
     "DENT": {
@@ -17553,7 +17553,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -27.47,
-        "live_price": 0.0766292,
+        "live_price": 0.0793746,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.1059479,
         "atr": 0.004539296890373887,
@@ -17730,7 +17730,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.3
       }
     },
     "DOGS": {
@@ -17959,7 +17959,7 @@
       "far": {
         "status": "insufficient_data",
         "n_candles": 0,
-        "elapsed_s": 0.2
+        "elapsed_s": 0.1
       }
     },
     "DOT": {
@@ -17981,10 +17981,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -16.28,
-        "live_price": 1.0565,
+        "live_price": 1.1193,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 1.2064,
-        "atr": 0.03433783491543595,
+        "atr": 0.038502120629721664,
         "n_candles": 999,
         "btc_correlation": 0.703,
         "trade_log": [
@@ -18130,10 +18130,10 @@
           "avg_holding_hours": 240.0
         },
         "buy_and_hold_pct": -37.23,
-        "live_price": 1.0565,
+        "live_price": 1.1193,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 1.295,
-        "atr": 0.09289153527212703,
+        "atr": 0.09292010670069846,
         "n_candles": 999,
         "btc_correlation": 0.652,
         "trade_log": [
@@ -18320,7 +18320,7 @@
       "far": {
         "status": "insufficient_data",
         "n_candles": 291,
-        "elapsed_s": 0.1
+        "elapsed_s": 0.2
       }
     },
     "DYDX": {
@@ -18395,7 +18395,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -49.7,
-        "live_price": 0.06864,
+        "live_price": 0.07158,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.08895,
         "atr": 0.0034737519671760642,
@@ -18544,7 +18544,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -76.59,
-        "live_price": 0.06864,
+        "live_price": 0.07158,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.08895,
         "atr": 0.008122137181699789,
@@ -18673,7 +18673,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.3
       }
     },
     "EGLD": {
@@ -18681,7 +18681,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.662,
-        "elapsed_s": 0.9
+        "elapsed_s": 0.8
       },
       "far": {
         "status": "ok",
@@ -18701,7 +18701,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -30.0,
-        "live_price": 3.4,
+        "live_price": 3.55,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 4.19,
         "atr": 0.31280656710293564,
@@ -18854,7 +18854,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.1
       }
     },
     "EIGEN": {
@@ -18862,7 +18862,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.699,
-        "elapsed_s": 0.9
+        "elapsed_s": 0.8
       },
       "far": {
         "status": "insufficient_data",
@@ -18922,7 +18922,7 @@
           "avg_holding_hours": 336.0
         },
         "buy_and_hold_pct": 31.93,
-        "live_price": 0.02647,
+        "live_price": 0.02711,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.03354,
         "atr": 0.002443601905953661,
@@ -19075,7 +19075,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.2
       }
     },
     "ENS": {
@@ -19103,7 +19103,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -37.1,
-        "live_price": 5.26,
+        "live_price": 5.45,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 7.28,
         "atr": 0.4078067277049767,
@@ -19254,10 +19254,10 @@
           "avg_holding_hours": 28.0
         },
         "buy_and_hold_pct": -21.51,
-        "live_price": 0.672,
+        "live_price": 0.677,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.798,
-        "atr": 0.01978368099827383,
+        "atr": 0.021569395283988116,
         "n_candles": 999,
         "btc_correlation": 0.211,
         "trade_log": [
@@ -19434,10 +19434,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": 1.67,
-        "live_price": 0.00091,
+        "live_price": 0.00089,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.00108,
-        "atr": 6.906371590875983e-05,
+        "atr": 6.977800162304554e-05,
         "n_candles": 999,
         "btc_correlation": 0.313,
         "trade_log": [
@@ -19600,7 +19600,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.752,
-        "elapsed_s": 1.0
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "ok",
@@ -19620,7 +19620,7 @@
           "avg_holding_hours": 408.0
         },
         "buy_and_hold_pct": -18.79,
-        "live_price": 7.501,
+        "live_price": 7.74,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 8.552,
         "atr": 0.44712544277582045,
@@ -19867,10 +19867,10 @@
           "avg_holding_hours": 72.0
         },
         "buy_and_hold_pct": 1.98,
-        "live_price": 2353.78,
+        "live_price": 2406.67,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 2438.0,
-        "atr": 35.88127808819962,
+        "atr": 39.9134209453425,
         "n_candles": 999,
         "btc_correlation": 0.901,
         "trade_log": [
@@ -20064,7 +20064,7 @@
           "avg_holding_hours": 696.0
         },
         "buy_and_hold_pct": -3.83,
-        "live_price": 2353.86,
+        "live_price": 2406.23,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 2806.69,
         "atr": 96.5453356054799,
@@ -20259,7 +20259,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -9.36,
-        "live_price": 1.109,
+        "live_price": 1.152,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 1.568,
         "atr": 0.10059176188389313,
@@ -20422,10 +20422,10 @@
           "avg_holding_hours": 36.0
         },
         "buy_and_hold_pct": -6.76,
-        "live_price": 0.333,
+        "live_price": 0.337,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.344,
-        "atr": 0.005963422638350402,
+        "atr": 0.006177708352636117,
         "n_candles": 999,
         "btc_correlation": 0.146,
         "trade_log": [
@@ -20595,7 +20595,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -37.11,
-        "live_price": 0.333,
+        "live_price": 0.337,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.407,
         "atr": 0.034500252151744744,
@@ -20746,10 +20746,10 @@
           "avg_holding_hours": 32.0
         },
         "buy_and_hold_pct": 13.69,
-        "live_price": 0.1377,
+        "live_price": 0.1439,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.1541,
-        "atr": 0.004339974292412005,
+        "atr": 0.004747117149554864,
         "n_candles": 999,
         "btc_correlation": 0.582,
         "trade_log": [
@@ -20947,7 +20947,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.5
+        "elapsed_s": 1.2
       },
       "far": {
         "status": "insufficient_data",
@@ -20980,7 +20980,7 @@
           "avg_holding_hours": 276.0
         },
         "buy_and_hold_pct": -6.39,
-        "live_price": 0.1797,
+        "live_price": 0.1894,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.2441,
         "atr": 0.0214757390938838,
@@ -21270,7 +21270,7 @@
           "avg_holding_hours": 168.0
         },
         "buy_and_hold_pct": 5.44,
-        "live_price": 0.0173,
+        "live_price": 0.01793,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.02279,
         "atr": 0.0014574628744631905,
@@ -21457,10 +21457,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -9.77,
-        "live_price": 1.003,
+        "live_price": 1.043,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 1.222,
-        "atr": 0.04115463369472471,
+        "atr": 0.04365463369472471,
         "n_candles": 999,
         "btc_correlation": 0.496,
         "trade_log": [
@@ -21606,7 +21606,7 @@
           "avg_holding_hours": 144.0
         },
         "buy_and_hold_pct": -18.51,
-        "live_price": 1.003,
+        "live_price": 1.043,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 1.275,
         "atr": 0.11380788054525974,
@@ -21767,7 +21767,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.463,
-        "elapsed_s": 0.9
+        "elapsed_s": 0.8
       },
       "far": {
         "status": "insufficient_data",
@@ -21800,7 +21800,7 @@
           "avg_holding_hours": 168.0
         },
         "buy_and_hold_pct": -30.16,
-        "live_price": 2.249e-05,
+        "live_price": 2.341e-05,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 3.085e-05,
         "atr": 1.6203526729721152e-06,
@@ -21953,7 +21953,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.4
       }
     },
     "FLOW": {
@@ -21981,7 +21981,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -36.97,
-        "live_price": 0.029,
+        "live_price": 0.0297,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.038,
         "atr": 0.002961697489383515,
@@ -22162,7 +22162,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -32.11,
-        "live_price": 0.00631,
+        "live_price": 0.00643,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.0074,
         "atr": 0.00028056015768284916,
@@ -22363,7 +22363,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.0
       }
     },
     "FLUX": {
@@ -22371,7 +22371,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.4,
-        "elapsed_s": 1.0
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "ok",
@@ -22391,7 +22391,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -36.4,
-        "live_price": 0.06843,
+        "live_price": 0.07119,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.12,
         "atr": 0.009862993063163563,
@@ -22542,10 +22542,10 @@
           "avg_holding_hours": 56.0
         },
         "buy_and_hold_pct": -11.24,
-        "live_price": 2.1231,
+        "live_price": 2.1593,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 2.46,
-        "atr": 0.07692126838971904,
+        "atr": 0.08047841124686188,
         "n_candles": 389,
         "btc_correlation": -0.003,
         "trade_log": [
@@ -22720,7 +22720,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.311,
-        "elapsed_s": 0.9
+        "elapsed_s": 1.2
       },
       "far": {
         "status": "insufficient_data",
@@ -22753,7 +22753,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -49.88,
-        "live_price": 0.001835,
+        "live_price": 0.001916,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.002758,
         "atr": 0.0001844115604974819,
@@ -22906,7 +22906,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.0
       }
     },
     "GAS": {
@@ -22928,7 +22928,7 @@
           "avg_holding_hours": 20.0
         },
         "buy_and_hold_pct": 25.97,
-        "live_price": 1.2042,
+        "live_price": 1.2249,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 1.3006,
         "atr": 0.01487582813447584,
@@ -23173,7 +23173,7 @@
           "avg_holding_hours": 144.0
         },
         "buy_and_hold_pct": -36.62,
-        "live_price": 1.2042,
+        "live_price": 1.2249,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 1.424,
         "atr": 0.07098129160234637,
@@ -23346,7 +23346,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.513,
-        "elapsed_s": 0.9
+        "elapsed_s": 0.8
       },
       "far": {
         "status": "insufficient_data",
@@ -23379,7 +23379,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -35.59,
-        "live_price": 0.01055,
+        "live_price": 0.01045,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.0131,
         "atr": 0.0015859850387899737,
@@ -23536,7 +23536,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -38.65,
-        "live_price": 0.00713,
+        "live_price": 0.0073,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01458,
         "atr": 0.0008140164632626255,
@@ -23717,7 +23717,7 @@
           "avg_holding_hours": 240.0
         },
         "buy_and_hold_pct": -6.36,
-        "live_price": 8.21,
+        "live_price": 8.45,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 9.51,
         "atr": 0.5024418945788052,
@@ -23904,10 +23904,10 @@
           "avg_holding_hours": 20.0
         },
         "buy_and_hold_pct": -6.11,
-        "live_price": 0.01353,
+        "live_price": 0.01374,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01517,
-        "atr": 0.0005247751295417301,
+        "atr": 0.0005397751295417301,
         "n_candles": 999,
         "btc_correlation": 0.642,
         "trade_log": [
@@ -24099,7 +24099,7 @@
       "far": {
         "status": "insufficient_data",
         "n_candles": 0,
-        "elapsed_s": 0.2
+        "elapsed_s": 0.1
       }
     },
     "GRASS": {
@@ -24121,10 +24121,10 @@
           "avg_holding_hours": 29.3
         },
         "buy_and_hold_pct": -14.47,
-        "live_price": 0.5619,
+        "live_price": 0.5902,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.6571,
-        "atr": 0.02722980257526211,
+        "atr": 0.029315516860976394,
         "n_candles": 999,
         "btc_correlation": 0.396,
         "trade_log": [
@@ -24322,7 +24322,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.1
       },
       "far": {
         "status": "insufficient_data",
@@ -24349,10 +24349,10 @@
           "avg_holding_hours": 112.0
         },
         "buy_and_hold_pct": 45.08,
-        "live_price": 0.014,
+        "live_price": 0.01471,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01538,
-        "atr": 0.00042727597001135706,
+        "atr": 0.00047584739858278565,
         "n_candles": 999,
         "btc_correlation": 0.455,
         "trade_log": [
@@ -24563,7 +24563,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.709,
-        "elapsed_s": 0.9
+        "elapsed_s": 0.8
       },
       "far": {
         "status": "ok",
@@ -24583,7 +24583,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -36.65,
-        "live_price": 0.02276,
+        "live_price": 0.02353,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.02843,
         "atr": 0.0020131227968367385,
@@ -24740,7 +24740,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -30.59,
-        "live_price": 0.2826,
+        "live_price": 0.2605,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.4177,
         "atr": 0.04925445105419841,
@@ -24891,10 +24891,10 @@
           "avg_holding_hours": 40.0
         },
         "buy_and_hold_pct": -14.03,
-        "live_price": 0.00219,
+        "live_price": 0.00228,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.00299,
-        "atr": 5.3296170754771446e-05,
+        "atr": 5.9724742183342866e-05,
         "n_candles": 999,
         "btc_correlation": 0.245,
         "trade_log": [
@@ -25089,7 +25089,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -32.85,
-        "live_price": 0.0829,
+        "live_price": 0.08513,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.09671,
         "atr": 0.006227862937867975,
@@ -25250,7 +25250,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.482,
-        "elapsed_s": 0.9
+        "elapsed_s": 0.8
       },
       "far": {
         "status": "ok",
@@ -25270,10 +25270,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -49.47,
-        "live_price": 0.0056,
+        "live_price": 0.00561,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01,
-        "atr": 0.0008128824416143084,
+        "atr": 0.0008150252987571656,
         "n_candles": 999,
         "btc_correlation": 0.469,
         "trade_log": [
@@ -25423,7 +25423,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.0
       }
     },
     "HMSTR": {
@@ -25445,10 +25445,10 @@
           "avg_holding_hours": 172.0
         },
         "buy_and_hold_pct": -8.45,
-        "live_price": 0.0001403,
+        "live_price": 0.0001411,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.0001544,
-        "atr": 2.1734131216412423e-06,
+        "atr": 2.259127407355528e-06,
         "n_candles": 999,
         "btc_correlation": 0.429,
         "trade_log": [
@@ -25625,10 +25625,10 @@
           "avg_holding_hours": 60.0
         },
         "buy_and_hold_pct": -7.66,
-        "live_price": 0.3904,
+        "live_price": 0.4048,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.4701,
-        "atr": 0.015968250527945312,
+        "atr": 0.016882536242231027,
         "n_candles": 999,
         "btc_correlation": 0.488,
         "trade_log": [
@@ -25802,7 +25802,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.3
+        "elapsed_s": 1.1
       },
       "far": {
         "status": "ok",
@@ -25822,7 +25822,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -84.09,
-        "live_price": 0.3904,
+        "live_price": 0.4048,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.5312,
         "atr": 0.05405903619902772,
@@ -26020,7 +26020,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.22,
-        "elapsed_s": 1.0
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "insufficient_data",
@@ -26047,10 +26047,10 @@
           "avg_holding_hours": 89.3
         },
         "buy_and_hold_pct": 10.9,
-        "live_price": 76.77,
+        "live_price": 78.96,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 80.37,
-        "atr": 1.4899306032186068,
+        "atr": 1.6535020317900357,
         "n_candles": 999,
         "btc_correlation": 0.519,
         "trade_log": [
@@ -26253,7 +26253,7 @@
       "far": {
         "status": "insufficient_data",
         "n_candles": 86,
-        "elapsed_s": 0.2
+        "elapsed_s": 0.1
       }
     },
     "IAG": {
@@ -26288,10 +26288,10 @@
           "avg_holding_hours": 64.0
         },
         "buy_and_hold_pct": 3.15,
-        "live_price": 0.1942,
+        "live_price": 0.1912,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.2755,
-        "atr": 0.02476248799374364,
+        "atr": 0.025019630850886498,
         "n_candles": 999,
         "btc_correlation": 0.053,
         "trade_log": [
@@ -26516,10 +26516,10 @@
           "avg_holding_hours": 84.0
         },
         "buy_and_hold_pct": -7.28,
-        "live_price": 2.777,
+        "live_price": 2.91,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 3.056,
-        "atr": 0.07726110866336984,
+        "atr": 0.08590396580622697,
         "n_candles": 999,
         "btc_correlation": 0.421,
         "trade_log": [
@@ -26689,7 +26689,7 @@
           "avg_holding_hours": 232.0
         },
         "buy_and_hold_pct": -7.91,
-        "live_price": 2.777,
+        "live_price": 2.91,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 3.527,
         "atr": 0.24126155665415933,
@@ -26985,7 +26985,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.332,
-        "elapsed_s": 0.9
+        "elapsed_s": 1.0
       },
       "far": {
         "status": "insufficient_data",
@@ -27018,10 +27018,10 @@
           "avg_holding_hours": 960.0
         },
         "buy_and_hold_pct": 60.68,
-        "live_price": 7.833,
+        "live_price": 8.819,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 9.49,
-        "atr": 0.8563783533932056,
+        "atr": 0.8633783533932056,
         "n_candles": 999,
         "btc_correlation": 0.648,
         "trade_log": [
@@ -27229,10 +27229,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -8.78,
-        "live_price": 0.00443,
+        "live_price": 0.00458,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.00468,
-        "atr": 0.00015659664537481417,
+        "atr": 0.00016588235966052845,
         "n_candles": 999,
         "btc_correlation": 0.637,
         "trade_log": [
@@ -27378,7 +27378,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -25.77,
-        "live_price": 0.00443,
+        "live_price": 0.00458,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.00622,
         "atr": 0.00046113157240404716,
@@ -27529,10 +27529,10 @@
           "avg_holding_hours": 30.0
         },
         "buy_and_hold_pct": 24.58,
-        "live_price": 0.13543,
+        "live_price": 0.13597,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.14023,
-        "atr": 0.0016844978532834947,
+        "atr": 0.0017230692818549242,
         "n_candles": 999,
         "btc_correlation": 0.148,
         "trade_log": [
@@ -27966,7 +27966,7 @@
           "avg_holding_hours": 1992.0
         },
         "buy_and_hold_pct": 142.41,
-        "live_price": 0.13543,
+        "live_price": 0.13597,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.14378,
         "atr": 0.007448117847994559,
@@ -28233,7 +28233,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -9.47,
-        "live_price": 0.27839,
+        "live_price": 0.28918,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.38739,
         "atr": 0.028288155555171963,
@@ -28397,10 +28397,10 @@
           "avg_holding_hours": 43.0
         },
         "buy_and_hold_pct": 2.85,
-        "live_price": 0.03472,
+        "live_price": 0.0355,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.03601,
-        "atr": 0.0009743970262553518,
+        "atr": 0.0010079684548267808,
         "n_candles": 999,
         "btc_correlation": 0.659,
         "trade_log": [
@@ -28642,10 +28642,10 @@
           "avg_holding_hours": 204.0
         },
         "buy_and_hold_pct": -10.85,
-        "live_price": 0.03472,
+        "live_price": 0.0355,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.04292,
-        "atr": 0.002764102025063184,
+        "atr": 0.0027655305964917553,
         "n_candles": 999,
         "btc_correlation": 0.569,
         "trade_log": [
@@ -28935,7 +28935,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.419,
-        "elapsed_s": 0.9
+        "elapsed_s": 1.0
       },
       "far": {
         "status": "ok",
@@ -28955,7 +28955,7 @@
           "avg_holding_hours": 936.0
         },
         "buy_and_hold_pct": -17.31,
-        "live_price": 0.0701,
+        "live_price": 0.0705,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.0716,
         "atr": 0.0021984356085843317,
@@ -29143,10 +29143,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -29.24,
-        "live_price": 0.0831,
+        "live_price": 0.0856,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.094,
-        "atr": 0.0027599161696438375,
+        "atr": 0.002938487598215266,
         "n_candles": 999,
         "btc_correlation": 0.143,
         "trade_log": [
@@ -29311,10 +29311,10 @@
           "avg_holding_hours": 15.0
         },
         "buy_and_hold_pct": -7.45,
-        "live_price": 0.03758,
+        "live_price": 0.03987,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.04341,
-        "atr": 0.0017673489820949752,
+        "atr": 0.001910920410666404,
         "n_candles": 999,
         "btc_correlation": 0.533,
         "trade_log": [
@@ -29536,7 +29536,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.3
       },
       "far": {
         "status": "ok",
@@ -29556,7 +29556,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -32.06,
-        "live_price": 0.03758,
+        "live_price": 0.03987,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.04875,
         "atr": 0.004167912887361452,
@@ -29685,7 +29685,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.0
       }
     },
     "KNC": {
@@ -29713,7 +29713,7 @@
           "avg_holding_hours": 240.0
         },
         "buy_and_hold_pct": -21.36,
-        "live_price": 0.116,
+        "live_price": 0.1181,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.1394,
         "atr": 0.006627602469574166,
@@ -29898,7 +29898,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.639,
-        "elapsed_s": 1.1
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "ok",
@@ -29918,7 +29918,7 @@
           "avg_holding_hours": 120.0
         },
         "buy_and_hold_pct": -28.39,
-        "live_price": 4.08,
+        "live_price": 4.2,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 5.25,
         "atr": 0.3023010291932435,
@@ -30095,7 +30095,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.1
       }
     },
     "LAPTOP": {
@@ -30129,10 +30129,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -12.69,
-        "live_price": 0.01084,
+        "live_price": 0.01081,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01242,
-        "atr": 0.00020068527476276918,
+        "atr": 0.0002071138461913406,
         "n_candles": 999,
         "btc_correlation": 0.176,
         "trade_log": [
@@ -30298,10 +30298,10 @@
           "avg_holding_hours": 108.0
         },
         "buy_and_hold_pct": 10.9,
-        "live_price": 0.368,
+        "live_price": 0.387,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.404,
-        "atr": 0.011358179181049711,
+        "atr": 0.01278675060962114,
         "n_candles": 999,
         "btc_correlation": 0.776,
         "trade_log": [
@@ -30519,7 +30519,7 @@
           "avg_holding_hours": 120.0
         },
         "buy_and_hold_pct": -1.74,
-        "live_price": 0.368,
+        "live_price": 0.387,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.47,
         "atr": 0.03796929354801486,
@@ -30785,7 +30785,7 @@
           "avg_holding_hours": 168.0
         },
         "buy_and_hold_pct": -4.96,
-        "live_price": 11.6539,
+        "live_price": 12.02433,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 15.7666,
         "atr": 0.7366608527662428,
@@ -31002,7 +31002,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -64.22,
-        "live_price": 0.00962,
+        "live_price": 0.00973,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01078,
         "atr": 0.0006646246722447744,
@@ -31196,7 +31196,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -35.66,
-        "live_price": 1.569,
+        "live_price": 1.601,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 2.186,
         "atr": 0.1482984659083469,
@@ -31357,7 +31357,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.459,
-        "elapsed_s": 0.9
+        "elapsed_s": 1.1
       },
       "far": {
         "status": "ok",
@@ -31377,7 +31377,7 @@
           "avg_holding_hours": 36.0
         },
         "buy_and_hold_pct": -37.98,
-        "live_price": 0.1849,
+        "live_price": 0.1899,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.2393,
         "atr": 0.016928786625752444,
@@ -31630,7 +31630,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -67.77,
-        "live_price": 0.008549,
+        "live_price": 0.008834,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.012142,
         "atr": 0.000828670492121008,
@@ -31795,10 +31795,10 @@
           "avg_holding_hours": 74.0
         },
         "buy_and_hold_pct": -1.74,
-        "live_price": 57.37,
+        "live_price": 59.08,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 60.02,
-        "atr": 1.127851904852048,
+        "atr": 1.2407090477091907,
         "n_candles": 999,
         "btc_correlation": 0.737,
         "trade_log": [
@@ -31992,7 +31992,7 @@
           "avg_holding_hours": 144.0
         },
         "buy_and_hold_pct": -17.59,
-        "live_price": 57.37,
+        "live_price": 59.08,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 74.98,
         "atr": 3.159691965997478,
@@ -32191,10 +32191,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -15.42,
-        "live_price": 4.548e-05,
+        "live_price": 4.723e-05,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 4.984e-05,
-        "atr": 1.6293845724343894e-06,
+        "atr": 1.7679560010058179e-06,
         "n_candles": 999,
         "btc_correlation": 0.377,
         "trade_log": [
@@ -32436,7 +32436,7 @@
           "avg_holding_hours": 208.0
         },
         "buy_and_hold_pct": 75.75,
-        "live_price": 4.548e-05,
+        "live_price": 4.723e-05,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 5.8e-05,
         "atr": 3.7306628244652735e-06,
@@ -32683,10 +32683,10 @@
           "avg_holding_hours": 34.0
         },
         "buy_and_hold_pct": -2.91,
-        "live_price": 0.08122,
+        "live_price": 0.08448,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.09282,
-        "atr": 0.002335778862198054,
+        "atr": 0.0025572074336266248,
         "n_candles": 999,
         "btc_correlation": 0.706,
         "trade_log": [
@@ -32860,7 +32860,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.5
+        "elapsed_s": 1.4
       },
       "far": {
         "status": "ok",
@@ -32880,7 +32880,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -31.87,
-        "live_price": 0.08122,
+        "live_price": 0.08448,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.10414,
         "atr": 0.00720454580560288,
@@ -33009,7 +33009,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.2
       }
     },
     "MANTRA": {
@@ -33029,7 +33029,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.686,
-        "elapsed_s": 1.3
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "ok",
@@ -33049,7 +33049,7 @@
           "avg_holding_hours": 156.0
         },
         "buy_and_hold_pct": -16.69,
-        "live_price": 0.39,
+        "live_price": 0.402,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.501,
         "atr": 0.026517180275952616,
@@ -33275,7 +33275,7 @@
       "far": {
         "status": "insufficient_data",
         "n_candles": 0,
-        "elapsed_s": 0.2
+        "elapsed_s": 0.1
       }
     },
     "MELANIA": {
@@ -33297,10 +33297,10 @@
           "avg_holding_hours": 57.0
         },
         "buy_and_hold_pct": 3.59,
-        "live_price": 0.078,
+        "live_price": 0.0819,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.086,
-        "atr": 0.0017114590056962107,
+        "atr": 0.0019543161485533534,
         "n_candles": 999,
         "btc_correlation": 0.329,
         "trade_log": [
@@ -33541,7 +33541,7 @@
         "status": "no_signal",
         "n_candles": 486,
         "btc_correlation": 0.533,
-        "elapsed_s": 0.5
+        "elapsed_s": 0.4
       }
     },
     "MERL": {
@@ -33563,10 +33563,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -40.14,
-        "live_price": 0.0284,
+        "live_price": 0.02916,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.0395,
-        "atr": 0.002361580505775677,
+        "atr": 0.002395151934347105,
         "n_candles": 999,
         "btc_correlation": 0.227,
         "trade_log": [
@@ -33763,7 +33763,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -22.01,
-        "live_price": 3.618,
+        "live_price": 3.821,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 4.64,
         "atr": 0.4202535598918098,
@@ -33988,10 +33988,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -35.54,
-        "live_price": 0.00221,
+        "live_price": 0.00235,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.00296,
-        "atr": 0.0004285403677036292,
+        "atr": 0.00043854036770362917,
         "n_candles": 999,
         "btc_correlation": 0.049,
         "trade_log": [
@@ -34150,7 +34150,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -32.58,
-        "live_price": 0.06942,
+        "live_price": 0.07206,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.1924,
         "atr": 0.013996674889304613,
@@ -34320,7 +34320,7 @@
           "avg_holding_hours": 72.0
         },
         "buy_and_hold_pct": -36.61,
-        "live_price": 0.5176,
+        "live_price": 0.5291,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.5827,
         "atr": 0.029761013249337765,
@@ -34699,10 +34699,10 @@
           "avg_holding_hours": 44.0
         },
         "buy_and_hold_pct": -9.66,
-        "live_price": 9.87e-08,
+        "live_price": 1.008e-07,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 1.03e-07,
-        "atr": 1.6458757096500274e-09,
+        "atr": 1.7887328525071705e-09,
         "n_candles": 999,
         "btc_correlation": 0.652,
         "trade_log": [
@@ -34928,10 +34928,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -21.96,
-        "live_price": 2.29002,
+        "live_price": 2.35064,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 2.49167,
-        "atr": 0.05460549143549395,
+        "atr": 0.058935491435493925,
         "n_candles": 999,
         "btc_correlation": 0.575,
         "trade_log": [
@@ -35057,7 +35057,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.1
       },
       "far": {
         "status": "insufficient_data",
@@ -35090,7 +35090,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -8.26,
-        "live_price": 1.3099,
+        "live_price": 1.3587,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 2.0035,
         "atr": 0.2388139211973678,
@@ -35219,7 +35219,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.3
       }
     },
     "MUBARAK": {
@@ -35227,7 +35227,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.46,
-        "elapsed_s": 1.0
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "insufficient_data",
@@ -35254,10 +35254,10 @@
           "avg_holding_hours": 42.0
         },
         "buy_and_hold_pct": -2.47,
-        "live_price": 4.694,
+        "live_price": 5.0069,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 5.1916,
-        "atr": 0.19874115245970353,
+        "atr": 0.22251258103113208,
         "n_candles": 999,
         "btc_correlation": 0.672,
         "trade_log": [
@@ -35451,7 +35451,7 @@
           "avg_holding_hours": 510.0
         },
         "buy_and_hold_pct": 90.62,
-        "live_price": 4.694,
+        "live_price": 5.0069,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 5.999,
         "atr": 0.5614151070312966,
@@ -35722,10 +35722,10 @@
           "avg_holding_hours": 33.6
         },
         "buy_and_hold_pct": 15.11,
-        "live_price": 2.117,
+        "live_price": 2.181,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 2.353,
-        "atr": 0.03485279810697912,
+        "atr": 0.03942422667840769,
         "n_candles": 999,
         "btc_correlation": 0.682,
         "trade_log": [
@@ -35971,7 +35971,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.5
+        "elapsed_s": 1.2
       },
       "far": {
         "status": "ok",
@@ -35991,7 +35991,7 @@
           "avg_holding_hours": 144.0
         },
         "buy_and_hold_pct": -29.7,
-        "live_price": 2.117,
+        "live_price": 2.181,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 3.152,
         "atr": 0.18580159799930113,
@@ -36144,7 +36144,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.2
       }
     },
     "NES": {
@@ -36221,7 +36221,7 @@
           "avg_holding_hours": 312.0
         },
         "buy_and_hold_pct": 21.81,
-        "live_price": 10.97,
+        "live_price": 11.22,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 15.71,
         "atr": 1.5107646135613169,
@@ -36422,10 +36422,10 @@
           "avg_holding_hours": 36.0
         },
         "buy_and_hold_pct": -8.91,
-        "live_price": 0.017741,
+        "live_price": 0.018206,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.020017,
-        "atr": 0.0007464916134171566,
+        "atr": 0.0007903487562742995,
         "n_candles": 999,
         "btc_correlation": 0.569,
         "trade_log": [
@@ -36656,7 +36656,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -23.56,
-        "live_price": 0.02856,
+        "live_price": 0.02906,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.05322,
         "atr": 0.005291135472067497,
@@ -36837,7 +36837,7 @@
           "avg_holding_hours": 48.0
         },
         "buy_and_hold_pct": -11.37,
-        "live_price": 0.41438,
+        "live_price": 0.43509,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.60846,
         "atr": 0.039346535597749324,
@@ -36990,7 +36990,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 0.8
+        "elapsed_s": 0.6
       }
     },
     "ONE": {
@@ -37018,7 +37018,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -54.42,
-        "live_price": 0.09881,
+        "live_price": 0.10067,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.13824,
         "atr": 0.012293932439522745,
@@ -37193,10 +37193,10 @@
           "avg_holding_hours": 124.0
         },
         "buy_and_hold_pct": -6.97,
-        "live_price": 0.1194,
+        "live_price": 0.1257,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.1405,
-        "atr": 0.004644755326831951,
+        "atr": 0.0050661838982605225,
         "n_candles": 999,
         "btc_correlation": 0.719,
         "trade_log": [
@@ -37366,7 +37366,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -46.28,
-        "live_price": 0.1194,
+        "live_price": 0.1257,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.1623,
         "atr": 0.013682064340168998,
@@ -37530,10 +37530,10 @@
           "avg_holding_hours": 30.0
         },
         "buy_and_hold_pct": -11.69,
-        "live_price": 1.722,
+        "live_price": 1.783,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 1.914,
-        "atr": 0.04799120265125882,
+        "atr": 0.052419774079830256,
         "n_candles": 999,
         "btc_correlation": 0.404,
         "trade_log": [
@@ -37726,7 +37726,7 @@
       "far": {
         "status": "insufficient_data",
         "n_candles": 189,
-        "elapsed_s": 0.2
+        "elapsed_s": 0.1
       }
     },
     "OSMO": {
@@ -37762,10 +37762,10 @@
           "avg_holding_hours": 40.0
         },
         "buy_and_hold_pct": -2.08,
-        "live_price": 0.02917,
+        "live_price": 0.02965,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.03424,
-        "atr": 0.0014141593007665953,
+        "atr": 0.001462730729338024,
         "n_candles": 999,
         "btc_correlation": 0.244,
         "trade_log": [
@@ -37990,10 +37990,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -8.75,
-        "live_price": 4140.81,
+        "live_price": 4171.66,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 4189.3,
-        "atr": 12.79100851325954,
+        "atr": 15.048151370402357,
         "n_candles": 999,
         "btc_correlation": 0.222,
         "trade_log": [
@@ -38139,10 +38139,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -19.44,
-        "live_price": 4140.81,
+        "live_price": 4171.66,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 4440.39,
-        "atr": 49.65600739166756,
+        "atr": 51.031721677381796,
         "n_candles": 999,
         "btc_correlation": 0.178,
         "trade_log": [
@@ -38381,7 +38381,7 @@
           "avg_holding_hours": 624.0
         },
         "buy_and_hold_pct": 25.98,
-        "live_price": 1.94,
+        "live_price": 2.046,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 2.805,
         "atr": 0.18508926637377227,
@@ -38575,10 +38575,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -36.21,
-        "live_price": 3.833e-06,
+        "live_price": 4.033e-06,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 4.748e-06,
-        "atr": 3.0255677499319433e-07,
+        "atr": 3.113424892789086e-07,
         "n_candles": 999,
         "btc_correlation": 0.66,
         "trade_log": [
@@ -38828,7 +38828,7 @@
           "avg_holding_hours": 84.0
         },
         "buy_and_hold_pct": -10.61,
-        "live_price": 0.04663,
+        "live_price": 0.04829,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.06605,
         "atr": 0.007369092340629771,
@@ -39052,10 +39052,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -13.25,
-        "live_price": 0.01445,
+        "live_price": 0.015433,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01748,
-        "atr": 0.0006591585980494914,
+        "atr": 0.0007385157409066344,
         "n_candles": 300,
         "btc_correlation": 0.095,
         "trade_log": [
@@ -39246,10 +39246,10 @@
           "avg_holding_hours": 44.0
         },
         "buy_and_hold_pct": -4.21,
-        "live_price": 0.08847,
+        "live_price": 0.09143,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.09435,
-        "atr": 0.001968286832337864,
+        "atr": 0.002165429689480721,
         "n_candles": 999,
         "btc_correlation": 0.64,
         "trade_log": [
@@ -39405,7 +39405,7 @@
         "status": "no_signal",
         "n_candles": 480,
         "btc_correlation": 0.619,
-        "elapsed_s": 0.4
+        "elapsed_s": 0.5
       }
     },
     "POLS": {
@@ -39413,7 +39413,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.164,
-        "elapsed_s": 1.0
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "ok",
@@ -39433,7 +39433,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -19.46,
-        "live_price": 0.0602,
+        "live_price": 0.0614,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.0791,
         "atr": 0.005064114904860642,
@@ -39590,7 +39590,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -67.27,
-        "live_price": 0.001465,
+        "live_price": 0.00149,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.002346,
         "atr": 0.0003067282371913233,
@@ -39833,7 +39833,7 @@
         "status": "no_signal",
         "n_candles": 321,
         "btc_correlation": 0.519,
-        "elapsed_s": 0.4
+        "elapsed_s": 0.3
       }
     },
     "PRO": {
@@ -39855,10 +39855,10 @@
           "avg_holding_hours": 52.0
         },
         "buy_and_hold_pct": -1.56,
-        "live_price": 0.3442,
+        "live_price": 0.3479,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.38,
-        "atr": 0.010361661090216882,
+        "atr": 0.012454518233074023,
         "n_candles": 999,
         "btc_correlation": 0.355,
         "trade_log": [
@@ -40035,10 +40035,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -21.91,
-        "live_price": 0.01679,
+        "live_price": 0.01706,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01773,
-        "atr": 0.0004717048683460975,
+        "atr": 0.000490276296917526,
         "n_candles": 999,
         "btc_correlation": 0.341,
         "trade_log": [
@@ -40242,10 +40242,10 @@
           "avg_holding_hours": 34.0
         },
         "buy_and_hold_pct": -13.89,
-        "live_price": 0.003941,
+        "live_price": 0.004167,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.004665,
-        "atr": 0.0001841344987165215,
+        "atr": 0.00020013449871652154,
         "n_candles": 999,
         "btc_correlation": 0.628,
         "trade_log": [
@@ -40438,7 +40438,7 @@
         "status": "no_signal",
         "n_candles": 469,
         "btc_correlation": 0.58,
-        "elapsed_s": 0.4
+        "elapsed_s": 0.5
       }
     },
     "Q": {
@@ -40460,10 +40460,10 @@
           "avg_holding_hours": 44.0
         },
         "buy_and_hold_pct": -29.47,
-        "live_price": 0.117035,
+        "live_price": 0.112173,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.153792,
-        "atr": 0.01766491965144013,
+        "atr": 0.018042419651440128,
         "n_candles": 999,
         "btc_correlation": 0.072,
         "trade_log": [
@@ -40838,7 +40838,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -46.21,
-        "live_price": 0.00237,
+        "live_price": 0.002415,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.003074,
         "atr": 0.0006189839197213028,
@@ -41019,7 +41019,7 @@
           "avg_holding_hours": 456.0
         },
         "buy_and_hold_pct": -6.86,
-        "live_price": 184.21,
+        "live_price": 192.47,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 374.99,
         "atr": 27.22861432824016,
@@ -41194,10 +41194,10 @@
           "avg_holding_hours": 8.0
         },
         "buy_and_hold_pct": 11.24,
-        "live_price": 0.8305,
+        "live_price": 0.86005,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.89774,
-        "atr": 0.011771794979861408,
+        "atr": 0.013101080694147123,
         "n_candles": 999,
         "btc_correlation": 0.608,
         "trade_log": [
@@ -41417,7 +41417,7 @@
           "avg_holding_hours": 48.0
         },
         "buy_and_hold_pct": -41.65,
-        "live_price": 1.723,
+        "live_price": 1.799,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 2.528,
         "atr": 0.2151621688342432,
@@ -41590,7 +41590,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.304,
-        "elapsed_s": 1.0
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "insufficient_data",
@@ -41617,10 +41617,10 @@
           "avg_holding_hours": 54.0
         },
         "buy_and_hold_pct": 37.64,
-        "live_price": 1.742,
+        "live_price": 1.813,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 1.93,
-        "atr": 0.05463633628763181,
+        "atr": 0.05985062200191752,
         "n_candles": 999,
         "btc_correlation": 0.667,
         "trade_log": [
@@ -41855,7 +41855,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.496,
-        "elapsed_s": 0.9
+        "elapsed_s": 1.0
       },
       "far": {
         "status": "ok",
@@ -41875,7 +41875,7 @@
           "avg_holding_hours": 48.0
         },
         "buy_and_hold_pct": -23.5,
-        "live_price": 0.0517,
+        "live_price": 0.05286,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.0588,
         "atr": 0.005471842646169355,
@@ -42142,7 +42142,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -35.17,
-        "live_price": 0.7332,
+        "live_price": 0.7408,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 1.4871,
         "atr": 0.14560227948379517,
@@ -42323,10 +42323,10 @@
           "avg_holding_hours": 176.0
         },
         "buy_and_hold_pct": 1.58,
-        "live_price": 1.484,
+        "live_price": 1.465,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 2.039,
-        "atr": 0.13202485629993835,
+        "atr": 0.13252485629993832,
         "n_candles": 999,
         "btc_correlation": 0.518,
         "trade_log": [
@@ -42576,7 +42576,7 @@
           "avg_holding_hours": 408.0
         },
         "buy_and_hold_pct": -21.15,
-        "live_price": 0.00185,
+        "live_price": 0.00191,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.003577,
         "atr": 0.00023988148130260801,
@@ -42829,10 +42829,10 @@
           "avg_holding_hours": 372.0
         },
         "buy_and_hold_pct": 3.59,
-        "live_price": 0.618,
+        "live_price": 0.667,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.724,
-        "atr": 0.041865922580307115,
+        "atr": 0.04350877972316426,
         "n_candles": 999,
         "btc_correlation": 0.628,
         "trade_log": [
@@ -43062,7 +43062,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.658,
-        "elapsed_s": 1.0
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "insufficient_data",
@@ -43089,10 +43089,10 @@
           "avg_holding_hours": 57.3
         },
         "buy_and_hold_pct": 11.33,
-        "live_price": 0.0987,
+        "live_price": 0.1021,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.1104,
-        "atr": 0.0038234357729428907,
+        "atr": 0.004030578630085747,
         "n_candles": 999,
         "btc_correlation": 0.492,
         "trade_log": [
@@ -43290,13 +43290,13 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.3
+        "elapsed_s": 1.1
       },
       "far": {
         "status": "no_signal",
         "n_candles": 314,
         "btc_correlation": 0.347,
-        "elapsed_s": 0.4
+        "elapsed_s": 0.3
       }
     },
     "SAHARA": {
@@ -43318,10 +43318,10 @@
           "avg_holding_hours": 48.0
         },
         "buy_and_hold_pct": -17.68,
-        "live_price": 0.00722,
+        "live_price": 0.00736,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.0079,
-        "atr": 0.00011830649547036014,
+        "atr": 0.00012830649547036015,
         "n_candles": 999,
         "btc_correlation": 0.235,
         "trade_log": [
@@ -43528,7 +43528,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -44.09,
-        "live_price": 0.0565,
+        "live_price": 0.0589,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.0958,
         "atr": 0.007465922617401828,
@@ -43679,10 +43679,10 @@
           "avg_holding_hours": 12.0
         },
         "buy_and_hold_pct": -3.88,
-        "live_price": 0.05745,
+        "live_price": 0.05961,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.06557,
-        "atr": 0.0013784080345678332,
+        "atr": 0.0015326937488535477,
         "n_candles": 999,
         "btc_correlation": 0.199,
         "trade_log": [
@@ -43869,7 +43869,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.729,
-        "elapsed_s": 0.9
+        "elapsed_s": 1.1
       },
       "far": {
         "status": "ok",
@@ -43889,7 +43889,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -35.75,
-        "live_price": 0.05894,
+        "live_price": 0.06176,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.07145,
         "atr": 0.005012763433243658,
@@ -44082,7 +44082,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -35.53,
-        "live_price": 4.82e-06,
+        "live_price": 4.966e-06,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 6.042e-06,
         "atr": 2.6991364002946286e-07,
@@ -44449,10 +44449,10 @@
           "avg_holding_hours": 20.0
         },
         "buy_and_hold_pct": -1.41,
-        "live_price": 0.06699,
+        "live_price": 0.06961,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.07363,
-        "atr": 0.0014516692477382477,
+        "atr": 0.0016209549620239626,
         "n_candles": 999,
         "btc_correlation": 0.516,
         "trade_log": [
@@ -44663,7 +44663,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.567,
-        "elapsed_s": 0.9
+        "elapsed_s": 0.8
       },
       "far": {
         "status": "insufficient_data",
@@ -44696,7 +44696,7 @@
           "avg_holding_hours": 456.0
         },
         "buy_and_hold_pct": -18.27,
-        "live_price": 0.2023,
+        "live_price": 0.211,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.2613,
         "atr": 0.015944517755116093,
@@ -44871,10 +44871,10 @@
           "avg_holding_hours": 36.0
         },
         "buy_and_hold_pct": -5.73,
-        "live_price": 101.5,
+        "live_price": 104.0,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 105.13,
-        "atr": 1.800704332971655,
+        "atr": 1.9878471901145125,
         "n_candles": 999,
         "btc_correlation": 0.859,
         "trade_log": [
@@ -45092,7 +45092,7 @@
           "avg_holding_hours": 204.0
         },
         "buy_and_hold_pct": -9.61,
-        "live_price": 101.5,
+        "live_price": 104.0,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 116.74,
         "atr": 5.026437292849694,
@@ -45531,10 +45531,10 @@
           "avg_holding_hours": 28.0
         },
         "buy_and_hold_pct": 12.4,
-        "live_price": 0.00441,
+        "live_price": 0.00456,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.00467,
-        "atr": 0.000177897234793438,
+        "atr": 0.0001800400919362951,
         "n_candles": 999,
         "btc_correlation": 0.306,
         "trade_log": [
@@ -45775,10 +45775,10 @@
           "avg_holding_hours": 56.0
         },
         "buy_and_hold_pct": -15.67,
-        "live_price": 2.463,
+        "live_price": 2.521,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 2.63,
-        "atr": 0.046087584339453515,
+        "atr": 0.05015901291088208,
         "n_candles": 999,
         "btc_correlation": 0.624,
         "trade_log": [
@@ -45948,7 +45948,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -38.27,
-        "live_price": 2.463,
+        "live_price": 2.521,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 3.068,
         "atr": 0.17633014784689466,
@@ -46135,10 +46135,10 @@
           "avg_holding_hours": 38.0
         },
         "buy_and_hold_pct": -3.56,
-        "live_price": 0.02273,
+        "live_price": 0.022862,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.026937,
-        "atr": 0.0019460164346254108,
+        "atr": 0.0019569450060539823,
         "n_candles": 999,
         "btc_correlation": 0.435,
         "trade_log": [
@@ -46345,7 +46345,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -26.36,
-        "live_price": 0.02414,
+        "live_price": 0.02462,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.03165,
         "atr": 0.0037437667519647617,
@@ -46544,10 +46544,10 @@
           "avg_holding_hours": 32.0
         },
         "buy_and_hold_pct": -14.24,
-        "live_price": 0.05873,
+        "live_price": 0.06035,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.07271,
-        "atr": 0.0045320106298541996,
+        "atr": 0.004648439201282772,
         "n_candles": 999,
         "btc_correlation": 0.486,
         "trade_log": [
@@ -46749,10 +46749,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -15.76,
-        "live_price": 0.3412,
+        "live_price": 0.356,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.3823,
-        "atr": 0.015021489186644126,
+        "atr": 0.015614346329501271,
         "n_candles": 999,
         "btc_correlation": 0.72,
         "trade_log": [
@@ -46898,7 +46898,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -36.88,
-        "live_price": 0.3412,
+        "live_price": 0.356,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.4609,
         "atr": 0.03757748020805007,
@@ -47079,10 +47079,10 @@
           "avg_holding_hours": 144.0
         },
         "buy_and_hold_pct": -21.68,
-        "live_price": 0.9519,
+        "live_price": 0.9946,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 1.293,
-        "atr": 0.07913541024168202,
+        "atr": 0.07944255309882488,
         "n_candles": 999,
         "btc_correlation": 0.604,
         "trade_log": [
@@ -47268,10 +47268,10 @@
           "avg_holding_hours": 94.7
         },
         "buy_and_hold_pct": 7.01,
-        "live_price": 0.01645,
+        "live_price": 0.01656,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01675,
-        "atr": 0.00010952659020315769,
+        "atr": 0.0001138123044888718,
         "n_candles": 999,
         "btc_correlation": 0.269,
         "trade_log": [
@@ -47469,7 +47469,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.1
       },
       "far": {
         "status": "ok",
@@ -47489,7 +47489,7 @@
           "avg_holding_hours": 264.0
         },
         "buy_and_hold_pct": 1.91,
-        "live_price": 0.01645,
+        "live_price": 0.01656,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01744,
         "atr": 0.0002865779113599288,
@@ -47690,7 +47690,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.3
       }
     },
     "SUNDOG": {
@@ -47744,7 +47744,7 @@
           "avg_holding_hours": 120.0
         },
         "buy_and_hold_pct": -31.36,
-        "live_price": 0.1784,
+        "live_price": 0.1838,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.2419,
         "atr": 0.019785819512074223,
@@ -47949,7 +47949,7 @@
           "avg_holding_hours": 120.0
         },
         "buy_and_hold_pct": -20.22,
-        "live_price": 0.2066,
+        "live_price": 0.2147,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.2473,
         "atr": 0.01832352149720855,
@@ -48244,10 +48244,10 @@
           "avg_holding_hours": 82.7
         },
         "buy_and_hold_pct": 27.42,
-        "live_price": 0.00662,
+        "live_price": 0.00652,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.0073,
-        "atr": 0.0001062985207329937,
+        "atr": 0.00011844137787585085,
         "n_candles": 999,
         "btc_correlation": 0.42,
         "trade_log": [
@@ -48463,7 +48463,7 @@
       "far": {
         "status": "insufficient_data",
         "n_candles": 116,
-        "elapsed_s": 0.1
+        "elapsed_s": 0.2
       }
     },
     "SXT": {
@@ -48504,7 +48504,7 @@
           "avg_holding_hours": 372.0
         },
         "buy_and_hold_pct": 456.62,
-        "live_price": 0.1716,
+        "live_price": 0.1822,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.207,
         "atr": 0.021344297715862905,
@@ -48705,7 +48705,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.2
       }
     },
     "SYRUP": {
@@ -48727,10 +48727,10 @@
           "avg_holding_hours": 116.0
         },
         "buy_and_hold_pct": -8.93,
-        "live_price": 0.1882,
+        "live_price": 0.19383,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.20929,
-        "atr": 0.006005792009618973,
+        "atr": 0.006431506295333258,
         "n_candles": 999,
         "btc_correlation": 0.562,
         "trade_log": [
@@ -48913,7 +48913,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -40.33,
-        "live_price": 0.00463,
+        "live_price": 0.00477,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.00572,
         "atr": 0.00034909105578600076,
@@ -49106,7 +49106,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -24.6,
-        "live_price": 258.3722,
+        "live_price": 270.295,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 311.182,
         "atr": 21.84139325964828,
@@ -49243,7 +49243,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.475,
-        "elapsed_s": 1.2
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "ok",
@@ -49263,10 +49263,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -22.91,
-        "live_price": 0.001525,
+        "live_price": 0.001544,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.003075,
-        "atr": 0.00020621755203557133,
+        "atr": 0.00020636040917842847,
         "n_candles": 999,
         "btc_correlation": 0.545,
         "trade_log": [
@@ -49474,10 +49474,10 @@
           "avg_holding_hours": 68.0
         },
         "buy_and_hold_pct": -8.12,
-        "live_price": 0.5891,
+        "live_price": 0.6362,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.7681,
-        "atr": 0.03681791260988568,
+        "atr": 0.03981791260988568,
         "n_candles": 999,
         "btc_correlation": 0.684,
         "trade_log": [
@@ -49651,7 +49651,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.1
       },
       "far": {
         "status": "ok",
@@ -49671,10 +49671,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -18.61,
-        "live_price": 0.5891,
+        "live_price": 0.6362,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.7681,
-        "atr": 0.0729222911612325,
+        "atr": 0.07296514830408965,
         "n_candles": 489,
         "btc_correlation": 0.402,
         "trade_log": [
@@ -49824,7 +49824,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.0
+        "elapsed_s": 1.2
       }
     },
     "TLM": {
@@ -49852,7 +49852,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -3.88,
-        "live_price": 0.001148,
+        "live_price": 0.001193,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.001677,
         "atr": 8.29222991583039e-05,
@@ -50015,10 +50015,10 @@
           "avg_holding_hours": 52.0
         },
         "buy_and_hold_pct": -17.32,
-        "live_price": 0.0302,
+        "live_price": 0.0313,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.033,
-        "atr": 0.0005642972411526475,
+        "atr": 0.0006428686697240761,
         "n_candles": 999,
         "btc_correlation": 0.098,
         "trade_log": [
@@ -50188,7 +50188,7 @@
         "status": "no_signal",
         "n_candles": 486,
         "btc_correlation": 0.515,
-        "elapsed_s": 0.5
+        "elapsed_s": 0.4
       }
     },
     "TOSHI": {
@@ -50196,7 +50196,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.569,
-        "elapsed_s": 0.9
+        "elapsed_s": 0.8
       },
       "far": {
         "status": "insufficient_data",
@@ -50229,7 +50229,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -23.02,
-        "live_price": 0.3806,
+        "live_price": 0.3971,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.52,
         "atr": 0.04454355795812583,
@@ -50405,10 +50405,10 @@
           "avg_holding_hours": 4.0
         },
         "buy_and_hold_pct": -3.08,
-        "live_price": 1.671,
+        "live_price": 1.726,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 1.892,
-        "atr": 0.038262103920906274,
+        "atr": 0.042047818206620555,
         "n_candles": 999,
         "btc_correlation": 0.455,
         "trade_log": [
@@ -50571,7 +50571,7 @@
         "status": "no_signal",
         "n_candles": 396,
         "btc_correlation": 0.195,
-        "elapsed_s": 0.4
+        "elapsed_s": 0.6
       },
       "far": {
         "status": "insufficient_data",
@@ -50598,10 +50598,10 @@
           "avg_holding_hours": 56.0
         },
         "buy_and_hold_pct": 9.85,
-        "live_price": 0.331814,
+        "live_price": 0.332377,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.336774,
-        "atr": 0.0013479113247781471,
+        "atr": 0.001439125610492435,
         "n_candles": 999,
         "btc_correlation": 0.433,
         "trade_log": [
@@ -50823,7 +50823,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.2
       },
       "far": {
         "status": "ok",
@@ -50843,7 +50843,7 @@
           "avg_holding_hours": 1920.0
         },
         "buy_and_hold_pct": 16.23,
-        "live_price": 0.331814,
+        "live_price": 0.332377,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.336774,
         "atr": 0.00397009592272651,
@@ -51206,7 +51206,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -26.69,
-        "live_price": 0.361,
+        "live_price": 0.371,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.432,
         "atr": 0.029815020583333386,
@@ -51369,10 +51369,10 @@
           "avg_holding_hours": 56.0
         },
         "buy_and_hold_pct": -18.21,
-        "live_price": 6.8966,
+        "live_price": 7.1802,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 7.347,
-        "atr": 0.1958328948101049,
+        "atr": 0.21729718052439068,
         "n_candles": 999,
         "btc_correlation": 0.605,
         "trade_log": [
@@ -51546,7 +51546,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.4
+        "elapsed_s": 1.1
       },
       "far": {
         "status": "ok",
@@ -51566,7 +51566,7 @@
           "avg_holding_hours": 528.0
         },
         "buy_and_hold_pct": 5.58,
-        "live_price": 6.8966,
+        "live_price": 7.1802,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 8.0208,
         "atr": 0.6515037699337639,
@@ -52067,10 +52067,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -12.91,
-        "live_price": 0.00984,
+        "live_price": 0.01014,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01072,
-        "atr": 0.00021863417823596125,
+        "atr": 0.0002372056068073898,
         "n_candles": 999,
         "btc_correlation": 0.471,
         "trade_log": [
@@ -52196,7 +52196,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.1
       },
       "far": {
         "status": "insufficient_data",
@@ -52229,7 +52229,7 @@
           "avg_holding_hours": 300.0
         },
         "buy_and_hold_pct": -8.28,
-        "live_price": 0.003996,
+        "live_price": 0.004076,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.005515,
         "atr": 0.0005189826579141019,
@@ -52524,10 +52524,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -22.95,
-        "live_price": 0.0641,
+        "live_price": 0.0658,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.0724,
-        "atr": 0.0020414428926726486,
+        "atr": 0.002184300035529792,
         "n_candles": 999,
         "btc_correlation": 0.12,
         "trade_log": [
@@ -52686,7 +52686,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -42.19,
-        "live_price": 0.006483,
+        "live_price": 0.006789,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.0104,
         "atr": 0.000590260395675454,
@@ -52839,7 +52839,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.0
       }
     },
     "VFY": {
@@ -52847,7 +52847,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.444,
-        "elapsed_s": 0.9
+        "elapsed_s": 0.8
       },
       "far": {
         "status": "insufficient_data",
@@ -52887,10 +52887,10 @@
           "avg_holding_hours": 40.0
         },
         "buy_and_hold_pct": -2.28,
-        "live_price": 0.6308,
+        "live_price": 0.6567,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.6757,
-        "atr": 0.015687348523012238,
+        "atr": 0.017573062808726524,
         "n_candles": 999,
         "btc_correlation": 0.615,
         "trade_log": [
@@ -53177,10 +53177,10 @@
           "avg_holding_hours": 134.0
         },
         "buy_and_hold_pct": 38.92,
-        "live_price": 21.213,
+        "live_price": 22.624,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 25.469,
-        "atr": 0.779026841980761,
+        "atr": 0.8777411276950468,
         "n_candles": 999,
         "btc_correlation": 0.435,
         "trade_log": [
@@ -53444,10 +53444,10 @@
           "avg_holding_hours": 40.0
         },
         "buy_and_hold_pct": -3.14,
-        "live_price": 80607.9,
+        "live_price": 81912.6,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 81964.5,
-        "atr": 570.683379201482,
+        "atr": 655.1333792014822,
         "n_candles": 999,
         "btc_correlation": 0.858,
         "trade_log": [
@@ -53665,7 +53665,7 @@
           "avg_holding_hours": 648.0
         },
         "buy_and_hold_pct": -0.86,
-        "live_price": 80607.9,
+        "live_price": 81912.6,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 84178.0,
         "atr": 2092.037899163403,
@@ -53907,7 +53907,7 @@
           "avg_holding_hours": 144.0
         },
         "buy_and_hold_pct": -16.94,
-        "live_price": 0.00197,
+        "live_price": 0.00205,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.00283,
         "atr": 0.00024242950142899908,
@@ -54112,7 +54112,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -21.07,
-        "live_price": 0.1811,
+        "live_price": 0.1815,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.23,
         "atr": 0.016267761931603578,
@@ -54269,7 +54269,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -59.11,
-        "live_price": 0.1889,
+        "live_price": 0.1978,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.2336,
         "atr": 0.0172834425474916,
@@ -54426,7 +54426,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -3.53,
-        "live_price": 5.225e-05,
+        "live_price": 5.224e-05,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 6.9202e-05,
         "atr": 1.1579575568242026e-05,
@@ -54607,7 +54607,7 @@
           "avg_holding_hours": 192.0
         },
         "buy_and_hold_pct": 2.55,
-        "live_price": 0.4615,
+        "live_price": 0.4888,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.5865,
         "atr": 0.05269844679651609,
@@ -54784,7 +54784,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 0.9
+        "elapsed_s": 1.1
       }
     },
     "WLFI": {
@@ -54806,10 +54806,10 @@
           "avg_holding_hours": 104.0
         },
         "buy_and_hold_pct": -1.79,
-        "live_price": 0.0567,
+        "live_price": 0.057,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.0571,
-        "atr": 0.00047981316868606517,
+        "atr": 0.0005012417401146367,
         "n_candles": 999,
         "btc_correlation": 0.51,
         "trade_log": [
@@ -55055,7 +55055,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.3
+        "elapsed_s": 1.2
       },
       "far": {
         "status": "insufficient_data",
@@ -55088,7 +55088,7 @@
           "avg_holding_hours": 468.0
         },
         "buy_and_hold_pct": -27.62,
-        "live_price": 0.01036,
+        "live_price": 0.01076,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.01379,
         "atr": 0.0008032126665442234,
@@ -55348,10 +55348,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -8.44,
-        "live_price": 4141.3,
+        "live_price": 4172.8,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 4156.0,
-        "atr": 12.150114660598954,
+        "atr": 14.35725751774185,
         "n_candles": 999,
         "btc_correlation": 0.222,
         "trade_log": [
@@ -55630,7 +55630,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -31.88,
-        "live_price": 0.00408,
+        "live_price": 0.00409,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.0049,
         "atr": 0.00037340825074098894,
@@ -55903,7 +55903,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.3
+        "elapsed_s": 1.1
       }
     },
     "XDC": {
@@ -55931,7 +55931,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -25.12,
-        "live_price": 0.03252,
+        "live_price": 0.03297,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.0384,
         "atr": 0.0017920794530988436,
@@ -56113,7 +56113,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": 8.4,
-        "live_price": 0.172818,
+        "live_price": 0.177591,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.236993,
         "atr": 0.010879554938747033,
@@ -56264,10 +56264,10 @@
           "avg_holding_hours": 36.0
         },
         "buy_and_hold_pct": -51.08,
-        "live_price": 0.000418,
+        "live_price": 0.000422,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.000441,
-        "atr": 2.4335405735367446e-05,
+        "atr": 2.4763977163938872e-05,
         "n_candles": 999,
         "btc_correlation": 0.022,
         "trade_log": [
@@ -56444,10 +56444,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -5.64,
-        "live_price": 581.14,
+        "live_price": 596.08,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 607.87,
-        "atr": 15.195308617539915,
+        "atr": 16.179594331825637,
         "n_candles": 999,
         "btc_correlation": 0.332,
         "trade_log": [
@@ -56593,7 +56593,7 @@
           "avg_holding_hours": 864.0
         },
         "buy_and_hold_pct": -0.07,
-        "live_price": 581.14,
+        "live_price": 596.08,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 633.9,
         "atr": 28.971292148460762,
@@ -56768,10 +56768,10 @@
           "avg_holding_hours": 36.0
         },
         "buy_and_hold_pct": -12.68,
-        "live_price": 0.004373,
+        "live_price": 0.004557,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.005063,
-        "atr": 0.00010791201385038776,
+        "atr": 0.0001136262995646735,
         "n_candles": 999,
         "btc_correlation": 0.167,
         "trade_log": [
@@ -57087,10 +57087,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -24.65,
-        "live_price": 1.26755,
+        "live_price": 1.30406,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 1.6578,
-        "atr": 0.06566611363719199,
+        "atr": 0.06601897078004913,
         "n_candles": 999,
         "btc_correlation": 0.624,
         "trade_log": [
@@ -57240,7 +57240,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.1
+        "elapsed_s": 1.0
       }
     },
     "XTZ": {
@@ -57262,10 +57262,10 @@
           "avg_holding_hours": 50.0
         },
         "buy_and_hold_pct": -2.86,
-        "live_price": 0.28794,
+        "live_price": 0.30052,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.31766,
-        "atr": 0.007961171459992668,
+        "atr": 0.008843314317135524,
         "n_candles": 999,
         "btc_correlation": 0.614,
         "trade_log": [
@@ -57439,7 +57439,7 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.3
       },
       "far": {
         "status": "ok",
@@ -57459,7 +57459,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -41.78,
-        "live_price": 0.28799,
+        "live_price": 0.30052,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.3502,
         "atr": 0.023897468678302183,
@@ -57610,10 +57610,10 @@
           "avg_holding_hours": 8.0
         },
         "buy_and_hold_pct": -0.97,
-        "live_price": 5.627,
+        "live_price": 5.639,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 5.644,
-        "atr": 0.013990469589247004,
+        "atr": 0.014847612446389893,
         "n_candles": 999,
         "btc_correlation": 0.099,
         "trade_log": [
@@ -57796,7 +57796,7 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -31.08,
-        "live_price": 0.003216,
+        "live_price": 0.003246,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.003719,
         "atr": 0.0004291343366331063,
@@ -57971,10 +57971,10 @@
           "avg_holding_hours": null
         },
         "buy_and_hold_pct": -20.01,
-        "live_price": 0.06,
+        "live_price": 0.06321,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.06897,
-        "atr": 0.0013563497187522732,
+        "atr": 0.0015206354330379876,
         "n_candles": 999,
         "btc_correlation": 0.284,
         "trade_log": [
@@ -58147,7 +58147,7 @@
           "avg_holding_hours": 144.0
         },
         "buy_and_hold_pct": -45.73,
-        "live_price": 0.0228,
+        "live_price": 0.0234,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 0.0302,
         "atr": 0.0019037773198252192,
@@ -58373,10 +58373,10 @@
           "avg_holding_hours": 40.0
         },
         "buy_and_hold_pct": 10.93,
-        "live_price": 1067.0,
+        "live_price": 1129.53,
         "live_status": "NO_SIGNAL",
         "donchian_breakout_level": 1251.86,
-        "atr": 41.133043618250575,
+        "atr": 45.71518647539344,
         "n_candles": 999,
         "btc_correlation": 0.421,
         "trade_log": [
@@ -58570,7 +58570,7 @@
           "avg_holding_hours": 624.0
         },
         "buy_and_hold_pct": 89.51,
-        "live_price": 1066.52,
+        "live_price": 1129.53,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 1600.03,
         "atr": 121.8432913442533,
@@ -58792,7 +58792,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.578,
-        "elapsed_s": 1.2
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "no_signal",
@@ -58806,7 +58806,7 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.129,
-        "elapsed_s": 1.0
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "no_signal",
@@ -58819,7 +58819,7 @@
       "near": {
         "status": "insufficient_data",
         "n_candles": 137,
-        "elapsed_s": 0.2
+        "elapsed_s": 0.1
       },
       "far": {
         "status": "insufficient_data",
@@ -58846,10 +58846,10 @@
           "avg_holding_hours": 136.0
         },
         "buy_and_hold_pct": -10.94,
-        "live_price": 0.01427,
+        "live_price": 0.01499,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 0.0166,
-        "atr": 0.0007443100562296101,
+        "atr": 0.0007957386276581817,
         "n_candles": 999,
         "btc_correlation": 0.426,
         "trade_log": [
@@ -59023,19 +59023,19 @@
           }
         ],
         "rejected_count": 0,
-        "elapsed_s": 1.2
+        "elapsed_s": 1.1
       },
       "far": {
         "status": "insufficient_data",
         "n_candles": 259,
-        "elapsed_s": 0.4
+        "elapsed_s": 0.1
       }
     },
     "ZKP": {
       "near": {
         "status": "insufficient_data",
         "n_candles": 131,
-        "elapsed_s": 0.2
+        "elapsed_s": 0.1
       },
       "far": {
         "status": "insufficient_data",
@@ -59075,10 +59075,10 @@
           "avg_holding_hours": 64.0
         },
         "buy_and_hold_pct": -4.39,
-        "live_price": 1.768,
+        "live_price": 1.854,
         "live_status": "UPTREND_WAITING",
         "donchian_breakout_level": 1.992,
-        "atr": 0.08619141176808968,
+        "atr": 0.09326284033951826,
         "n_candles": 999,
         "btc_correlation": 0.435,
         "trade_log": [
@@ -59257,7 +59257,7 @@
       "far": {
         "status": "insufficient_data",
         "n_candles": 256,
-        "elapsed_s": 0.2
+        "elapsed_s": 0.1
       }
     },
     "ZRX": {
@@ -59265,13 +59265,13 @@
         "status": "no_signal",
         "n_candles": 999,
         "btc_correlation": 0.57,
-        "elapsed_s": 1.1
+        "elapsed_s": 0.9
       },
       "far": {
         "status": "no_signal",
         "n_candles": 467,
         "btc_correlation": 0.516,
-        "elapsed_s": 0.5
+        "elapsed_s": 0.4
       }
     }
   }
