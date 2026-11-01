@@ -65,7 +65,7 @@
 </head>
 <body>
   <h1>Trading signal dashboard</h1>
-  <div class="meta">Generated 2026-11-01T07:12:02.658194+00:00 · "4H" = 4-hour candles, "1D" = daily candles (not the NEAR Protocol coin — "near"/"far" are internal timeframe names, renamed here to avoid that mix-up)</div>
+  <div class="meta">Generated 2026-11-01T14:09:50.768435+00:00 · "4H" = 4-hour candles, "1D" = daily candles (not the NEAR Protocol coin — "near"/"far" are internal timeframe names, renamed here to avoid that mix-up)</div>
   <div class="disclaimer">
     <strong>Read before trading on any of this:</strong> every number here comes from a real backtest where
     parameters were tuned on one slice of history and then checked against a holdout slice the tuning never
@@ -84,12 +84,12 @@
         <tr><td>&nbsp;&nbsp;🟨 Moderate</td><td>0</td></tr>
         <tr><td>&nbsp;&nbsp;🟧 High risk / high reward</td><td>0</td></tr>
         <tr><td>&nbsp;&nbsp;⬜ No signal</td><td>862</td></tr>
-        <tr><td>Total holdout trades across the whole universe</td><td>272</td></tr>
+        <tr><td>Total holdout trades across the whole universe</td><td>274</td></tr>
       </table>
       <p class="reliability-note">Median coin-vs-BTC return correlation: <strong>0.511</strong> across 566 coin/horizon slots — <strong>55</strong> are highly correlated (|r| &ge; 0.7) with BTC. A correlated group moving together is NOT 566 independent trading opportunities — it is closer to one BTC-driven market move wearing many coin tickers.</p>
       <p class="reliability-note">
-        <strong>What "independent sample size" means here:</strong> 272 total holdout
-        trades is the raw count across all coins — it is <em>not</em> 272 independent
+        <strong>What "independent sample size" means here:</strong> 274 total holdout
+        trades is the raw count across all coins — it is <em>not</em> 274 independent
         tests of the strategy, since correlated coins moving together in the same market event aren't separate
         evidence. A statistically defensible "effective independent sample size" accounting for that overlap is
         <strong>not established</strong> — it would require a more rigorous cross-asset dependence model than
@@ -134,7 +134,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.082200</div>
+      <div class="price">$0.084600</div>
       <div class="sparkline" data-coin="1INCH" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -155,10 +155,27 @@
     <section class="coin" data-best-tier="none">
       <h2>2Z</h2>
       <div class="horizon-row">
-        <div class="horizon-card muted" data-tier="none">
-          <div class="horizon-title">4H</div>
-          <div class="na">— No tradable setups in test data —</div>
-        </div>
+    <div class="horizon-card" data-tier="none">
+      <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
+      <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
+      <div class="live-status" style="color:#6e7781">⚪ No signal</div>
+      <div class="price">$0.025470</div>
+      <div class="sparkline" data-coin="2Z" data-horizon="near">
+        <span class="na-cell">Loading price history&hellip;</span>
+      </div>
+      <table class="metrics">
+        <tr><td>Strategy (holdout)</td><td class="pos">+3.40%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+31.72%</td></tr>
+        <tr><td>Sharpe</td><td>5.18</td></tr>
+        <tr><td>Max drawdown</td><td>-2.19%</td></tr>
+        <tr><td>Trades (holdout)</td><td>2</td></tr>
+        <tr><td>Win rate</td><td>50.0%</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~28h</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.472</td></tr>
+        
+        <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
+      </table>
+    </div>
         <div class="horizon-card muted" data-tier="none">
           <div class="horizon-title">1D</div>
           <div class="na">— Not enough history yet —</div>
@@ -187,7 +204,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$138.66</div>
+      <div class="price">$138.48</div>
       <div class="sparkline" data-coin="AAVE" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -216,7 +233,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.004740</div>
+      <div class="price">$0.004790</div>
       <div class="sparkline" data-coin="ACH" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -241,15 +258,15 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.008310</div>
+      <div class="price">$0.008280</div>
       <div class="sparkline" data-coin="ACT" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+2.34%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+27.31%</td></tr>
-        <tr><td>Sharpe</td><td>4.10</td></tr>
-        <tr><td>Max drawdown</td><td>-0.21%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+3.06%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+25.17%</td></tr>
+        <tr><td>Sharpe</td><td>3.44</td></tr>
+        <tr><td>Max drawdown</td><td>-0.43%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
@@ -286,7 +303,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.193096</div>
+      <div class="price">$0.193351</div>
       <div class="sparkline" data-coin="ADA" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -327,7 +344,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.060520</div>
+      <div class="price">$0.056800</div>
       <div class="sparkline" data-coin="ADX" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -400,15 +417,15 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.031190</div>
+      <div class="price">$0.032490</div>
       <div class="sparkline" data-coin="AIO" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-3.21%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+5.12%</td></tr>
-        <tr><td>Sharpe</td><td>-6.61</td></tr>
-        <tr><td>Max drawdown</td><td>-3.35%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-3.17%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+2.93%</td></tr>
+        <tr><td>Sharpe</td><td>-6.62</td></tr>
+        <tr><td>Max drawdown</td><td>-3.29%</td></tr>
         <tr><td>Trades (holdout)</td><td>3</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~20h</td></tr>
@@ -433,7 +450,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.092700</div>
+      <div class="price">$0.092300</div>
       <div class="sparkline" data-coin="AIOZ" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -458,14 +475,14 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.016660</div>
+      <div class="price">$0.016630</div>
       <div class="sparkline" data-coin="AIXBT" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+0.95%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+31.76%</td></tr>
-        <tr><td>Sharpe</td><td>1.53</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+1.32%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+32.95%</td></tr>
+        <tr><td>Sharpe</td><td>2.07</td></tr>
         <tr><td>Max drawdown</td><td>-2.44%</td></tr>
         <tr><td>Trades (holdout)</td><td>2</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
@@ -503,7 +520,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.621900</div>
+      <div class="price">$0.620700</div>
       <div class="sparkline" data-coin="AKT" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -532,7 +549,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.095300</div>
+      <div class="price">$0.094770</div>
       <div class="sparkline" data-coin="ALGO" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -561,7 +578,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.132300</div>
+      <div class="price">$0.131200</div>
       <div class="sparkline" data-coin="ALICE" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -622,13 +639,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.002788</div>
+      <div class="price">$0.002775</div>
       <div class="sparkline" data-coin="ANIME" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-1.91%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+0.02%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
@@ -655,7 +672,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.003980</div>
+      <div class="price">$0.003920</div>
       <div class="sparkline" data-coin="ANKR" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -684,7 +701,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.113200</div>
+      <div class="price">$0.113000</div>
       <div class="sparkline" data-coin="APE" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -713,7 +730,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.236900</div>
+      <div class="price">$0.235700</div>
       <div class="sparkline" data-coin="API3" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -754,7 +771,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.637100</div>
+      <div class="price">$0.634700</div>
       <div class="sparkline" data-coin="APT" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -783,7 +800,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$3.1830</div>
+      <div class="price">$3.1400</div>
       <div class="sparkline" data-coin="AR" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -812,7 +829,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.165300</div>
+      <div class="price">$0.163400</div>
       <div class="sparkline" data-coin="ARB" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -837,13 +854,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.041910</div>
+      <div class="price">$0.041490</div>
       <div class="sparkline" data-coin="ARC" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="neg">-1.57%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+50.78%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+56.76%</td></tr>
         <tr><td>Sharpe</td><td>-2.42</td></tr>
         <tr><td>Max drawdown</td><td>-1.91%</td></tr>
         <tr><td>Trades (holdout)</td><td>3</td></tr>
@@ -870,7 +887,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.114700</div>
+      <div class="price">$0.114100</div>
       <div class="sparkline" data-coin="ARKM" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -899,7 +916,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.010290</div>
+      <div class="price">$0.010020</div>
       <div class="sparkline" data-coin="ARPA" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -948,18 +965,18 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.697670</div>
+      <div class="price">$0.696690</div>
       <div class="sparkline" data-coin="ASTER" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-2.29%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+3.28%</td></tr>
-        <tr><td>Sharpe</td><td>-4.88</td></tr>
-        <tr><td>Max drawdown</td><td>-2.29%</td></tr>
-        <tr><td>Trades (holdout)</td><td>2</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-4.80%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+3.79%</td></tr>
+        <tr><td>Sharpe</td><td>-8.70</td></tr>
+        <tr><td>Max drawdown</td><td>-5.13%</td></tr>
+        <tr><td>Trades (holdout)</td><td>4</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~2.8d</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~2.2d</td></tr>
         <tr><td>Correlation to BTC</td><td>0.46</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
@@ -981,7 +998,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.005860</div>
+      <div class="price">$0.005830</div>
       <div class="sparkline" data-coin="ASTR" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -1018,14 +1035,14 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$1.4958</div>
+      <div class="price">$1.4771</div>
       <div class="sparkline" data-coin="ATOM" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+0.50%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+2.85%</td></tr>
-        <tr><td>Sharpe</td><td>1.27</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+0.25%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+2.43%</td></tr>
+        <tr><td>Sharpe</td><td>0.66</td></tr>
         <tr><td>Max drawdown</td><td>-1.14%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
@@ -1039,7 +1056,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$1.4958</div>
+      <div class="price">$1.4771</div>
       <div class="sparkline" data-coin="ATOM" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -1104,7 +1121,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$8.8900</div>
+      <div class="price">$8.7460</div>
       <div class="sparkline" data-coin="AVAX" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -1145,7 +1162,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.868000</div>
+      <div class="price">$0.872000</div>
       <div class="sparkline" data-coin="AXS" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -1182,18 +1199,18 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.407900</div>
+      <div class="price">$0.394900</div>
       <div class="sparkline" data-coin="B2" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-2.86%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-14.13%</td></tr>
-        <tr><td>Sharpe</td><td>-7.61</td></tr>
-        <tr><td>Max drawdown</td><td>-2.86%</td></tr>
-        <tr><td>Trades (holdout)</td><td>2</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-15.19%</td></tr>
+        <tr><td>Sharpe</td><td>0.00</td></tr>
+        <tr><td>Max drawdown</td><td>0.00%</td></tr>
+        <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~14h</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
         <tr><td>Correlation to BTC</td><td>0.162</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
@@ -1239,7 +1256,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.196700</div>
+      <div class="price">$0.195500</div>
       <div class="sparkline" data-coin="BAND" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -1276,19 +1293,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.139540</div>
+      <div class="price">$0.139080</div>
       <div class="sparkline" data-coin="BAT" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-0.59%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+12.65%</td></tr>
-        <tr><td>Sharpe</td><td>-1.10</td></tr>
-        <tr><td>Max drawdown</td><td>-2.57%</td></tr>
-        <tr><td>Trades (holdout)</td><td>3</td></tr>
-        <tr><td>Win rate</td><td>33.3%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~3.3d</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.52</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-0.15%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+13.89%</td></tr>
+        <tr><td>Sharpe</td><td>-0.30</td></tr>
+        <tr><td>Max drawdown</td><td>-1.95%</td></tr>
+        <tr><td>Trades (holdout)</td><td>2</td></tr>
+        <tr><td>Win rate</td><td>50.0%</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~4.0d</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.521</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -1297,7 +1314,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.139540</div>
+      <div class="price">$0.139080</div>
       <div class="sparkline" data-coin="BAT" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -1322,15 +1339,15 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$284.15</div>
+      <div class="price">$283.19</div>
       <div class="sparkline" data-coin="BCH" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-0.83%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-4.34%</td></tr>
-        <tr><td>Sharpe</td><td>-2.89</td></tr>
-        <tr><td>Max drawdown</td><td>-1.12%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-0.84%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-3.57%</td></tr>
+        <tr><td>Sharpe</td><td>-2.86</td></tr>
+        <tr><td>Max drawdown</td><td>-1.16%</td></tr>
         <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~32h</td></tr>
@@ -1343,7 +1360,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$284.15</div>
+      <div class="price">$283.19</div>
       <div class="sparkline" data-coin="BCH" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -1396,7 +1413,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.015670</div>
+      <div class="price">$0.015760</div>
       <div class="sparkline" data-coin="BICO" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -1425,7 +1442,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.007049</div>
+      <div class="price">$0.006765</div>
       <div class="sparkline" data-coin="BIGTIME" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -1498,19 +1515,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.008016</div>
+      <div class="price">$0.007945</div>
       <div class="sparkline" data-coin="BLUAI" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="neg">-0.79%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+3.53%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+0.42%</td></tr>
         <tr><td>Sharpe</td><td>-4.09</td></tr>
         <tr><td>Max drawdown</td><td>-1.05%</td></tr>
         <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~28h</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.208</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.209</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -1579,7 +1596,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$705.18</div>
+      <div class="price">$713.87</div>
       <div class="sparkline" data-coin="BNB" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -1673,7 +1690,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$77,869.50</div>
+      <div class="price">$77,804.20</div>
       <div class="sparkline" data-coin="BTC" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -1698,13 +1715,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.045650</div>
+      <div class="price">$0.045550</div>
       <div class="sparkline" data-coin="BTR" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-83.64%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-79.15%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
@@ -1756,13 +1773,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.013119</div>
+      <div class="price">$0.013028</div>
       <div class="sparkline" data-coin="C98" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-28.10%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-24.02%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
@@ -1789,7 +1806,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$1.9610</div>
+      <div class="price">$1.9470</div>
       <div class="sparkline" data-coin="CAKE" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -1874,18 +1891,18 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.002901</div>
+      <div class="price">$0.002804</div>
       <div class="sparkline" data-coin="CCD" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-3.43%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+7.17%</td></tr>
-        <tr><td>Sharpe</td><td>-7.25</td></tr>
-        <tr><td>Max drawdown</td><td>-3.43%</td></tr>
-        <tr><td>Trades (holdout)</td><td>4</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-2.58%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+0.79%</td></tr>
+        <tr><td>Sharpe</td><td>-6.72</td></tr>
+        <tr><td>Max drawdown</td><td>-2.58%</td></tr>
+        <tr><td>Trades (holdout)</td><td>2</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~22h</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~2h</td></tr>
         <tr><td>Correlation to BTC</td><td>0.119</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
@@ -1895,7 +1912,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.002901</div>
+      <div class="price">$0.002804</div>
       <div class="sparkline" data-coin="CCD" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -1924,7 +1941,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.074100</div>
+      <div class="price">$0.075900</div>
       <div class="sparkline" data-coin="CELO" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -1945,27 +1962,10 @@
     <section class="coin" data-best-tier="none">
       <h2>CELR</h2>
       <div class="horizon-row">
-    <div class="horizon-card" data-tier="none">
-      <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
-      <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
-      <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.002556</div>
-      <div class="sparkline" data-coin="CELR" data-horizon="near">
-        <span class="na-cell">Loading price history&hellip;</span>
-      </div>
-      <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-0.84%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+4.88%</td></tr>
-        <tr><td>Sharpe</td><td>-2.31</td></tr>
-        <tr><td>Max drawdown</td><td>-1.50%</td></tr>
-        <tr><td>Trades (holdout)</td><td>1</td></tr>
-        <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~28h</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.633</td></tr>
-        
-        <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
-      </table>
-    </div>
+        <div class="horizon-card muted" data-tier="none">
+          <div class="horizon-title">4H</div>
+          <div class="na">— No tradable setups in test data —</div>
+        </div>
         <div class="horizon-card muted" data-tier="none">
           <div class="horizon-title">1D</div>
           <div class="na">— No tradable setups in test data —</div>
@@ -1982,7 +1982,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.095200</div>
+      <div class="price">$0.094600</div>
       <div class="sparkline" data-coin="CFG" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2011,7 +2011,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.046560</div>
+      <div class="price">$0.046640</div>
       <div class="sparkline" data-coin="CFX" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2052,7 +2052,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.016300</div>
+      <div class="price">$0.016280</div>
       <div class="sparkline" data-coin="CHR" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2077,19 +2077,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.012170</div>
+      <div class="price">$0.012200</div>
       <div class="sparkline" data-coin="CHZ" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+1.72%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+24.22%</td></tr>
-        <tr><td>Sharpe</td><td>2.43</td></tr>
-        <tr><td>Max drawdown</td><td>-3.31%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+0.94%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+19.54%</td></tr>
+        <tr><td>Sharpe</td><td>1.34</td></tr>
+        <tr><td>Max drawdown</td><td>-3.29%</td></tr>
         <tr><td>Trades (holdout)</td><td>3</td></tr>
         <tr><td>Win rate</td><td>33.3%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~2.9d</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.498</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.499</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -2098,7 +2098,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.012170</div>
+      <div class="price">$0.012200</div>
       <div class="sparkline" data-coin="CHZ" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2151,7 +2151,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$20.7200</div>
+      <div class="price">$20.7300</div>
       <div class="sparkline" data-coin="COMP" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2204,7 +2204,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.010390</div>
+      <div class="price">$0.010480</div>
       <div class="sparkline" data-coin="COTI" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2229,19 +2229,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.118900</div>
+      <div class="price">$0.116600</div>
       <div class="sparkline" data-coin="COW" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="neg">-1.45%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-9.43%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-10.30%</td></tr>
         <tr><td>Sharpe</td><td>-5.61</td></tr>
         <tr><td>Max drawdown</td><td>-1.45%</td></tr>
         <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~12h</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.603</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.604</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -2262,7 +2262,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.027130</div>
+      <div class="price">$0.026950</div>
       <div class="sparkline" data-coin="CPOOL" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2291,7 +2291,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.051320</div>
+      <div class="price">$0.051820</div>
       <div class="sparkline" data-coin="CRO" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2320,7 +2320,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.284400</div>
+      <div class="price">$0.284620</div>
       <div class="sparkline" data-coin="CRV" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2414,7 +2414,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.027440</div>
+      <div class="price">$0.027190</div>
       <div class="sparkline" data-coin="CTSI" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2451,14 +2451,14 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$2.0320</div>
+      <div class="price">$2.0470</div>
       <div class="sparkline" data-coin="CVX" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-1.27%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+6.59%</td></tr>
-        <tr><td>Sharpe</td><td>-4.84</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-1.48%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+4.82%</td></tr>
+        <tr><td>Sharpe</td><td>-5.60</td></tr>
         <tr><td>Max drawdown</td><td>-2.26%</td></tr>
         <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
@@ -2472,7 +2472,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$2.0320</div>
+      <div class="price">$2.0470</div>
       <div class="sparkline" data-coin="CVX" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2501,7 +2501,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.270000</div>
+      <div class="price">$0.273000</div>
       <div class="sparkline" data-coin="CYBER" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2526,13 +2526,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.005006</div>
+      <div class="price">$0.004915</div>
       <div class="sparkline" data-coin="DAG" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-16.10%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-15.56%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
@@ -2547,7 +2547,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.005006</div>
+      <div class="price">$0.004915</div>
       <div class="sparkline" data-coin="DAG" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2568,32 +2568,15 @@
     <section class="coin" data-best-tier="none">
       <h2>DASH</h2>
       <div class="horizon-row">
-    <div class="horizon-card" data-tier="none">
-      <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
-      <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
-      <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$48.1730</div>
-      <div class="sparkline" data-coin="DASH" data-horizon="near">
-        <span class="na-cell">Loading price history&hellip;</span>
-      </div>
-      <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-0.11%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+16.59%</td></tr>
-        <tr><td>Sharpe</td><td>-0.10</td></tr>
-        <tr><td>Max drawdown</td><td>-1.90%</td></tr>
-        <tr><td>Trades (holdout)</td><td>2</td></tr>
-        <tr><td>Win rate</td><td>50.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~2.3d</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.382</td></tr>
-        
-        <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
-      </table>
-    </div>
+        <div class="horizon-card muted" data-tier="none">
+          <div class="horizon-title">4H</div>
+          <div class="na">— No tradable setups in test data —</div>
+        </div>
     <div class="horizon-card" data-tier="none">
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$48.1730</div>
+      <div class="price">$48.6220</div>
       <div class="sparkline" data-coin="DASH" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2630,13 +2613,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$13.2290</div>
+      <div class="price">$13.2050</div>
       <div class="sparkline" data-coin="DCR" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-10.12%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-11.15%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
@@ -2747,7 +2730,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.075712</div>
+      <div class="price">$0.075589</div>
       <div class="sparkline" data-coin="DOGE" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2812,7 +2795,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.947000</div>
+      <div class="price">$0.949900</div>
       <div class="sparkline" data-coin="DOT" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2841,7 +2824,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.012960</div>
+      <div class="price">$0.012980</div>
       <div class="sparkline" data-coin="DRIFT" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -2890,13 +2873,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.003220</div>
+      <div class="price">$0.003050</div>
       <div class="sparkline" data-coin="EAT" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-23.87%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-29.12%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
@@ -2931,19 +2914,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.054230</div>
+      <div class="price">$0.054060</div>
       <div class="sparkline" data-coin="EDU" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-37.38%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-35.54%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.412</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.411</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -2952,7 +2935,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.054230</div>
+      <div class="price">$0.054060</div>
       <div class="sparkline" data-coin="EDU" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3046,7 +3029,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.023940</div>
+      <div class="price">$0.024230</div>
       <div class="sparkline" data-coin="ENJ" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3075,7 +3058,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$4.9400</div>
+      <div class="price">$4.9500</div>
       <div class="sparkline" data-coin="ENS" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3100,13 +3083,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.549000</div>
+      <div class="price">$0.557000</div>
       <div class="sparkline" data-coin="ENSO" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-21.91%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-20.24%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
@@ -3169,7 +3152,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$7.1630</div>
+      <div class="price">$7.1680</div>
       <div class="sparkline" data-coin="ETC" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3194,18 +3177,18 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$2,266.17</div>
+      <div class="price">$2,261.98</div>
       <div class="sparkline" data-coin="ETH" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-5.86%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+14.90%</td></tr>
-        <tr><td>Sharpe</td><td>-11.31</td></tr>
-        <tr><td>Max drawdown</td><td>-5.86%</td></tr>
-        <tr><td>Trades (holdout)</td><td>5</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-7.05%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+13.71%</td></tr>
+        <tr><td>Sharpe</td><td>-12.07</td></tr>
+        <tr><td>Max drawdown</td><td>-7.05%</td></tr>
+        <tr><td>Trades (holdout)</td><td>6</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~26h</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~24h</td></tr>
         <tr><td>Correlation to BTC</td><td>0.901</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
@@ -3215,7 +3198,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$2,266.17</div>
+      <div class="price">$2,261.98</div>
       <div class="sparkline" data-coin="ETH" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3256,7 +3239,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$1.1690</div>
+      <div class="price">$1.1360</div>
       <div class="sparkline" data-coin="EUL" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3289,15 +3272,32 @@
     <section class="coin" data-best-tier="none">
       <h2>EWT</h2>
       <div class="horizon-row">
-        <div class="horizon-card muted" data-tier="none">
-          <div class="horizon-title">4H</div>
-          <div class="na">— No tradable setups in test data —</div>
-        </div>
+    <div class="horizon-card" data-tier="none">
+      <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
+      <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
+      <div class="live-status" style="color:#6e7781">⚪ No signal</div>
+      <div class="price">$0.282000</div>
+      <div class="sparkline" data-coin="EWT" data-horizon="near">
+        <span class="na-cell">Loading price history&hellip;</span>
+      </div>
+      <table class="metrics">
+        <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-7.96%</td></tr>
+        <tr><td>Sharpe</td><td>0.00</td></tr>
+        <tr><td>Max drawdown</td><td>0.00%</td></tr>
+        <tr><td>Trades (holdout)</td><td>0</td></tr>
+        <tr><td>Win rate</td><td>0.0%</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.149</td></tr>
+        
+        <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
+      </table>
+    </div>
     <div class="horizon-card" data-tier="none">
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.280000</div>
+      <div class="price">$0.282000</div>
       <div class="sparkline" data-coin="EWT" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3334,19 +3334,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.164200</div>
+      <div class="price">$0.162700</div>
       <div class="sparkline" data-coin="FET" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-5.45%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+17.80%</td></tr>
-        <tr><td>Sharpe</td><td>-11.32</td></tr>
-        <tr><td>Max drawdown</td><td>-5.87%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-6.33%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+12.91%</td></tr>
+        <tr><td>Sharpe</td><td>-12.45</td></tr>
+        <tr><td>Max drawdown</td><td>-6.33%</td></tr>
         <tr><td>Trades (holdout)</td><td>5</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~18h</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.578</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.579</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -3355,7 +3355,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.164200</div>
+      <div class="price">$0.162700</div>
       <div class="sparkline" data-coin="FET" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3416,18 +3416,18 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.874000</div>
+      <div class="price">$0.879000</div>
       <div class="sparkline" data-coin="FIL" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-2.42%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+18.67%</td></tr>
-        <tr><td>Sharpe</td><td>-5.01</td></tr>
-        <tr><td>Max drawdown</td><td>-3.73%</td></tr>
-        <tr><td>Trades (holdout)</td><td>3</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-1.73%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+15.46%</td></tr>
+        <tr><td>Sharpe</td><td>-3.81</td></tr>
+        <tr><td>Max drawdown</td><td>-2.44%</td></tr>
+        <tr><td>Trades (holdout)</td><td>2</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~16h</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~12h</td></tr>
         <tr><td>Correlation to BTC</td><td>0.496</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
@@ -3437,7 +3437,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.874000</div>
+      <div class="price">$0.879000</div>
       <div class="sparkline" data-coin="FIL" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3507,7 +3507,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.023600</div>
+      <div class="price">$0.023800</div>
       <div class="sparkline" data-coin="FLOW" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3536,7 +3536,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.006080</div>
+      <div class="price">$0.006100</div>
       <div class="sparkline" data-coin="FLR" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3565,7 +3565,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.059600</div>
+      <div class="price">$0.059670</div>
       <div class="sparkline" data-coin="FLUX" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3590,19 +3590,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$2.1735</div>
+      <div class="price">$2.2048</div>
       <div class="sparkline" data-coin="FOLKS" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-32.98%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-33.47%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.012</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.011</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -3647,7 +3647,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.001705</div>
+      <div class="price">$0.001732</div>
       <div class="sparkline" data-coin="GALA" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3712,7 +3712,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.008130</div>
+      <div class="price">$0.007950</div>
       <div class="sparkline" data-coin="GLMR" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3741,7 +3741,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.006850</div>
+      <div class="price">$0.006750</div>
       <div class="sparkline" data-coin="GMT" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3814,19 +3814,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.602300</div>
+      <div class="price">$0.594000</div>
       <div class="sparkline" data-coin="GRASS" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-0.29%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+2.94%</td></tr>
-        <tr><td>Sharpe</td><td>-1.62</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+0.15%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+3.34%</td></tr>
+        <tr><td>Sharpe</td><td>0.75</td></tr>
         <tr><td>Max drawdown</td><td>-0.45%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.375</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.374</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -3843,19 +3843,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.012100</div>
+      <div class="price">$0.012280</div>
       <div class="sparkline" data-coin="GRIFFAIN" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+0.59%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+82.03%</td></tr>
-        <tr><td>Sharpe</td><td>0.73</td></tr>
-        <tr><td>Max drawdown</td><td>-2.85%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+1.36%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+104.52%</td></tr>
+        <tr><td>Sharpe</td><td>1.49</td></tr>
+        <tr><td>Max drawdown</td><td>-3.13%</td></tr>
         <tr><td>Trades (holdout)</td><td>4</td></tr>
         <tr><td>Win rate</td><td>50.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~3.7d</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.407</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~3.6d</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.403</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -3876,7 +3876,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.020340</div>
+      <div class="price">$0.020390</div>
       <div class="sparkline" data-coin="GRT" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3919,7 +3919,7 @@
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-38.18%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-40.68%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
@@ -3958,7 +3958,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.072010</div>
+      <div class="price">$0.071540</div>
       <div class="sparkline" data-coin="HBAR" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -3987,7 +3987,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.005160</div>
+      <div class="price">$0.005090</div>
       <div class="sparkline" data-coin="HFT" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4028,7 +4028,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.364000</div>
+      <div class="price">$0.360400</div>
       <div class="sparkline" data-coin="HNT" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4101,19 +4101,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.184100</div>
+      <div class="price">$0.176700</div>
       <div class="sparkline" data-coin="ICNT" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-0.82%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+1.45%</td></tr>
-        <tr><td>Sharpe</td><td>-2.10</td></tr>
-        <tr><td>Max drawdown</td><td>-1.65%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-0.85%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-0.39%</td></tr>
+        <tr><td>Sharpe</td><td>-2.07</td></tr>
+        <tr><td>Max drawdown</td><td>-1.72%</td></tr>
         <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~3.5d</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.053</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.054</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -4130,14 +4130,14 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$2.5170</div>
+      <div class="price">$2.5120</div>
       <div class="sparkline" data-coin="ICP" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-1.93%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+12.82%</td></tr>
-        <tr><td>Sharpe</td><td>-4.86</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-2.57%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+10.20%</td></tr>
+        <tr><td>Sharpe</td><td>-5.76</td></tr>
         <tr><td>Max drawdown</td><td>-2.90%</td></tr>
         <tr><td>Trades (holdout)</td><td>2</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
@@ -4151,7 +4151,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$2.5170</div>
+      <div class="price">$2.5120</div>
       <div class="sparkline" data-coin="ICP" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4228,7 +4228,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$7.3190</div>
+      <div class="price">$7.2210</div>
       <div class="sparkline" data-coin="INJ" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4269,7 +4269,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.003740</div>
+      <div class="price">$0.003810</div>
       <div class="sparkline" data-coin="JASMY" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4294,19 +4294,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.136800</div>
+      <div class="price">$0.136590</div>
       <div class="sparkline" data-coin="JST" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+0.31%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+4.69%</td></tr>
-        <tr><td>Sharpe</td><td>0.56</td></tr>
-        <tr><td>Max drawdown</td><td>-1.81%</td></tr>
-        <tr><td>Trades (holdout)</td><td>2</td></tr>
-        <tr><td>Win rate</td><td>50.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~6.4d</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.104</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+1.00%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+3.35%</td></tr>
+        <tr><td>Sharpe</td><td>1.48</td></tr>
+        <tr><td>Max drawdown</td><td>-2.11%</td></tr>
+        <tr><td>Trades (holdout)</td><td>1</td></tr>
+        <tr><td>Win rate</td><td>100.0%</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~8.8d</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.103</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -4315,7 +4315,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.136800</div>
+      <div class="price">$0.136590</div>
       <div class="sparkline" data-coin="JST" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4356,7 +4356,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.263280</div>
+      <div class="price">$0.258780</div>
       <div class="sparkline" data-coin="JUP" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4393,19 +4393,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.033170</div>
+      <div class="price">$0.033220</div>
       <div class="sparkline" data-coin="KAS" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-6.35%</td></tr>
-        <tr><td>Sharpe</td><td>0.00</td></tr>
-        <tr><td>Max drawdown</td><td>0.00%</td></tr>
-        <tr><td>Trades (holdout)</td><td>0</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-1.08%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-2.52%</td></tr>
+        <tr><td>Sharpe</td><td>-6.35</td></tr>
+        <tr><td>Max drawdown</td><td>-1.08%</td></tr>
+        <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.657</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~20h</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.658</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -4414,7 +4414,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.033170</div>
+      <div class="price">$0.033220</div>
       <div class="sparkline" data-coin="KAS" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4455,7 +4455,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.068400</div>
+      <div class="price">$0.068500</div>
       <div class="sparkline" data-coin="KAVA" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4480,14 +4480,14 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.046650</div>
+      <div class="price">$0.047160</div>
       <div class="sparkline" data-coin="KERNEL" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="neg">-0.95%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-10.54%</td></tr>
-        <tr><td>Sharpe</td><td>-6.62</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-10.16%</td></tr>
+        <tr><td>Sharpe</td><td>-6.61</td></tr>
         <tr><td>Max drawdown</td><td>-0.95%</td></tr>
         <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
@@ -4509,19 +4509,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.074900</div>
+      <div class="price">$0.075300</div>
       <div class="sparkline" data-coin="KGEN" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-20.06%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-15.09%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.157</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.156</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -4550,19 +4550,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.032730</div>
+      <div class="price">$0.032750</div>
       <div class="sparkline" data-coin="KMNO" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-1.11%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+12.85%</td></tr>
-        <tr><td>Sharpe</td><td>-2.73</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-0.91%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+10.94%</td></tr>
+        <tr><td>Sharpe</td><td>-2.22</td></tr>
         <tr><td>Max drawdown</td><td>-1.92%</td></tr>
         <tr><td>Trades (holdout)</td><td>2</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~12h</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.517</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.516</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -4571,7 +4571,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.032730</div>
+      <div class="price">$0.032750</div>
       <div class="sparkline" data-coin="KMNO" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4632,13 +4632,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.013420</div>
+      <div class="price">$0.013440</div>
       <div class="sparkline" data-coin="LAVA" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-26.33%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-23.41%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
@@ -4677,7 +4677,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.337000</div>
+      <div class="price">$0.342000</div>
       <div class="sparkline" data-coin="LDO" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4718,7 +4718,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$11.7567</div>
+      <div class="price">$11.5656</div>
       <div class="sparkline" data-coin="LINK" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4759,7 +4759,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.008990</div>
+      <div class="price">$0.009060</div>
       <div class="sparkline" data-coin="LMWR" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4841,7 +4841,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.007937</div>
+      <div class="price">$0.007877</div>
       <div class="sparkline" data-coin="LRC" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4866,14 +4866,14 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.230615</div>
+      <div class="price">$0.218862</div>
       <div class="sparkline" data-coin="LSK" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-0.80%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+7.67%</td></tr>
-        <tr><td>Sharpe</td><td>-2.67</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-0.89%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+7.10%</td></tr>
+        <tr><td>Sharpe</td><td>-2.95</td></tr>
         <tr><td>Max drawdown</td><td>-2.13%</td></tr>
         <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
@@ -4899,7 +4899,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$56.1900</div>
+      <div class="price">$55.7700</div>
       <div class="sparkline" data-coin="LTC" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -4929,14 +4929,14 @@
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-1.19%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+20.35%</td></tr>
-        <tr><td>Sharpe</td><td>-2.64</td></tr>
-        <tr><td>Max drawdown</td><td>-2.07%</td></tr>
-        <tr><td>Trades (holdout)</td><td>2</td></tr>
-        <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~28h</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.363</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-0.46%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+29.57%</td></tr>
+        <tr><td>Sharpe</td><td>-0.68</td></tr>
+        <tr><td>Max drawdown</td><td>-2.90%</td></tr>
+        <tr><td>Trades (holdout)</td><td>3</td></tr>
+        <tr><td>Win rate</td><td>33.3%</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~25h</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.361</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -4974,7 +4974,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.074380</div>
+      <div class="price">$0.074970</div>
       <div class="sparkline" data-coin="MANA" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -5015,7 +5015,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.390000</div>
+      <div class="price">$0.386000</div>
       <div class="sparkline" data-coin="MASK" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -5064,19 +5064,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.073900</div>
+      <div class="price">$0.075500</div>
       <div class="sparkline" data-coin="MELANIA" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-2.18%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-2.47%</td></tr>
-        <tr><td>Sharpe</td><td>-6.41</td></tr>
-        <tr><td>Max drawdown</td><td>-2.41%</td></tr>
-        <tr><td>Trades (holdout)</td><td>2</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-0.72%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-2.13%</td></tr>
+        <tr><td>Sharpe</td><td>-3.88</td></tr>
+        <tr><td>Max drawdown</td><td>-0.97%</td></tr>
+        <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~28h</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.341</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~40h</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.34</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -5105,15 +5105,15 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.030650</div>
+      <div class="price">$0.030770</div>
       <div class="sparkline" data-coin="MERL" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+0.38%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+26.07%</td></tr>
-        <tr><td>Sharpe</td><td>1.03</td></tr>
-        <tr><td>Max drawdown</td><td>-0.97%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+1.39%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+35.80%</td></tr>
+        <tr><td>Sharpe</td><td>3.24</td></tr>
+        <tr><td>Max drawdown</td><td>-1.04%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
@@ -5150,7 +5150,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$2.8960</div>
+      <div class="price">$2.8830</div>
       <div class="sparkline" data-coin="METIS" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -5199,19 +5199,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.002580</div>
+      <div class="price">$0.002560</div>
       <div class="sparkline" data-coin="MF" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-12.96%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-9.94%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.022</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.021</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -5232,7 +5232,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.058660</div>
+      <div class="price">$0.059550</div>
       <div class="sparkline" data-coin="MINA" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -5273,7 +5273,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.474700</div>
+      <div class="price">$0.478800</div>
       <div class="sparkline" data-coin="MNT" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -5346,18 +5346,18 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$2.3092</div>
+      <div class="price">$2.2842</div>
       <div class="sparkline" data-coin="MORPHO" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-1.28%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+7.59%</td></tr>
-        <tr><td>Sharpe</td><td>-4.65</td></tr>
-        <tr><td>Max drawdown</td><td>-1.63%</td></tr>
-        <tr><td>Trades (holdout)</td><td>1</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-2.54%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+7.19%</td></tr>
+        <tr><td>Sharpe</td><td>-7.74</td></tr>
+        <tr><td>Max drawdown</td><td>-2.54%</td></tr>
+        <tr><td>Trades (holdout)</td><td>2</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~2.7d</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~34h</td></tr>
         <tr><td>Correlation to BTC</td><td>0.575</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
@@ -5399,13 +5399,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$4.3767</div>
+      <div class="price">$4.3883</div>
       <div class="sparkline" data-coin="NEAR" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="neg">-3.11%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+12.45%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+11.35%</td></tr>
         <tr><td>Sharpe</td><td>-5.73</td></tr>
         <tr><td>Max drawdown</td><td>-3.67%</td></tr>
         <tr><td>Trades (holdout)</td><td>3</td></tr>
@@ -5420,7 +5420,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$4.3767</div>
+      <div class="price">$4.3883</div>
       <div class="sparkline" data-coin="NEAR" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -5526,7 +5526,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$10.0800</div>
+      <div class="price">$10.0100</div>
       <div class="sparkline" data-coin="NMR" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -5591,7 +5591,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.024280</div>
+      <div class="price">$0.025630</div>
       <div class="sparkline" data-coin="OGN" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -5620,7 +5620,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.413140</div>
+      <div class="price">$0.407220</div>
       <div class="sparkline" data-coin="ONDO" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -5649,7 +5649,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.106590</div>
+      <div class="price">$0.107000</div>
       <div class="sparkline" data-coin="ONE" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -5674,14 +5674,14 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.114600</div>
+      <div class="price">$0.113900</div>
       <div class="sparkline" data-coin="OP" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+1.14%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+15.53%</td></tr>
-        <tr><td>Sharpe</td><td>4.79</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+0.97%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+14.93%</td></tr>
+        <tr><td>Sharpe</td><td>4.00</td></tr>
         <tr><td>Max drawdown</td><td>-0.27%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
@@ -5695,7 +5695,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.114600</div>
+      <div class="price">$0.113900</div>
       <div class="sparkline" data-coin="OP" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -5768,15 +5768,15 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.048150</div>
+      <div class="price">$0.048060</div>
       <div class="sparkline" data-coin="PARTI" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-1.05%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-50.29%</td></tr>
-        <tr><td>Sharpe</td><td>-5.90</td></tr>
-        <tr><td>Max drawdown</td><td>-1.05%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-1.09%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-53.58%</td></tr>
+        <tr><td>Sharpe</td><td>-5.83</td></tr>
+        <tr><td>Max drawdown</td><td>-1.09%</td></tr>
         <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~40h</td></tr>
@@ -5797,15 +5797,15 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$3,894.97</div>
+      <div class="price">$3,895.00</div>
       <div class="sparkline" data-coin="PAXG" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-1.15%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+6.80%</td></tr>
-        <tr><td>Sharpe</td><td>-3.39</td></tr>
-        <tr><td>Max drawdown</td><td>-2.27%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-1.22%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+13.03%</td></tr>
+        <tr><td>Sharpe</td><td>-3.82</td></tr>
+        <tr><td>Max drawdown</td><td>-2.17%</td></tr>
         <tr><td>Trades (holdout)</td><td>2</td></tr>
         <tr><td>Win rate</td><td>50.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~4.8d</td></tr>
@@ -5818,7 +5818,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$3,894.97</div>
+      <div class="price">$3,895.00</div>
       <div class="sparkline" data-coin="PAXG" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -5859,7 +5859,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$1.8890</div>
+      <div class="price">$1.8630</div>
       <div class="sparkline" data-coin="PENDLE" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -5925,19 +5925,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.040990</div>
+      <div class="price">$0.042220</div>
       <div class="sparkline" data-coin="PHA" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-0.74%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+4.00%</td></tr>
-        <tr><td>Sharpe</td><td>-2.46</td></tr>
-        <tr><td>Max drawdown</td><td>-1.23%</td></tr>
-        <tr><td>Trades (holdout)</td><td>1</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-2.70%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+4.13%</td></tr>
+        <tr><td>Sharpe</td><td>-7.43</td></tr>
+        <tr><td>Max drawdown</td><td>-2.70%</td></tr>
+        <tr><td>Trades (holdout)</td><td>2</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~2.2d</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.354</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~34h</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.355</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -5946,7 +5946,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.040990</div>
+      <div class="price">$0.042220</div>
       <div class="sparkline" data-coin="PHA" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -5995,19 +5995,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.014866</div>
+      <div class="price">$0.014551</div>
       <div class="sparkline" data-coin="PLAY" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-0.17%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+6.68%</td></tr>
-        <tr><td>Sharpe</td><td>-4.75</td></tr>
-        <tr><td>Max drawdown</td><td>-0.33%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-0.26%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+2.98%</td></tr>
+        <tr><td>Sharpe</td><td>-4.69</td></tr>
+        <tr><td>Max drawdown</td><td>-0.49%</td></tr>
         <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~2.7d</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.14</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.139</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -6088,7 +6088,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.001264</div>
+      <div class="price">$0.001273</div>
       <div class="sparkline" data-coin="POND" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -6173,13 +6173,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.307100</div>
+      <div class="price">$0.306800</div>
       <div class="sparkline" data-coin="PRO" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-3.19%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-5.59%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
@@ -6202,14 +6202,14 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.016350</div>
+      <div class="price">$0.016520</div>
       <div class="sparkline" data-coin="PROMPT" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+4.06%</td></tr>
-        <tr><td>Sharpe</td><td>0.00</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+0.09%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+7.86%</td></tr>
+        <tr><td>Sharpe</td><td>3.97</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
@@ -6303,19 +6303,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.029504</div>
+      <div class="price">$0.029786</div>
       <div class="sparkline" data-coin="Q" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-19.15%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-21.48%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.062</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.063</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -6336,7 +6336,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.001897</div>
+      <div class="price">$0.001907</div>
       <div class="sparkline" data-coin="QI" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -6361,18 +6361,18 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$201.54</div>
+      <div class="price">$199.01</div>
       <div class="sparkline" data-coin="QNT" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-2.47%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+5.75%</td></tr>
-        <tr><td>Sharpe</td><td>-9.71</td></tr>
-        <tr><td>Max drawdown</td><td>-2.47%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-1.42%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+9.31%</td></tr>
+        <tr><td>Sharpe</td><td>-4.02</td></tr>
+        <tr><td>Max drawdown</td><td>-2.50%</td></tr>
         <tr><td>Trades (holdout)</td><td>2</td></tr>
-        <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~24h</td></tr>
+        <tr><td>Win rate</td><td>50.0%</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~34h</td></tr>
         <tr><td>Correlation to BTC</td><td>0.505</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
@@ -6382,7 +6382,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$201.54</div>
+      <div class="price">$199.01</div>
       <div class="sparkline" data-coin="QNT" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -6435,7 +6435,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$1.6340</div>
+      <div class="price">$1.6090</div>
       <div class="sparkline" data-coin="RAY" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -6484,15 +6484,15 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$1.5740</div>
+      <div class="price">$1.5800</div>
       <div class="sparkline" data-coin="RENDER" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="neg">-3.65%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+17.32%</td></tr>
-        <tr><td>Sharpe</td><td>-6.51</td></tr>
-        <tr><td>Max drawdown</td><td>-4.25%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+15.82%</td></tr>
+        <tr><td>Sharpe</td><td>-6.59</td></tr>
+        <tr><td>Max drawdown</td><td>-4.21%</td></tr>
         <tr><td>Trades (holdout)</td><td>5</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~44h</td></tr>
@@ -6517,7 +6517,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.050200</div>
+      <div class="price">$0.050390</div>
       <div class="sparkline" data-coin="REQ" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -6558,7 +6558,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.472900</div>
+      <div class="price">$0.477200</div>
       <div class="sparkline" data-coin="RLC" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -6611,7 +6611,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$1.4910</div>
+      <div class="price">$1.4750</div>
       <div class="sparkline" data-coin="RPL" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -6640,7 +6640,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.001534</div>
+      <div class="price">$0.001548</div>
       <div class="sparkline" data-coin="RSR" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -6669,7 +6669,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.633000</div>
+      <div class="price">$0.617000</div>
       <div class="sparkline" data-coin="RUNE" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -6706,19 +6706,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.086000</div>
+      <div class="price">$0.085500</div>
       <div class="sparkline" data-coin="SAFE" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-0.33%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+42.49%</td></tr>
-        <tr><td>Sharpe</td><td>-0.47</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+0.18%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+57.98%</td></tr>
+        <tr><td>Sharpe</td><td>0.32</td></tr>
         <tr><td>Max drawdown</td><td>-1.88%</td></tr>
         <tr><td>Trades (holdout)</td><td>3</td></tr>
         <tr><td>Win rate</td><td>33.3%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~44h</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.435</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.43</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -6735,13 +6735,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.007300</div>
+      <div class="price">$0.007390</div>
       <div class="sparkline" data-coin="SAHARA" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-13.68%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-10.03%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
@@ -6768,7 +6768,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.046600</div>
+      <div class="price">$0.046400</div>
       <div class="sparkline" data-coin="SAND" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -6809,7 +6809,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.048000</div>
+      <div class="price">$0.048260</div>
       <div class="sparkline" data-coin="SEI" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -6875,19 +6875,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.010560</div>
+      <div class="price">$0.010390</div>
       <div class="sparkline" data-coin="SIGN" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-62.34%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-61.68%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.232</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.231</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -6916,13 +6916,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.068200</div>
+      <div class="price">$0.068390</div>
       <div class="sparkline" data-coin="SKY" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+9.06%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+12.25%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
@@ -6961,7 +6961,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.183700</div>
+      <div class="price">$0.185000</div>
       <div class="sparkline" data-coin="SNX" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -6990,7 +6990,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$95.4800</div>
+      <div class="price">$94.9700</div>
       <div class="sparkline" data-coin="SOL" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7099,15 +7099,15 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$2.2820</div>
+      <div class="price">$2.3070</div>
       <div class="sparkline" data-coin="SSV" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+11.14%</td></tr>
-        <tr><td>Sharpe</td><td>0.00</td></tr>
-        <tr><td>Max drawdown</td><td>0.00%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-0.04%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+14.58%</td></tr>
+        <tr><td>Sharpe</td><td>-3.34</td></tr>
+        <tr><td>Max drawdown</td><td>-0.04%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
@@ -7120,7 +7120,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$2.2820</div>
+      <div class="price">$2.3070</div>
       <div class="sparkline" data-coin="SSV" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7173,7 +7173,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.020520</div>
+      <div class="price">$0.020200</div>
       <div class="sparkline" data-coin="STORJ" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7214,7 +7214,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.326200</div>
+      <div class="price">$0.321100</div>
       <div class="sparkline" data-coin="STX" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7243,7 +7243,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.903200</div>
+      <div class="price">$0.902800</div>
       <div class="sparkline" data-coin="SUI" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7280,15 +7280,15 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.015200</div>
+      <div class="price">$0.015270</div>
       <div class="sparkline" data-coin="SUN" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-0.21%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+0.77%</td></tr>
-        <tr><td>Sharpe</td><td>-0.86</td></tr>
-        <tr><td>Max drawdown</td><td>-0.53%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-0.08%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-0.43%</td></tr>
+        <tr><td>Sharpe</td><td>-0.32</td></tr>
+        <tr><td>Max drawdown</td><td>-0.54%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
@@ -7301,7 +7301,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.015200</div>
+      <div class="price">$0.015270</div>
       <div class="sparkline" data-coin="SUN" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7354,7 +7354,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.170700</div>
+      <div class="price">$0.180900</div>
       <div class="sparkline" data-coin="SUPER" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7383,7 +7383,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.194800</div>
+      <div class="price">$0.194700</div>
       <div class="sparkline" data-coin="SUSHI" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7448,7 +7448,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.157700</div>
+      <div class="price">$0.159300</div>
       <div class="sparkline" data-coin="SYN" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7473,19 +7473,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.162230</div>
+      <div class="price">$0.160460</div>
       <div class="sparkline" data-coin="SYRUP" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+3.76%</td></tr>
-        <tr><td>Sharpe</td><td>0.00</td></tr>
-        <tr><td>Max drawdown</td><td>0.00%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+0.13%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+6.23%</td></tr>
+        <tr><td>Sharpe</td><td>2.53</td></tr>
+        <tr><td>Max drawdown</td><td>-0.07%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.556</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.555</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -7506,7 +7506,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.004620</div>
+      <div class="price">$0.004720</div>
       <div class="sparkline" data-coin="T" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7547,7 +7547,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$237.17</div>
+      <div class="price">$235.88</div>
       <div class="sparkline" data-coin="TAO" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7572,18 +7572,18 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.001476</div>
+      <div class="price">$0.001448</div>
       <div class="sparkline" data-coin="TEL" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-4.99%</td></tr>
-        <tr><td>Sharpe</td><td>0.00</td></tr>
-        <tr><td>Max drawdown</td><td>0.00%</td></tr>
-        <tr><td>Trades (holdout)</td><td>0</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-1.48%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+3.04%</td></tr>
+        <tr><td>Sharpe</td><td>-7.89</td></tr>
+        <tr><td>Max drawdown</td><td>-1.48%</td></tr>
+        <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~16h</td></tr>
         <tr><td>Correlation to BTC</td><td>0.478</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
@@ -7593,7 +7593,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.001476</div>
+      <div class="price">$0.001448</div>
       <div class="sparkline" data-coin="TEL" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7634,7 +7634,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.480500</div>
+      <div class="price">$0.479100</div>
       <div class="sparkline" data-coin="TIA" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7659,19 +7659,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.001187</div>
+      <div class="price">$0.001188</div>
       <div class="sparkline" data-coin="TLM" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+0.90%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+6.04%</td></tr>
-        <tr><td>Sharpe</td><td>5.56</td></tr>
-        <tr><td>Max drawdown</td><td>0.00%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+1.41%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+8.34%</td></tr>
+        <tr><td>Sharpe</td><td>6.96</td></tr>
+        <tr><td>Max drawdown</td><td>-0.01%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.363</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.362</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -7680,7 +7680,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.001187</div>
+      <div class="price">$0.001188</div>
       <div class="sparkline" data-coin="TLM" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7757,7 +7757,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.355100</div>
+      <div class="price">$0.353100</div>
       <div class="sparkline" data-coin="TRAC" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7830,18 +7830,18 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.310399</div>
+      <div class="price">$0.310509</div>
       <div class="sparkline" data-coin="TRX" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-3.34%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+5.29%</td></tr>
-        <tr><td>Sharpe</td><td>-8.60</td></tr>
-        <tr><td>Max drawdown</td><td>-3.65%</td></tr>
-        <tr><td>Trades (holdout)</td><td>3</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-6.11%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+5.62%</td></tr>
+        <tr><td>Sharpe</td><td>-10.45</td></tr>
+        <tr><td>Max drawdown</td><td>-6.38%</td></tr>
+        <tr><td>Trades (holdout)</td><td>4</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~2.3d</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~38h</td></tr>
         <tr><td>Correlation to BTC</td><td>0.403</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
@@ -7851,7 +7851,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.310399</div>
+      <div class="price">$0.310509</div>
       <div class="sparkline" data-coin="TRX" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7888,18 +7888,18 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.239140</div>
+      <div class="price">$0.200770</div>
       <div class="sparkline" data-coin="UAI" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-2.57%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+16.41%</td></tr>
-        <tr><td>Sharpe</td><td>-10.35</td></tr>
-        <tr><td>Max drawdown</td><td>-3.18%</td></tr>
-        <tr><td>Trades (holdout)</td><td>3</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-1.92%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+11.51%</td></tr>
+        <tr><td>Sharpe</td><td>-12.62</td></tr>
+        <tr><td>Max drawdown</td><td>-2.10%</td></tr>
+        <tr><td>Trades (holdout)</td><td>2</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~23h</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~24h</td></tr>
         <tr><td>Correlation to BTC</td><td>0.099</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
@@ -7921,7 +7921,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.341000</div>
+      <div class="price">$0.349000</div>
       <div class="sparkline" data-coin="UMA" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -7958,19 +7958,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$7.2747</div>
+      <div class="price">$7.3822</div>
       <div class="sparkline" data-coin="UNI" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-1.40%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-0.22%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-1.39%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-3.61%</td></tr>
         <tr><td>Sharpe</td><td>-6.17</td></tr>
-        <tr><td>Max drawdown</td><td>-1.40%</td></tr>
+        <tr><td>Max drawdown</td><td>-1.39%</td></tr>
         <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~16h</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.603</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.604</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -7979,7 +7979,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$7.2747</div>
+      <div class="price">$7.3822</div>
       <div class="sparkline" data-coin="UNI" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8033,14 +8033,14 @@
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-0.38%</td></tr>
-        <tr><td>Sharpe</td><td>0.00</td></tr>
-        <tr><td>Max drawdown</td><td>0.00%</td></tr>
-        <tr><td>Trades (holdout)</td><td>0</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-1.87%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-0.06%</td></tr>
+        <tr><td>Sharpe</td><td>-8.24</td></tr>
+        <tr><td>Max drawdown</td><td>-1.87%</td></tr>
+        <tr><td>Trades (holdout)</td><td>2</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>—</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.062</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~32h</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.061</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -8114,7 +8114,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.003252</div>
+      <div class="price">$0.003311</div>
       <div class="sparkline" data-coin="VELO" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8155,7 +8155,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.005891</div>
+      <div class="price">$0.005867</div>
       <div class="sparkline" data-coin="VET" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8252,18 +8252,18 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$23.2090</div>
+      <div class="price">$23.1850</div>
       <div class="sparkline" data-coin="VVV" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+0.93%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+46.57%</td></tr>
-        <tr><td>Sharpe</td><td>2.15</td></tr>
-        <tr><td>Max drawdown</td><td>-0.81%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+0.27%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+40.77%</td></tr>
+        <tr><td>Sharpe</td><td>0.81</td></tr>
+        <tr><td>Max drawdown</td><td>-0.72%</td></tr>
         <tr><td>Trades (holdout)</td><td>1</td></tr>
-        <tr><td>Win rate</td><td>100.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~7.8d</td></tr>
+        <tr><td>Win rate</td><td>0.0%</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~36h</td></tr>
         <tr><td>Correlation to BTC</td><td>0.431</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
@@ -8321,7 +8321,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$77,601.50</div>
+      <div class="price">$77,878.20</div>
       <div class="sparkline" data-coin="WBTC" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8362,7 +8362,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.001970</div>
+      <div class="price">$0.001950</div>
       <div class="sparkline" data-coin="WELL" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8403,7 +8403,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.177200</div>
+      <div class="price">$0.178700</div>
       <div class="sparkline" data-coin="WIF" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8432,7 +8432,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.000069</div>
+      <div class="price">$0.000066</div>
       <div class="sparkline" data-coin="WIN" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8461,7 +8461,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.400500</div>
+      <div class="price">$0.399100</div>
       <div class="sparkline" data-coin="WLD" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8486,19 +8486,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.050100</div>
+      <div class="price">$0.050400</div>
       <div class="sparkline" data-coin="WLFI" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-0.56%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-14.83%</td></tr>
-        <tr><td>Sharpe</td><td>-2.29</td></tr>
-        <tr><td>Max drawdown</td><td>-0.75%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-0.52%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-15.78%</td></tr>
+        <tr><td>Sharpe</td><td>-2.30</td></tr>
+        <tr><td>Max drawdown</td><td>-0.69%</td></tr>
         <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~7.5d</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.505</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.506</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -8515,18 +8515,18 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.011570</div>
+      <div class="price">$0.011600</div>
       <div class="sparkline" data-coin="WOO" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-2.46%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+14.93%</td></tr>
-        <tr><td>Sharpe</td><td>-7.58</td></tr>
-        <tr><td>Max drawdown</td><td>-3.34%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-2.54%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+13.10%</td></tr>
+        <tr><td>Sharpe</td><td>-6.96</td></tr>
+        <tr><td>Max drawdown</td><td>-3.12%</td></tr>
         <tr><td>Trades (holdout)</td><td>3</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~17h</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~20h</td></tr>
         <tr><td>Correlation to BTC</td><td>0.684</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
@@ -8536,7 +8536,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.011570</div>
+      <div class="price">$0.011600</div>
       <div class="sparkline" data-coin="WOO" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8578,13 +8578,13 @@
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-0.10%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+6.83%</td></tr>
-        <tr><td>Sharpe</td><td>-0.18</td></tr>
-        <tr><td>Max drawdown</td><td>-1.53%</td></tr>
-        <tr><td>Trades (holdout)</td><td>2</td></tr>
-        <tr><td>Win rate</td><td>100.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~5.9d</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-0.51%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+12.58%</td></tr>
+        <tr><td>Sharpe</td><td>-1.14</td></tr>
+        <tr><td>Max drawdown</td><td>-1.42%</td></tr>
+        <tr><td>Trades (holdout)</td><td>3</td></tr>
+        <tr><td>Win rate</td><td>66.7%</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~4.6d</td></tr>
         <tr><td>Correlation to BTC</td><td>0.267</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
@@ -8606,7 +8606,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.003800</div>
+      <div class="price">$0.003750</div>
       <div class="sparkline" data-coin="XCN" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8635,7 +8635,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.031320</div>
+      <div class="price">$0.031310</div>
       <div class="sparkline" data-coin="XDC" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8688,7 +8688,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.169127</div>
+      <div class="price">$0.168232</div>
       <div class="sparkline" data-coin="XLM" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8725,13 +8725,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$603.87</div>
+      <div class="price">$600.46</div>
       <div class="sparkline" data-coin="XMR" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-3.92%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-3.26%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
@@ -8746,7 +8746,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$603.87</div>
+      <div class="price">$600.46</div>
       <div class="sparkline" data-coin="XMR" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8771,19 +8771,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$0.005844</div>
+      <div class="price">$0.005748</div>
       <div class="sparkline" data-coin="XNY" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-0.54%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+19.15%</td></tr>
-        <tr><td>Sharpe</td><td>-2.02</td></tr>
-        <tr><td>Max drawdown</td><td>-1.14%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-1.17%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+36.05%</td></tr>
+        <tr><td>Sharpe</td><td>-5.99</td></tr>
+        <tr><td>Max drawdown</td><td>-1.27%</td></tr>
         <tr><td>Trades (holdout)</td><td>1</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~32h</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.139</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~2.5d</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.141</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -8816,7 +8816,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$1.2522</div>
+      <div class="price">$1.2506</div>
       <div class="sparkline" data-coin="XRP" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8845,7 +8845,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.254170</div>
+      <div class="price">$0.255680</div>
       <div class="sparkline" data-coin="XTZ" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8886,7 +8886,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.003045</div>
+      <div class="price">$0.003005</div>
       <div class="sparkline" data-coin="XYO" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -8939,7 +8939,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.023700</div>
+      <div class="price">$0.024000</div>
       <div class="sparkline" data-coin="YGG" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -9012,15 +9012,15 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$1,244.06</div>
+      <div class="price">$1,240.36</div>
       <div class="sparkline" data-coin="ZEC" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="pos">+1.05%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+58.64%</td></tr>
-        <tr><td>Sharpe</td><td>0.97</td></tr>
-        <tr><td>Max drawdown</td><td>-3.03%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="pos">+1.09%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+52.56%</td></tr>
+        <tr><td>Sharpe</td><td>1.01</td></tr>
+        <tr><td>Max drawdown</td><td>-3.02%</td></tr>
         <tr><td>Trades (holdout)</td><td>5</td></tr>
         <tr><td>Win rate</td><td>40.0%</td></tr>
         <tr><td>Avg hold time (holdout)</td><td>~2.1d</td></tr>
@@ -9033,7 +9033,7 @@
       <div class="horizon-title">1D <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#9a6700">🟡 Uptrend, waiting for breakout</div>
-      <div class="price">$1,244.06</div>
+      <div class="price">$1,240.36</div>
       <div class="sparkline" data-coin="ZEC" data-horizon="far">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
@@ -9106,19 +9106,19 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$0.010380</div>
+      <div class="price">$0.010520</div>
       <div class="sparkline" data-coin="ZK" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
-        <tr><td>Strategy (holdout)</td><td class="neg">-1.68%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-5.03%</td></tr>
-        <tr><td>Sharpe</td><td>-9.17</td></tr>
-        <tr><td>Max drawdown</td><td>-1.81%</td></tr>
+        <tr><td>Strategy (holdout)</td><td class="neg">-1.63%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-6.93%</td></tr>
+        <tr><td>Sharpe</td><td>-8.94</td></tr>
+        <tr><td>Max drawdown</td><td>-1.82%</td></tr>
         <tr><td>Trades (holdout)</td><td>2</td></tr>
         <tr><td>Win rate</td><td>0.0%</td></tr>
-        <tr><td>Avg hold time (holdout)</td><td>~26h</td></tr>
-        <tr><td>Correlation to BTC</td><td>0.42</td></tr>
+        <tr><td>Avg hold time (holdout)</td><td>~28h</td></tr>
+        <tr><td>Correlation to BTC</td><td>0.431</td></tr>
         
         <tr><td>Trailing stop (chandelier)</td><td class="na-cell">— no position —</td></tr>
       </table>
@@ -9159,13 +9159,13 @@
       <div class="horizon-title">4H <span class="badge unvalidated">NO VALIDATED EDGE</span></div>
       <div class="tier" style="color:#6e7781">⬜ NO SIGNAL</div>
       <div class="live-status" style="color:#6e7781">⚪ No signal</div>
-      <div class="price">$1.8270</div>
+      <div class="price">$1.9130</div>
       <div class="sparkline" data-coin="ZRO" data-horizon="near">
         <span class="na-cell">Loading price history&hellip;</span>
       </div>
       <table class="metrics">
         <tr><td>Strategy (holdout)</td><td class="pos">+0.00%</td></tr>
-        <tr><td>Buy &amp; hold (same window)</td><td class="pos">+2.40%</td></tr>
+        <tr><td>Buy &amp; hold (same window)</td><td class="neg">-2.32%</td></tr>
         <tr><td>Sharpe</td><td>0.00</td></tr>
         <tr><td>Max drawdown</td><td>0.00%</td></tr>
         <tr><td>Trades (holdout)</td><td>0</td></tr>
